@@ -5,7 +5,7 @@ Pessoal, aqui o nosso repositório. Qualquer dúvida de como usar, perguntem a m
 Bom trabalho para nós.
 
 # Colaboradores do projeto
-Bianca...
+Bianca Moreira
 
 Iago Richard Rodrigues Silva
 
