@@ -1,4 +1,4 @@
-# Nome do projeto: Sound
+# Nome do projeto: Soundmood
 
 Pessoal, aqui o nosso repositório. Qualquer dúvida de como usar, perguntem a mim; se eu não souber responder aí vamos pesquisar!
 
