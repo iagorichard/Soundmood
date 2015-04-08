@@ -1,0 +1,89 @@
+
+
+
+
+
+
+
+
+
+
+SoundMood
+
+
+
+
+
+
+Alunos:
+Bianca
+Leylane
+Iago
+Washington
+
+
+Turma:  
+5º período
+
+Professor: 
+Wylliams Barbosa Santos
+
+
+_______, DIA de MES de ANO
+
+Sumário
+
+Descrição do Projeto	
+Requisitos	
+Casos de Uso	
+
+
+
+
+Descrição do Projeto
+O sistema sugerido será um sistema de recomendação. Estes sistemas se utilizam de mecanismos de busca personalizada para melhor atender o usuário. Com o advento do consumo e comércio eletrônico, os sistemas de recomendação tornaram-se extremamente ativos e necessários. 
+	Com base neste tipo de sistema, pensamos em criar para a cadeira de Projeto de Orientação a Objeto um sistema de recomendação musical. Este sistema sugerirá músicas a partir de informações como: Humor do usuário, o que o usuário está fazendo, gênero escolhido pelo usuário no momento de execução do sistema. 
+Para melhor atender às necessidades do mercado, fizemos uma pesquisa dos principais aplicativos de música para computador. Encontramos o Shazam, Spotify e Deezer. 
+O Shazam reconhece músicas e faixas a partir do som gravado pelo dispositivo móvel. Também, descobre informações sobre a música reconhecida. Porém, não trabalha com sistema de recomendações, muito menos trabalha com autenticação. 
+O Spotify pesquisa artistas, músicas e playlists. O usuário monta novas playlists e playlists baseadas no humor. Porém, não trabalha com o conceito de recomendação a partir do gosto musical do usuário, humor e atividade realizada atualmente. Pode rodar músicas offline apenas para usuários premium. 
+Achamos também o Deezer, que trabalha com um conceito bem parecido com o sugerido pela nossa equipe neste projeto.  Porém, encontramos diferenças significativas: as recomendações do Deezer se dão a partir do gênero musical e artistas que o usuário curtiu a priori no aplicativo. Diferentemente do nosso projeto, que trabalhará com o conceito de recomendação voltado ao humor e à atividade realizada pelo usuário.
+Concluindo, estamos trabalhando em um sistema que se assemelha a outros existentes no mercado, porém com o diferencial a recomendação por “status”. Ou seja, o sistema recomendará músicas a partir do que o usuário estiver fazendo e como o usuário estiver se sentindo. Este conceito ajudará o usuário a conhecer novas músicas e bandas que previamente aquele não conhecia.
+A princípio, em nosso o usuário precisará de autenticação. Após autenticar, o usuário navegará pelas telas principais do sistema que são: A tela onde o usuário especificará o seu estado de HUMOR, após isto, o que ESTÁ FAZENDO, e por último, o gênero musical que deseja escutar. A partir desta informação, o sistema calculará e montará uma playlist com base no banco de dados. Utilizaremos JAVA como linguagem de programação e NetBeans como IDE. Utilizaremos também, MySQL para o Banco de Dados e o padrão de projeto MVC. 
+
+Requisitos
+	Nessa fase deveremos esclarecer os requisitos do sistema. Definiremos os requisitos funcionais e não funcionais. Os requisitos serão agrupados de acordo com as suas características. 
+	De acordo com Sommerville (2007), requisitos podem ser definidos como sendo o conjunto de funções, objetivos, propriedades e restrições que um sistema apresenta, seguindo a necessidade do usuário final e cliente. Os requisitos fazem parte de todo o ciclo de desenvolvimento de um software, não apenas do seu começo. Serve para descrever funcionalidades do sistema, como também para avaliar se o que o cliente deseja é compatível com a real capacidade da equipe de produção. Ou seja, se o sistema pode realmente ser desenvolvido ou não. Os requisitos são divididos em Requisitos Funcionais e Não Funcionais.
+	Segundo Pressman (2006), os requisitos são esclarecidos pelo engenheiro de software no processo de engenharia de requisitos. Esta fornece os mecanismos mais adequados para o entendimento do que o cliente deseja. Pressman afirma, também, que nesse processo, analisa-se as necessidades do cliente, avalia-se a viabilidade, negocia-se uma solução razoável, ao mesmo tempo que se especifica a solução sem ambiguidades, e, por fim, valida-se a especificação. 
+	A etapa de esclarecimento de requisitos abrange sete tarefas distintas, entre elas: Concepção, levantamento, elaboração, negociação, especificação, validaç’ao e gestão. Podem ocorrer em simultâneo ou sozinhas, porém todas são adaptadas às necessidades apresentadas no projeto. 
+
+Requisitos Funcionais
+
+RF001: 
+O sistema deverá efetuar cadastro do usuário: Permite que um usuário cadastre informações de acesso do usuário que deve ser utilizado na hora do login. Não deve haver outra maneira de começar a utilizar o sistema (entrada)
+RF002: 
+O sistema deverá permitir o log in do usuário: Permite que o usuário utilize o nome de usuário e a senha previamente cadastrados no sistema para ter acesso a este.  Não há outra forma de entrada no sistema (entrada)
+RF003: 
+O sistema deverá permitir o logoff do usuário: Permite que o usuário termine todas as suas atividades no sistema e saia do mesmo (saída)
+
+
+RF004: 
+O sistema deverá permitir que o usuário escolha opções de “status”: O usuário do sistema escolherá entre uma das opções impressas na tela para dar seguimento ao uso do sistema, pois se trata de um sistema de recomendação e apenas após a escolha de opção, o sistema poderá calcular a playlist de músicas baseada na escolha do usuário (entrada)
+RF005: 
+O sistema deverá retornar uma playlist: Baseando-se no que o usuário escolheu nas opções de status e humor, o sistema calculará uma lista de músicas e retornará para o usuário no player de música (saída)
+RF006:
+O sistema para a música atual: Se por algum evento do meio externo, o usuário decida parar a música, este requisito será necessário. O usuário deve clicar no botão “pause” para efetuar com sucesso (entrada e saída)
+RF007: 
+O sistema retorna para a música anterior: Volta para a música que estava tocando previamente. Esta função apenas funciona para usuários do tipo PREMIUM (entrada e saída)
+RF008: 
+O sistema passa para a próxima música: Passa para a música que vem em seguida a que está atualmente tocando. Esta função apenas funciona para usuários do tipo PREMIUM (entrada e saída)
+RF009: 
+Trocar playlist: Esta função dar ao usuário a opção de mudar de playlist se aquele não gostou desta. O usuário PREMIUM poderá realizar esta função quantas vezes desejar, porém, o usuário FREE apenas poderá realizar 5 (cinco) vezes. 
+
+Requisitos Não-Funcionais
+	Pressman (2006) define Requisitos Não-Funcionais como os fatores de qualidade de software de forma indireta ou como características que ficam implícitas no sistemas, mas são esperadas de todo software profissionalmente desenvolvido. 
+	Os Requisitos Não-Funcionais descrevem como o sistema fará o que foi especificado nos Requisitos Funcionais. Eles não estão ligados às funcionalidades do sistema diretamente, mas como estas se comportarão em termos de qualidade. Definem propriedades e restrições do sistema, como por exemplo, tempo, espaço, linguagem de programação utilizada, versão do compilador utilizada, SGBD, sistemas operacionais, método de desenvolvimento, entre outros. Eles abordam aspectos de qualidades. Em suma, se não forem levados em consideração como devem ser, o sistema poderá ser desenvolvido com baixa qualidade e poderá se tornar inconsistente. 
+ 
+RNF001: 
+RNF002:
+
+
