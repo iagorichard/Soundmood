@@ -1,19 +1,4 @@
-
-
-
-
-
-
-
-
-
-
 SoundMood
-
-
-
-
-
 
 Alunos:
 Bianca
@@ -21,15 +6,13 @@ Leylane
 Iago
 Washington
 
-
 Turma:  
 5º período
 
 Professor: 
 Wylliams Barbosa Santos
 
-
-_______, DIA de MES de ANO
+11 de Maio de 2015
 
 Sumário
 
@@ -39,10 +22,9 @@ Casos de Uso
 
 
 
-
 Descrição do Projeto
 O sistema sugerido será um sistema de recomendação. Estes sistemas se utilizam de mecanismos de busca personalizada para melhor atender o usuário. Com o advento do consumo e comércio eletrônico, os sistemas de recomendação tornaram-se extremamente ativos e necessários. 
-	Com base neste tipo de sistema, pensamos em criar para a cadeira de Projeto de Orientação a Objeto um sistema de recomendação musical. Este sistema sugerirá músicas a partir de informações como: Humor do usuário, o que o usuário está fazendo, gênero escolhido pelo usuário no momento de execução do sistema. 
+Com base neste tipo de sistema, pensamos em criar para a cadeira de Projeto de Orientação a Objeto um sistema de recomendação musical. Este sistema sugerirá músicas a partir de informações como: Humor do usuário, o que o usuário está fazendo, gênero escolhido pelo usuário no momento de execução do sistema. 
 Para melhor atender às necessidades do mercado, fizemos uma pesquisa dos principais aplicativos de música para computador. Encontramos o Shazam, Spotify e Deezer. 
 O Shazam reconhece músicas e faixas a partir do som gravado pelo dispositivo móvel. Também, descobre informações sobre a música reconhecida. Porém, não trabalha com sistema de recomendações, muito menos trabalha com autenticação. 
 O Spotify pesquisa artistas, músicas e playlists. O usuário monta novas playlists e playlists baseadas no humor. Porém, não trabalha com o conceito de recomendação a partir do gosto musical do usuário, humor e atividade realizada atualmente. Pode rodar músicas offline apenas para usuários premium. 
