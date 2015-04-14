@@ -1,5 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
+﻿/*
+ * To change this license header, choose License Headers in Project Properties. TESTE
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
@@ -38,9 +38,7 @@ public class PrimeiraTela extends javax.swing.JFrame {
 
         jButton1.setBackground(new java.awt.Color(0, 0, 0));
         jButton1.setForeground(new java.awt.Color(255, 255, 204));
-        jButton1.setIcon(new javax.swing.ImageIcon("/Users/biancamoreira/Documents/Universidade/UPE/Quinto Período/POO/buttons/button2.gif")); // NOI18N
         jButton1.setText("SignIn");
-        jButton1.setActionCommand("SignIn");
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseReleased(java.awt.event.MouseEvent evt) {
                 jButton1MouseReleased(evt);
@@ -57,7 +55,6 @@ public class PrimeiraTela extends javax.swing.JFrame {
 
         jButton3.setBackground(new java.awt.Color(0, 0, 0));
         jButton3.setForeground(new java.awt.Color(255, 255, 204));
-        jButton3.setIcon(new javax.swing.ImageIcon("/Users/biancamoreira/Documents/Universidade/UPE/Quinto Período/POO/buttons/button2.gif")); // NOI18N
         jButton3.setText("SignUp");
         jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseReleased(java.awt.event.MouseEvent evt) {
@@ -92,8 +89,6 @@ public class PrimeiraTela extends javax.swing.JFrame {
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(54, 54, 54))
         );
-
-        jButton1.getAccessibleContext().setAccessibleName("SignIn");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
