@@ -41,6 +41,7 @@ public class TelaSignUp extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jPasswordField1 = new javax.swing.JPasswordField();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(560, 360));
@@ -67,14 +68,13 @@ public class TelaSignUp extends javax.swing.JFrame {
 
         jLabel9.setText("Username:");
 
+        jLabel3.setForeground(new java.awt.Color(255, 51, 51));
+        jLabel3.setText("               ");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(214, 214, 214))
             .addGroup(layout.createSequentialGroup()
                 .addGap(39, 39, 39)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -91,14 +91,25 @@ public class TelaSignUp extends javax.swing.JFrame {
                     .addComponent(jTextField7, javax.swing.GroupLayout.DEFAULT_SIZE, 322, Short.MAX_VALUE)
                     .addComponent(jTextField8, javax.swing.GroupLayout.DEFAULT_SIZE, 322, Short.MAX_VALUE)
                     .addComponent(jPasswordField1))
-                .addContainerGap(146, Short.MAX_VALUE))
+                .addContainerGap(149, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addGap(214, 214, 214))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(182, 182, 182))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(19, 19, 19)
                 .addComponent(jLabel1)
-                .addGap(40, 40, 40)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel3)
+                .addGap(33, 33, 33)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2))
@@ -118,7 +129,7 @@ public class TelaSignUp extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel9))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 58, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 76, Short.MAX_VALUE)
                 .addComponent(jButton3)
                 .addContainerGap())
         );
@@ -134,8 +145,8 @@ public class TelaSignUp extends javax.swing.JFrame {
         String password;
         String nomeCompleto;
         String email;
+        int auxiliarRetornoDeCadastro;
         
-        cadastro = new Cadastro();
         
         //designa variaveis para elas
         username = jTextField1.getText();
@@ -143,12 +154,37 @@ public class TelaSignUp extends javax.swing.JFrame {
         nomeCompleto = jTextField6.getText();
         email = jTextField7.getText();
         
+        //criar construtor e jogar dados
+        cadastro = new Cadastro();
+         //cadastro.receberInformacao(username, password, nomeCompleto, email);
+        
         //coloca dentro do controle de cadastro 
-        cadastro.receberInformacao(username, password, nomeCompleto, email);
+        // testar email - com @ 
+        // testar se ja existe email e username e retornar algum valor se existir
+        
+        
+        //dependendo do retorno, a label acima dos textboxes retornara um valor e apagara
+        //o que esta escrito dentro da textbox
+        //if auxiliarRetornoDeCadastro == 1 
+        //email ja existente - jlabel3
+        //zera a textbox email
+        //zera valor de variavel responsavel pela textbox email
+        
+        //else if auxiliarRetornoDeCadastro == 2
+        //usuario ja existente - jalabel3
+        //zera textbox usuario
+        //zera valor de variavel responsavel pela textbox usuario
+        
+        //else if auxiliarRetornoDeCadastro == 0
+        //cadastro realizado com sucesso e chama uma tela de retorno
+        //new TelaCadastroRealizado().setVisible(true);
+       
 
         // TelaSignUp.setVisible(true);
         //Manda pra a tela de cadastro realizado
-       new TelaCadastroRealizado().setVisible(true);
+       
+       
+       
         
         
     }//GEN-LAST:event_jButton3MouseReleased
@@ -192,6 +228,7 @@ public class TelaSignUp extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
