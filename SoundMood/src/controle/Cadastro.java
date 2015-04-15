@@ -6,7 +6,7 @@ public class Cadastro {
         
         public void receberInformacao(String username, String password, String nomeCompleto, String email){
             //if (premiumuser){
-            // new premiumuser
+            // new premiumuser.
             //} else(freeuser){}
             
         }

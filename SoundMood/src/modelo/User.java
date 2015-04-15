@@ -15,7 +15,31 @@ public abstract class User {
         private String password;
         private String email;
         private String passwordTip;
-        
+
+        public void setId(long id) {
+            this.id = id;
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
+
+        public void setUserName(String userName) {
+            this.userName = userName;
+        }
+
+        public void setPassword(String password) {
+            this.password = password;
+        }
+
+        public void setEmail(String email) {
+            this.email = email;
+        }
+
+        public void setPasswordTip(String passwordTip) {
+            this.passwordTip = passwordTip;
+        }
+
         /**Método para cadastrar um usuário no sistema
         * @author IagoRichard
         * @return boolean - Verificar se o processo foi executado com sucesso ou não
