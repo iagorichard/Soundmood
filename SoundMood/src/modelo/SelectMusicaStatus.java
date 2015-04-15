@@ -1,7 +1,7 @@
 package modelo;
 
 /**
- *
+ * classe....
  * @author Leylane
  */
 public class SelectMusicaStatus {
