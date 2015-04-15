@@ -2,7 +2,7 @@ package modelo;
 
 /**Classe para objetos do tipo Musica, onde ficarão armazenados todos os dados de uma música.
  * @author IagoRichard
- * @version 0.0
+ * @version 0.1
  */
 
 public class Musica {
