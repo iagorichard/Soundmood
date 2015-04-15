@@ -1,8 +1,4 @@
-﻿/*
- * To change this license header, choose License Headers in Project Properties. TESTE
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package view;
 
 /**
@@ -46,7 +42,6 @@ public class PrimeiraTela extends javax.swing.JFrame {
         });
 
         jLabel1.setText("Esqueceu a senha?");
-        jLabel1.setPreferredSize(new java.awt.Dimension(116, 16));
         jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseReleased(java.awt.event.MouseEvent evt) {
                 jLabel1MouseReleased(evt);
@@ -74,7 +69,7 @@ public class PrimeiraTela extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel1)
                         .addGap(65, 65, 65)))
                 .addGap(141, 141, 141))
         );
@@ -86,7 +81,7 @@ public class PrimeiraTela extends javax.swing.JFrame {
                     .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabel1)
                 .addGap(54, 54, 54))
         );
 
@@ -95,8 +90,8 @@ public class PrimeiraTela extends javax.swing.JFrame {
 
     private void jButton3MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseReleased
         // TODO add your handling code here:
-        TelaSignUp Jframe = new TelaSignUp();  
-  
+        new TelaSignUp().setVisible(true);
+        
        // TelaSignUp.setVisible(true); 
     }//GEN-LAST:event_jButton3MouseReleased
 
