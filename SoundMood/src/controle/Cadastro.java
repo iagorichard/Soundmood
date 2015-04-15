@@ -4,6 +4,7 @@ public class Cadastro {
 
 	private String tipo;
         
+<<<<<<< HEAD
         //isso aqui sera um construtor -- mudar
         public int receberInformacao(String username, String password, String nomeCompleto, String email){
             //verificar o usuario -- verificar se existe
@@ -26,6 +27,12 @@ public class Cadastro {
                         //nao admite e retorna algum valor false
             
             return 0;
+=======
+        public void receberInformacao(String username, String password, String nomeCompleto, String email){
+            //if (premiumuser){
+            // new premiumuser.
+            //} else(freeuser){}
+>>>>>>> origin/master
             
         }
 

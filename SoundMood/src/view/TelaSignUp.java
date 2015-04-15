@@ -53,12 +53,19 @@ public class TelaSignUp extends javax.swing.JFrame {
 
         usernameCadastroLabel.setText("Username:");
 
+<<<<<<< HEAD
         cadastrarButton.setBackground(new java.awt.Color(0, 0, 0));
         cadastrarButton.setForeground(new java.awt.Color(255, 255, 204));
         cadastrarButton.setIcon(new javax.swing.ImageIcon("/Users/biancamoreira/Documents/Universidade/UPE/Quinto Período/POO/buttons/button2.gif")); // NOI18N
         cadastrarButton.setText("Cadastrar");
         cadastrarButton.setName("cadastrarButton"); // NOI18N
         cadastrarButton.addMouseListener(new java.awt.event.MouseAdapter() {
+=======
+        jButton3.setBackground(new java.awt.Color(0, 0, 0));
+        jButton3.setForeground(new java.awt.Color(255, 255, 204));
+        jButton3.setText("Cadastrar");
+        jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
+>>>>>>> origin/master
             public void mouseReleased(java.awt.event.MouseEvent evt) {
                 cadastrarButtonMouseReleased(evt);
             }
@@ -224,9 +231,13 @@ public class TelaSignUp extends javax.swing.JFrame {
 
         // TelaSignUp.setVisible(true);
         //Manda pra a tela de cadastro realizado
+<<<<<<< HEAD
        
        
        
+=======
+        new TelaCadastroRealizado().setVisible(true);
+>>>>>>> origin/master
         
         
     }//GEN-LAST:event_cadastrarButtonMouseReleased
