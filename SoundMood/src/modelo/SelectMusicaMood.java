@@ -12,6 +12,7 @@ public class SelectMusicaMood {
 
 	public int escolherMusica() {
 		return 0;
+                
 	}
 
 }
