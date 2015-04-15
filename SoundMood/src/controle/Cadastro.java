@@ -16,10 +16,10 @@ public class Cadastro {
               
 
                         //if (premiumuser){
-                        // new premiumuser
+                        // new premiumuser(username, password, nomeCompleto, email)
                         // retorna 0
                         //} else(freeuser){}
-                        // new freeuser
+                        // new freeuser(username, password, nomeCompleto, email)
                         // retorna 0
             
                   // se existir
