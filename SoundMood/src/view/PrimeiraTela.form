@@ -70,15 +70,8 @@
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="cc" green="ff" red="ff" type="rgb"/>
         </Property>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="/Users/biancamoreira/Documents/Universidade/UPE/Quinto Per&#xed;odo/POO/buttons/button2.gif"/>
-        </Property>
         <Property name="text" type="java.lang.String" value="SignIn"/>
-        <Property name="actionCommand" type="java.lang.String" value="SignIn"/>
       </Properties>
-      <AccessibilityProperties>
-        <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="SignIn"/>
-      </AccessibilityProperties>
       <Events>
         <EventHandler event="mouseReleased" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButton1MouseReleased"/>
       </Events>
@@ -101,9 +94,6 @@
         </Property>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="cc" green="ff" red="ff" type="rgb"/>
-        </Property>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="/Users/biancamoreira/Documents/Universidade/UPE/Quinto Per&#xed;odo/POO/buttons/button2.gif"/>
         </Property>
         <Property name="text" type="java.lang.String" value="SignUp"/>
       </Properties>
