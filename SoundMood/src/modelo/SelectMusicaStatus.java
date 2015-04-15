@@ -4,7 +4,7 @@ package modelo;
  * classe....
  * @author Leylane
  */
-public class SelectMusicaStatus {
+public class SelectMusicaStatus implements EscolheMusica{
 
 	private long id;
 

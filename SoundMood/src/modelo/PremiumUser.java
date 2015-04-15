@@ -4,6 +4,6 @@ package modelo;
  *
  * @author Leylane
  */
-public class PremiumUser {
+public class PremiumUser extends User{
 
 }
