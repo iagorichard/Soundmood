@@ -1,16 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package view;
 
 import controle.Cadastro;
 
-/**
- *
- * @author biancamoreira
- */
 public class TelaSignUp extends javax.swing.JFrame {
 
     /**
@@ -60,6 +51,11 @@ public class TelaSignUp extends javax.swing.JFrame {
         cadastrarButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseReleased(java.awt.event.MouseEvent evt) {
                 cadastrarButtonMouseReleased(evt);
+            }
+        });
+        cadastrarButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cadastrarButtonActionPerformed(evt);
             }
         });
 
@@ -169,24 +165,33 @@ public class TelaSignUp extends javax.swing.JFrame {
 
     private void cadastrarButtonMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cadastrarButtonMouseReleased
         // TODO add your handling code here:
-        //Pega informacao do cliente a partir das textboxes
+        
+        //Variáveis que indicam atributos do usuário (tipo a ser definido)
         Cadastro cadastro;
         String username;
         String password;
         String nomeCompleto;
         String email;
-        int tipoDeUsuario;
+        int tipoDeUsuario = 0;
+        
+        //Variável para controle de erro no cadastro
         int auxiliarRetornoDeCadastro;
         
-        
-        //designa variaveis para elas
+        //Atribuindo valores da textBox para os atributos
         username = usernameCadastroTextField.getText();
         password = passwordCadastroField.getText();
         nomeCompleto = nomeCompletoField.getText();
         email = emailCadastroTextField.getText();
+        
+
         //consertar isso do selected
-        //if (premiumRadioButton.selected() == true){
-        //    tipoDeUsuario = 1;
+        if (premiumRadioButton.isSelected() == true){
+            tipoDeUsuario = 1;
+        } else if (freeRadioButton.isSelected() == true){
+            tipoDeUsuario = 2;
+        } else {
+            jLabel3.setText("Digite um tipo de usuário!");
+        }
         //}else if(freeRadioButton.selected() == true){
        //     tipoDeUsuario = 0; 
        // }else{
@@ -224,10 +229,6 @@ public class TelaSignUp extends javax.swing.JFrame {
         // TelaSignUp.setVisible(true);
         //Manda pra a tela de cadastro realizado
 
-       
-       
-       
-
         new TelaCadastroRealizado().setVisible(true);
 
         
@@ -243,6 +244,10 @@ public class TelaSignUp extends javax.swing.JFrame {
         // TODO add your handling code here:
          premiumRadioButton.setSelected(false);
     }//GEN-LAST:event_freeRadioButtonMouseClicked
+
+    private void cadastrarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastrarButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cadastrarButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -273,6 +278,7 @@ public class TelaSignUp extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 new TelaSignUp().setVisible(true);
  
