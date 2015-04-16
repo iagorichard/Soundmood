@@ -10,7 +10,7 @@ public class FreeUser extends User {
     /**Construtor para a classe FreeUser.
      * @author IagoRichard
      */
-    FreeUser(long id, String name, String userName, String password, String email, String passwordTip){
+    public FreeUser(long id, String name, String userName, String password, String email, String passwordTip){
        
         setId(id);
         setName(name);

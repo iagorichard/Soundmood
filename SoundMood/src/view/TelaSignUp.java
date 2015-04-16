@@ -24,9 +24,9 @@ public class TelaSignUp extends javax.swing.JFrame {
         usernameCadastroLabel = new javax.swing.JLabel();
         cadastrarButton = new javax.swing.JButton();
         usernameCadastroTextField = new javax.swing.JTextField();
-        nomeCompletoField = new javax.swing.JTextField();
+        nomeCompletoTextField = new javax.swing.JTextField();
         emailCadastroTextField = new javax.swing.JTextField();
-        passwordTipCadastroField = new javax.swing.JTextField();
+        passwordTipCadastroTextField = new javax.swing.JTextField();
         passwordCadastroLabel = new javax.swing.JLabel();
         nomeCompletoCadastroLabel = new javax.swing.JLabel();
         emailCadastroLabel = new javax.swing.JLabel();
@@ -92,13 +92,8 @@ public class TelaSignUp extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addGap(214, 214, 214))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(182, 182, 182))))
+                .addComponent(jLabel1)
+                .addGap(214, 214, 214))
             .addGroup(layout.createSequentialGroup()
                 .addGap(39, 39, 39)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -110,18 +105,22 @@ public class TelaSignUp extends javax.swing.JFrame {
                     .addComponent(passwordTipCadastroLabel1))
                 .addGap(58, 58, 58)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(premiumRadioButton)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(freeRadioButton))
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(cadastrarButton, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(usernameCadastroTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 322, Short.MAX_VALUE)
-                        .addComponent(nomeCompletoField, javax.swing.GroupLayout.DEFAULT_SIZE, 322, Short.MAX_VALUE)
-                        .addComponent(emailCadastroTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 322, Short.MAX_VALUE)
-                        .addComponent(passwordTipCadastroField, javax.swing.GroupLayout.DEFAULT_SIZE, 322, Short.MAX_VALUE)
-                        .addComponent(passwordCadastroField)))
-                .addContainerGap(149, Short.MAX_VALUE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(premiumRadioButton)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(freeRadioButton))
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(cadastrarButton, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(usernameCadastroTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 322, Short.MAX_VALUE)
+                                .addComponent(nomeCompletoTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 322, Short.MAX_VALUE)
+                                .addComponent(emailCadastroTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 322, Short.MAX_VALUE)
+                                .addComponent(passwordTipCadastroTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 322, Short.MAX_VALUE)
+                                .addComponent(passwordCadastroField)))
+                        .addGap(0, 139, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -140,7 +139,7 @@ public class TelaSignUp extends javax.swing.JFrame {
                     .addComponent(passwordCadastroLabel))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(nomeCompletoField, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(nomeCompletoTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(nomeCompletoCadastroLabel))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -148,7 +147,7 @@ public class TelaSignUp extends javax.swing.JFrame {
                     .addComponent(emailCadastroLabel))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(passwordTipCadastroField, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(passwordTipCadastroTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(passwordTipCadastroLabel))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -168,68 +167,61 @@ public class TelaSignUp extends javax.swing.JFrame {
         
         //Variáveis que indicam atributos do usuário (tipo a ser definido)
         Cadastro cadastro;
+        int id = 1;
         String username;
         String password;
         String nomeCompleto;
         String email;
+        String passwordTip;
         int tipoDeUsuario = 0;
         
-        //Variável para controle de erro no cadastro
-        int auxiliarRetornoDeCadastro;
+        //Variável para controle de erro no cadastro, valor para default
+        int auxiliarRetornoDeCadastro = -1;
         
         //Atribuindo valores da textBox para os atributos
         username = usernameCadastroTextField.getText();
         password = passwordCadastroField.getText();
-        nomeCompleto = nomeCompletoField.getText();
+        nomeCompleto = nomeCompletoTextField.getText();
         email = emailCadastroTextField.getText();
+        passwordTip = passwordTipCadastroTextField.getText();
         
+        //Instanciando cadastro
+        cadastro = new Cadastro();
 
-        //consertar isso do selected
+        //Verifica qual o tipo de conta especificado pelo usuário
         if (premiumRadioButton.isSelected() == true){
             tipoDeUsuario = 1;
         } else if (freeRadioButton.isSelected() == true){
             tipoDeUsuario = 2;
         } else {
+            tipoDeUsuario = 0;
             jLabel3.setText("Digite um tipo de usuário!");
         }
-        //}else if(freeRadioButton.selected() == true){
-       //     tipoDeUsuario = 0; 
-       // }else{
-            //muda na label - coloca mensagem 'selecione um tipo de usuario'
-        //}
         
-        //criar construtor e jogar dados
-        cadastro = new Cadastro();
+        //Se o usuário tiver escolhido alguma opção para o tipo de conta, as instruções dentro do if irão verificar se as fields estão vazias
+        if(tipoDeUsuario!=0){
+            
+            if(username == "" || password == "" || nomeCompleto == "" || email == "" || passwordTip == ""){
+                jLabel3.setText("Por favor, preencha todos os campos!");
+            }
+            //Se não tiver nenhuma field vazia, o programa tentará cadastrar com os dados especificados
+            else{
+                //O retorno das operações irá para a variável auxiliarRetornoDeCadastro, para o tratamento de erros
+                auxiliarRetornoDeCadastro = cadastro.receberInformacao(id, username, password, nomeCompleto, email, tipoDeUsuario, passwordTip);
+            }
+        }
         
-        
-         //cadastro.receberInformacao(username, password, nomeCompleto, email, tipo);
-        
-        //coloca dentro do controle de cadastro 
-        // testar email - com @ 
-        // testar se ja existe email e username e retornar algum valor se existir
-        
-        
-        //dependendo do retorno, a label acima dos textboxes retornara um valor e apagara
-        //o que esta escrito dentro da textbox
-        //if auxiliarRetornoDeCadastro == 1 
-        //email ja existente - jlabel3
-        //zera a textbox email
-        //zera valor de variavel responsavel pela textbox email
-        
-        //else if auxiliarRetornoDeCadastro == 2
-        //usuario ja existente - jalabel3
-        //zera textbox usuario
-        //zera valor de variavel responsavel pela textbox usuario
-        
-        //else if auxiliarRetornoDeCadastro == 0
-        //cadastro realizado com sucesso e chama uma tela de retorno
-        //new TelaCadastroRealizado().setVisible(true);
-       
-
-        // TelaSignUp.setVisible(true);
-        //Manda pra a tela de cadastro realizado
-
-        new TelaCadastroRealizado().setVisible(true);
+        //Se tiver retornado a 0, o cadastro foi feito com sucesso; se não, houve erro(s)
+        if(auxiliarRetornoDeCadastro==0){
+            jLabel3.setText("Cadastro realizado com sucesso!");
+            new TelaCadastroRealizado().setVisible(true);
+        }
+        else if(auxiliarRetornoDeCadastro==1){
+            jLabel3.setText("Nome de usuário solicitado já foi cadastrado, favor digite outro!");
+        }
+        else if(auxiliarRetornoDeCadastro==2){
+            jLabel3.setText("Email solicitado já foi cadastrado, favor digite outro!");
+        }
 
         
         
@@ -294,12 +286,12 @@ public class TelaSignUp extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel nomeCompletoCadastroLabel;
-    private javax.swing.JTextField nomeCompletoField;
+    private javax.swing.JTextField nomeCompletoTextField;
     private javax.swing.JPasswordField passwordCadastroField;
     private javax.swing.JLabel passwordCadastroLabel;
-    private javax.swing.JTextField passwordTipCadastroField;
     private javax.swing.JLabel passwordTipCadastroLabel;
     private javax.swing.JLabel passwordTipCadastroLabel1;
+    private javax.swing.JTextField passwordTipCadastroTextField;
     private javax.swing.JRadioButton premiumRadioButton;
     private javax.swing.JLabel usernameCadastroLabel;
     private javax.swing.JTextField usernameCadastroTextField;
