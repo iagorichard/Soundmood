@@ -15,7 +15,10 @@ public abstract class User {
         private String password;
         private String email;
         private String passwordTip;
-
+        
+        /**Todos os set's da clase User, logo abaixo:
+        * @author IagoRichard
+        */
         public void setId(long id) {
             this.id = id;
         }
