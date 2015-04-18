@@ -26,6 +26,7 @@ public class Cadastro {
          */
         public int receberInformacao(long id, String username, String password, String nomeCompleto, String email, int tipoConta, String passwordTip){
             
+            try{
             //Verificar o usuario -- verificar se existe
             if(this.verificarUsuario(username)==true){
                 /** Se retornar a true, quer dizer que o usuário com esse username já existe
@@ -34,32 +35,33 @@ public class Cadastro {
                 return 1;
             }
             //Se retornou a false, vai verificar email
-            else{    
+            else if(this.verificarEmail(email)==true){    
                 
-                if(this.verificarEmail(email)==true){
+                
                     /** Se retornar a true, quer dizer que o usuário com esse username já existe
                     * o método retorna um valor para ser mostrada uma mensagem
                     */
-                    return 2;
-                }
-                
-                //Se retornou a false, vai verificar o tipo de conta, e isntanciar uma classe de acordo com o tipo
-                else{
+                return 2;
+            }
+            //Se retornou a false, vai verificar o tipo de conta, e isntanciar uma classe de acordo com o tipo
+            else{
                     
-                    this.tipo = tipoConta;
+                this.tipo = tipoConta;
                     
                     /** Se retornar a true, quer dizer que o usuário é do tipo premium, se retornar a false é do tipo free.
                     */
-                    if(verificarTipo()==true){
+                if(verificarTipo()==true){
                         PremiumUser  usuarioPremium = new PremiumUser(id, nomeCompleto, username, password, email, passwordTip);
-                    }
-                    else{
+                }
+                else{
                         FreeUser usuarioFree = new FreeUser(id, nomeCompleto, username, password, email, passwordTip);
-                    }
+                }
                     
-                    return 0;
+                return 0;
             
                 }
+            }catch(Exception e){
+                return 0; //mudar isso, colocar algum numero que remete a excessao 
             }
             
         }
@@ -80,16 +82,15 @@ public class Cadastro {
 		return false;
 	}
 
-        /**Método verificarUsuario - verifica se tem algum usuário cadastro com o nome de usuário solicitado
+        /**Método verificarTipo - verifica se tem algum usuário cadastro com o nome de usuário solicitado
         * @return boolean - se retornar a true quer dizer que o usuário será premium; se retornar a false quer dizer que o usuário será free.
         */
         private boolean verificarTipo() {
             
             if(this.tipo==1)
-                return true;
+                return true; //tipo true premium
             else
-                return false;
-            
+                return false; //tipo false free
         }
 
 }
