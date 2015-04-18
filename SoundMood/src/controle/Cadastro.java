@@ -50,7 +50,7 @@ public class Cadastro {
                     
                     /** Se retornar a true, quer dizer que o usuário é do tipo premium, se retornar a false é do tipo free.
                     */
-                if(verificarTipo()==true){
+                if("premium".equals(verificarTipo())){
                         PremiumUser  usuarioPremium = new PremiumUser(id, nomeCompleto, username, password, email, passwordTip);
                 }
                 else{
@@ -85,12 +85,15 @@ public class Cadastro {
         /**Método verificarTipo - verifica se tem algum usuário cadastro com o nome de usuário solicitado
         * @return boolean - se retornar a true quer dizer que o usuário será premium; se retornar a false quer dizer que o usuário será free.
         */
-        private boolean verificarTipo() {
-            
-            if(this.tipo==1)
-                return true; //tipo true premium
+        private String verificarTipo() {
+            try{
+            if(this.tipo!=1)
+                return "free"; //tipo false free
             else
-                return false; //tipo false free
+                return "premium"; //tipo true premium
+            }catch(Exception e){
+                return "Excpection" + e;
+            }
         }
 
 }
