@@ -176,7 +176,7 @@ public class TelaSignUp extends javax.swing.JFrame {
         int tipoDeUsuario = 0;
         
         //Variável para controle de erro no cadastro, valor para default
-        int auxiliarRetornoDeCadastro = -1;
+        String auxiliarRetornoDeCadastro;
         
         //Atribuindo valores da textBox para os atributos
         username = usernameCadastroTextField.getText();
@@ -201,27 +201,31 @@ public class TelaSignUp extends javax.swing.JFrame {
         //Se o usuário tiver escolhido alguma opção para o tipo de conta, as instruções dentro do if irão verificar se as fields estão vazias
         if(tipoDeUsuario!=0){
             
-            if(username == "" || password == "" || nomeCompleto == "" || email == "" || passwordTip == ""){
+            if("".equals(username) || "".equals(password) || "".equals(nomeCompleto) || "".equals(email) || "".equals(passwordTip)){
                 jLabel3.setText("Por favor, preencha todos os campos!");
             }
             //Se não tiver nenhuma field vazia, o programa tentará cadastrar com os dados especificados
             else{
                 //O retorno das operações irá para a variável auxiliarRetornoDeCadastro, para o tratamento de erros
                 auxiliarRetornoDeCadastro = cadastro.receberInformacao(id, username, password, nomeCompleto, email, tipoDeUsuario, passwordTip);
+                if("Sucesso".equals(auxiliarRetornoDeCadastro)){
+                    jLabel3.setText("Cadastro realizado com sucesso!");
+                    //new TelaCadastroRealizado().setVisible(true);
+                }
             }
         }
         
         //Se tiver retornado a 0, o cadastro foi feito com sucesso; se não, houve erro(s)
-        if(auxiliarRetornoDeCadastro==0){
-            jLabel3.setText("Cadastro realizado com sucesso!");
-            new TelaCadastroRealizado().setVisible(true);
-        }
-        else if(auxiliarRetornoDeCadastro==1){
-            jLabel3.setText("Nome de usuário solicitado já foi cadastrado, favor digite outro!");
-        }
-        else if(auxiliarRetornoDeCadastro==2){
-            jLabel3.setText("Email solicitado já foi cadastrado, favor digite outro!");
-        }
+       // if("Sucesso".equals(auxiliarRetornoDeCadastro)){
+       //     jLabel3.setText("Cadastro realizado com sucesso!");
+         //   new TelaCadastroRealizado().setVisible(true);
+        //}
+        //else if(auxiliarRetornoDeCadastro==1){
+         //   jLabel3.setText("Nome de usuário solicitado já foi cadastrado, favor digite outro!");
+        //}
+        //else if(auxiliarRetornoDeCadastro==2){
+        //    jLabel3.setText("Email solicitado já foi cadastrado, favor digite outro!");
+        //}
 
         
         
