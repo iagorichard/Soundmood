@@ -38,13 +38,17 @@ public class TelaSignUp extends javax.swing.JFrame {
         freeRadioButton = new javax.swing.JRadioButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(153, 0, 0));
         setPreferredSize(new java.awt.Dimension(560, 360));
 
+        jLabel1.setFont(new java.awt.Font("Malayalam MN", 0, 13)); // NOI18N
         jLabel1.setText("Cadastro de Usuário");
 
+        usernameCadastroLabel.setFont(new java.awt.Font("Malayalam MN", 0, 13)); // NOI18N
         usernameCadastroLabel.setText("Username:");
 
         cadastrarButton.setBackground(new java.awt.Color(0, 0, 0));
+        cadastrarButton.setFont(new java.awt.Font("Malayalam MN", 0, 13)); // NOI18N
         cadastrarButton.setForeground(new java.awt.Color(255, 255, 204));
         cadastrarButton.setText("Cadastrar");
         cadastrarButton.setName("cadastrarButton"); // NOI18N
@@ -59,19 +63,25 @@ public class TelaSignUp extends javax.swing.JFrame {
             }
         });
 
+        passwordCadastroLabel.setFont(new java.awt.Font("Malayalam MN", 0, 13)); // NOI18N
         passwordCadastroLabel.setText("Password:");
 
+        nomeCompletoCadastroLabel.setFont(new java.awt.Font("Malayalam MN", 0, 13)); // NOI18N
         nomeCompletoCadastroLabel.setText("Nome Completo:");
 
+        emailCadastroLabel.setFont(new java.awt.Font("Malayalam MN", 0, 13)); // NOI18N
         emailCadastroLabel.setText("Email:");
 
+        passwordTipCadastroLabel.setFont(new java.awt.Font("Malayalam MN", 0, 13)); // NOI18N
         passwordTipCadastroLabel.setText("Password Tip:");
 
         jLabel3.setForeground(new java.awt.Color(255, 51, 51));
         jLabel3.setText("               ");
 
+        passwordTipCadastroLabel1.setFont(new java.awt.Font("Malayalam MN", 0, 13)); // NOI18N
         passwordTipCadastroLabel1.setText("Tipo de Conta:");
 
+        premiumRadioButton.setFont(new java.awt.Font("Malayalam MN", 0, 13)); // NOI18N
         premiumRadioButton.setText("Premium User");
         premiumRadioButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -79,6 +89,7 @@ public class TelaSignUp extends javax.swing.JFrame {
             }
         });
 
+        freeRadioButton.setFont(new java.awt.Font("Malayalam MN", 0, 13)); // NOI18N
         freeRadioButton.setText("Free User");
         freeRadioButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -90,12 +101,8 @@ public class TelaSignUp extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(214, 214, 214))
             .addGroup(layout.createSequentialGroup()
-                .addGap(39, 39, 39)
+                .addGap(43, 43, 43)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(nomeCompletoCadastroLabel)
                     .addComponent(passwordCadastroLabel)
@@ -103,24 +110,30 @@ public class TelaSignUp extends javax.swing.JFrame {
                     .addComponent(usernameCadastroLabel)
                     .addComponent(passwordTipCadastroLabel)
                     .addComponent(passwordTipCadastroLabel1))
-                .addGap(58, 58, 58)
+                .addGap(59, 59, 59)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(premiumRadioButton)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(freeRadioButton))
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(cadastrarButton, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(usernameCadastroTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 322, Short.MAX_VALUE)
-                                .addComponent(nomeCompletoTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 322, Short.MAX_VALUE)
-                                .addComponent(emailCadastroTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 322, Short.MAX_VALUE)
-                                .addComponent(passwordTipCadastroTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 322, Short.MAX_VALUE)
-                                .addComponent(passwordCadastroField)))
-                        .addGap(0, 139, Short.MAX_VALUE)))
-                .addContainerGap())
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(premiumRadioButton)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(freeRadioButton))
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(cadastrarButton, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(usernameCadastroTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 322, Short.MAX_VALUE)
+                                        .addComponent(nomeCompletoTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 322, Short.MAX_VALUE)
+                                        .addComponent(emailCadastroTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 322, Short.MAX_VALUE)
+                                        .addComponent(passwordTipCadastroTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 322, Short.MAX_VALUE)
+                                        .addComponent(passwordCadastroField)))
+                                .addGap(0, 134, Short.MAX_VALUE)))
+                        .addContainerGap())
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 124, Short.MAX_VALUE)
+                        .addComponent(jLabel1)
+                        .addGap(214, 214, 214))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -129,7 +142,7 @@ public class TelaSignUp extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel3)
-                .addGap(36, 36, 36)
+                .addGap(37, 37, 37)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(usernameCadastroTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(usernameCadastroLabel))
@@ -154,7 +167,7 @@ public class TelaSignUp extends javax.swing.JFrame {
                     .addComponent(premiumRadioButton)
                     .addComponent(freeRadioButton)
                     .addComponent(passwordTipCadastroLabel1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 63, Short.MAX_VALUE)
                 .addComponent(cadastrarButton)
                 .addGap(35, 35, 35))
         );
