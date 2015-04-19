@@ -24,7 +24,7 @@ public class Cadastro {
          * @param passwordTip - lembra senha do usuário
          * @return int - o retorno será em inteiro, pois haverá várias possibilidades de erro: 1 - já haver um usuário cadastrado com o username solicitado; 2 - já haver um usuário cadastrado com o email solicitado; 0 - processo realizado com sucesso.
          */
-        public int receberInformacao(long id, String username, String password, String nomeCompleto, String email, int tipoConta, String passwordTip){
+        public String receberInformacao(long id, String username, String password, String nomeCompleto, String email, int tipoConta, String passwordTip){
             
             try{
             //Verificar o usuario -- verificar se existe
@@ -32,7 +32,7 @@ public class Cadastro {
                 /** Se retornar a true, quer dizer que o usuário com esse username já existe
                  * o método retorna um valor para ser mostrada uma mensagem
                  */
-                return 1;
+                return "Nome de Usuario ja cadastrado";
             }
             //Se retornou a false, vai verificar email
             else if(this.verificarEmail(email)==true){    
@@ -41,7 +41,7 @@ public class Cadastro {
                     /** Se retornar a true, quer dizer que o usuário com esse username já existe
                     * o método retorna um valor para ser mostrada uma mensagem
                     */
-                return 2;
+                return "Email ja cadastrado";
             }
             //Se retornou a false, vai verificar o tipo de conta, e isntanciar uma classe de acordo com o tipo
             else{
@@ -51,18 +51,25 @@ public class Cadastro {
                     /** Se retornar a true, quer dizer que o usuário é do tipo premium, se retornar a false é do tipo free.
                     */
                 if("premium".equals(verificarTipo())){
-                        PremiumUser  usuarioPremium = new PremiumUser(id, nomeCompleto, username, password, email, passwordTip);
+                        PremiumUser  usuarioPremium = new PremiumUser(id, email, username, password, email, passwordTip);
+                        //cadastra usuario e checa se foi obtido sucesso
+                        
+                        if ("Sucesso".equals(usuarioPremium.GravaUser())){
+                            return "Sucesso";
+                        }
                 }
                 else{
                         FreeUser usuarioFree = new FreeUser(id, nomeCompleto, username, password, email, passwordTip);
+                        if ("Sucesso".equals(usuarioFree.GravaUser())){
+                            return "Sucesso";
+                        }
                 }
-                    
-                return 0;
             
-                }
-            }catch(Exception e){
-                return 0; //mudar isso, colocar algum numero que remete a excessao 
             }
+            }catch(Exception e){
+                return "Excessao" + e; //mudar isso, colocar algum numero que remete a excessao 
+            }
+            return null; //conferir isso
             
         }
         
