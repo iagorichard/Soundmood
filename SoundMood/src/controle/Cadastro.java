@@ -2,6 +2,7 @@ package controle;
 
 import modelo.FreeUser;
 import modelo.PremiumUser;
+import modelo.User;
 
 /**Classe para objetos do tipo Cadastro, onde serão realizadas operações em relação à criação de um novo usuário
  * @author IagoRichard
@@ -36,11 +37,11 @@ public class Cadastro {
             }
             //Se retornou a false, vai verificar email
             else if(this.verificarEmail(email)==true){    
+                /** Se retornar a true, quer dizer que o usuário com esse username já existe
+                 * o método retorna um valor para ser mostrada uma mensagem
+                 */
                 
                 
-                    /** Se retornar a true, quer dizer que o usuário com esse username já existe
-                    * o método retorna um valor para ser mostrada uma mensagem
-                    */
                 return "Email ja cadastrado";
             }
             //Se retornou a false, vai verificar o tipo de conta, e isntanciar uma classe de acordo com o tipo
@@ -54,13 +55,13 @@ public class Cadastro {
                         PremiumUser  usuarioPremium = new PremiumUser(id, email, username, password, email, passwordTip);
                         //cadastra usuario e checa se foi obtido sucesso
                         
-                        if ("Sucesso".equals(usuarioPremium.GravaUser())){
+                        if ("Sucesso".equals(usuarioPremium.gravaUser())){
                             return "Sucesso";
                         }
                 }
                 else{
                         FreeUser usuarioFree = new FreeUser(id, nomeCompleto, username, password, email, passwordTip);
-                        if ("Sucesso".equals(usuarioFree.GravaUser())){
+                        if ("Sucesso".equals(usuarioFree.gravaUser())){
                             return "Sucesso";
                         }
                 }
@@ -86,7 +87,8 @@ public class Cadastro {
         * @return boolean - se retornar a true quer dizer que já existe; se retornar a false quer dizer que não existe.
         */
 	private boolean verificarEmail(String email) {
-		return false;
+            
+            return false;
 	}
 
         /**Método verificarTipo - verifica se tem algum usuário cadastro com o nome de usuário solicitado

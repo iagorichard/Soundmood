@@ -37,7 +37,7 @@ public final class PremiumUser extends User{
     
     
     @Override
-    public String GravaUser(){
+    public String gravaUser(){
        
         try{
             //INSERT INTO DATABASE

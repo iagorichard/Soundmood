@@ -3,6 +3,8 @@ package modelo;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.Statement;
+import java.sql.ResultSet;
 
 /**Classe para objetos do FreeUser, usuários do tipo free, a classe herdará da classe 'User'.
  * @author IagoRichard
@@ -34,17 +36,17 @@ public final class FreeUser extends User {
     
     
     @Override
-    public String GravaUser(){
+    public String gravaUser(){
        
         try{
             //INSERT INTO DATABASE
             
-            Connection conne =  DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE", "iagorrs", "iago2014");
+            Connection conn =  DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE", "iagorrs", "iago2014");
  
             String sql = "insert into usuario " 
                     + "(id,user_name,tipo,nome,email,senha,dica_senha,id_tagmood,id_tagstatus) " 
                     + "values (?,?,?,?,?,?,?,?,?);";
-            PreparedStatement stmt = conne.prepareStatement(sql);
+            PreparedStatement stmt = conn.prepareStatement(sql);
             
             stmt.setInt(1, 1);
             stmt.setString(2, this.username);
@@ -58,16 +60,16 @@ public final class FreeUser extends User {
             
             stmt.execute();
 
-            
             return "Sucesso";
             
         }catch(Exception e){
             return "Exception" + e;
         }
         
-       
-        
     }
+    
+    
+    
 
     /**
      * @return the id
@@ -119,6 +121,7 @@ public final class FreeUser extends User {
     /**
      * @param username the username to set
      */
+    @Override
     public void setUserName(String username) {
         this.username = username;
         //aqui coloca no banco de dados 
