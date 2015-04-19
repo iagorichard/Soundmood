@@ -18,7 +18,12 @@ public abstract class User {
         
         /**Todos os set's da clase User, logo abaixo:
         * @author IagoRichard
+     * @return 
         */
+        
+        //polimorfismo
+        public String GravaUser(){return "User";}
+        
         public void setId(long id) {
             this.id = id;
         }
