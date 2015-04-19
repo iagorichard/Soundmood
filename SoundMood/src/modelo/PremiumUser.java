@@ -16,14 +16,34 @@ public final class PremiumUser extends User{
     private String email;
     private String passwordTip;
     
+   //como fazer essa parte? 
+   // public PremiumUser(long id, String name, String username, String password, String email, String passwordTip){
+   //     GravaPremiumUser(id, name, username, password, email, passwordTip);
+   // }
+    
     public PremiumUser(long id, String name, String username, String password, String email, String passwordTip){
-       
+    
         setId(id);
         setName(name);
         setUserName(username);
         setPassword(password);
         setEmail(email);
         setPasswordTip(passwordTip);
+    }
+    
+    
+    @Override
+    public String GravaUser(){
+       
+        try{
+            //INSERT INTO DATABASE
+            
+             return "Sucesso";
+        }catch(Exception e){
+            return "Exception" + e;
+        }
+        
+       
         
     }
 
@@ -37,7 +57,7 @@ public final class PremiumUser extends User{
 
     /**
      * @param id the id to set
-     * @salva no banco de dados a id
+     * 
      */
     @Override
     public void setId(long id) {
@@ -54,7 +74,7 @@ public final class PremiumUser extends User{
 
     /**
      * @param name the name to set
-     * @salva no banco de dados o nome do usuario
+     * 
      */
     @Override
     public void setName(String name) {
@@ -70,7 +90,7 @@ public final class PremiumUser extends User{
 
     /**
      * @param username the username to set
-     * @salva no banco de dados o username
+     * 
      */
     public void setUsername(String username) {
         this.username = username;
@@ -85,7 +105,7 @@ public final class PremiumUser extends User{
 
     /**
      * @param password the password to set
-     * @salva no banco de dados a password
+     * 
      */
     @Override
     public void setPassword(String password) {
@@ -101,7 +121,7 @@ public final class PremiumUser extends User{
 
     /**
      * @param email the email to set
-     * @salva no banco de dados o email
+     * 
      */
     @Override
     public void setEmail(String email) {
@@ -117,7 +137,7 @@ public final class PremiumUser extends User{
 
     /**
      * @param passwordTip the passwordTip to set
-     * @salva no banco de dados o passwordTip
+     * 
      */
     @Override
     public void setPasswordTip(String passwordTip) {
