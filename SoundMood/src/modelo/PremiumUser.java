@@ -1,5 +1,9 @@
 package modelo;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+
 /**
  *Classe responsável pelo tipo de usuário Premium
  * @author Leylane
@@ -37,8 +41,27 @@ public final class PremiumUser extends User{
        
         try{
             //INSERT INTO DATABASE
+            Connection conne =  DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE", "iagorrs", "iago2014");
+ 
+            String sql = "insert into usuario " 
+                    + "(id,user_name,tipo,nome,email,senha,dica_senha,id_tagmood,id_tagstatus) " 
+                    + "values (?,?,?,?,?,?,?,?,?)";
+            PreparedStatement stmt = conne.prepareStatement(sql);
             
-             return "Sucesso";
+            stmt.setInt(1, 1);
+            stmt.setString(2, this.username);
+            stmt.setString(3, "premium");
+            stmt.setString(4, this.name);
+            stmt.setString(5, this.email);
+            stmt.setString(6, this.password);
+            stmt.setString(7, this.passwordTip);
+            stmt.setInt(8, 1);
+            stmt.setInt(9, 1);
+            
+            stmt.execute();
+            
+            return "Sucesso";
+            
         }catch(Exception e){
             return "Exception" + e;
         }
@@ -92,7 +115,7 @@ public final class PremiumUser extends User{
      * @param username the username to set
      * 
      */
-    public void setUsername(String username) {
+    public void setUserName(String username) {
         this.username = username;
     }
 

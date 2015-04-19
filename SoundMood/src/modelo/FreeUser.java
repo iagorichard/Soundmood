@@ -1,5 +1,9 @@
 package modelo;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+
 /**Classe para objetos do FreeUser, usuários do tipo free, a classe herdará da classe 'User'.
  * @author IagoRichard
  * @version 0.0
@@ -18,7 +22,7 @@ public final class FreeUser extends User {
     private String email;
     private String passwordTip;
     
-     public FreeUser(long id, String name, String username, String password, String email, String passwordTip){
+    public FreeUser(long id, String name, String username, String password, String email, String passwordTip){
     
         setId(id);
         setName(name);
@@ -35,7 +39,28 @@ public final class FreeUser extends User {
         try{
             //INSERT INTO DATABASE
             
-             return "Sucesso";
+            Connection conne =  DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE", "iagorrs", "iago2014");
+ 
+            String sql = "insert into usuario " 
+                    + "(id,user_name,tipo,nome,email,senha,dica_senha,id_tagmood,id_tagstatus) " 
+                    + "values (?,?,?,?,?,?,?,?,?);";
+            PreparedStatement stmt = conne.prepareStatement(sql);
+            
+            stmt.setInt(1, 1);
+            stmt.setString(2, this.username);
+            stmt.setString(3, "free");
+            stmt.setString(4, this.name);
+            stmt.setString(5, this.email);
+            stmt.setString(6, this.password);
+            stmt.setString(7, this.passwordTip);
+            stmt.setInt(8, 1);
+            stmt.setInt(9, 1);
+            
+            stmt.execute();
+
+            
+            return "Sucesso";
+            
         }catch(Exception e){
             return "Exception" + e;
         }
@@ -85,7 +110,7 @@ public final class FreeUser extends User {
     /**
      * @return the username
      */
-    public String getUsername() {
+    public String getUserName() {
         return username;
         //aqui coloca no banco de dados 
         //INSERT INTO DATABASE ID
@@ -94,7 +119,7 @@ public final class FreeUser extends User {
     /**
      * @param username the username to set
      */
-    public void setUsername(String username) {
+    public void setUserName(String username) {
         this.username = username;
         //aqui coloca no banco de dados 
         //INSERT INTO DATABASE ID
