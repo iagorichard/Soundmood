@@ -18,14 +18,29 @@ public final class FreeUser extends User {
     private String email;
     private String passwordTip;
     
-    public FreeUser(long id, String name, String username, String password, String email, String passwordTip){
-       
+     public FreeUser(long id, String name, String username, String password, String email, String passwordTip){
+    
         setId(id);
         setName(name);
         setUserName(username);
         setPassword(password);
         setEmail(email);
         setPasswordTip(passwordTip);
+    }
+    
+    
+    @Override
+    public String GravaUser(){
+       
+        try{
+            //INSERT INTO DATABASE
+            
+             return "Sucesso";
+        }catch(Exception e){
+            return "Exception" + e;
+        }
+        
+       
         
     }
 
