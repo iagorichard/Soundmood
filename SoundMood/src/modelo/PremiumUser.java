@@ -48,15 +48,15 @@ public final class PremiumUser extends User{
             Connection conn =  DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE", "projeto", "123");
             int proxId = 0; //inicializando id
             
-            String sqlSaberUltimoId = "select SEQ_ID_USER.NEXTVAL from dual"; //select para saber qual a ultima id, vai retonar o ultimo valor da sequencia criada
+            String sqlSaberUltimoId = "SELECT SEQ_ID_USER.NEXTVAL from dual"; //select para saber qual a ultima id, vai retonar o ultimo valor da sequencia criada
             PreparedStatement pst = conn.prepareStatement(sqlSaberUltimoId);
             ResultSet resultadoId = pst.executeQuery(); //Executar Query
             if(resultadoId.next()){
                  proxId = resultadoId.getInt(1); // pega o resultado do select e joga na variável criada
             }//o select só vai ter um resultado, por isso foi usado if ao invés de while
             
-            String sql = "INSERT INTO usuario " 
-                    + "(id,user_name,tipo,nome,email,senha,dica_senha,id_tagmood,id_tagstatus) " 
+            String sql = "INSERT INTO USUARIO " 
+                    + "(ID,USER_NAME,TIPO,NOME,EMAIL,SENHA,DICA_SENHA,ID_TAGMOOD,ID_TAGSATATUS) " 
                     + "VALUES (?,?,?,?,?,?,?,?,?)"; //insert na tabela de usuário
             PreparedStatement stmt = conn.prepareStatement(sql); 
             
@@ -177,6 +177,5 @@ public final class PremiumUser extends User{
     public void setPasswordTip(String passwordTip) {
         this.passwordTip = passwordTip;
     }
-    
-    
+       
 }
