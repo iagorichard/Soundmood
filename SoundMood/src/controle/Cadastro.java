@@ -29,48 +29,43 @@ public class Cadastro {
          * @param passwordTip - lembra senha do usuário
          * @return int - o retorno será em inteiro, pois haverá várias possibilidades de erro: 1 - já haver um usuário cadastrado com o username solicitado; 2 - já haver um usuário cadastrado com o email solicitado; 0 - processo realizado com sucesso.
          */
+        
         public String receberInformacao(long id, String username, String password, String nomeCompleto, String email, int tipoConta, String passwordTip){
             
             try{
-            //Verificar o usuario -- verificar se existe
-            if(this.verificarUsuario(username)==true){
-                /** Se retornar a true, quer dizer que o usuário com esse username já existe
-                 * o método retorna um valor para ser mostrada uma mensagem
-                 */
-                return "Nome de Usuario ja cadastrado";
-            }
-            //Se retornou a false, vai verificar email
-            else if(this.verificarEmail(email)==true){    
-                /** Se retornar a true, quer dizer que o usuário com esse username já existe
-                 * o método retorna um valor para ser mostrada uma mensagem
-                 */
-                
-                
-                return "Email ja cadastrado";
-            }
-            //Se retornou a false, vai verificar o tipo de conta, e isntanciar uma classe de acordo com o tipo
-            else{
-                    
+                //Verificar o usuario -- verificar se existe
+                if(this.verificarUsuario(username)==true){
+                    /** Se retornar a true, quer dizer que o usuário com esse username já existe
+                     * o método retorna um valor para ser mostrada uma mensagem
+                     */
+                    return "Nome de Usuario ja cadastrado";
+                }
+                //Se o usuário informado é válido, vai verificar email
+                if(this.verificarEmail(email)==true){    
+                    /** Se retornar a true, quer dizer que o usuário com esse username já existe
+                     * o método retorna um valor para ser mostrada uma mensagem
+                     */
+                    return "Email ja cadastrado";
+                }
+                //Se email é válido, vai verificar o tipo de conta, e isntanciar uma classe de acordo com o tipo
                 this.tipo = tipoConta;
-                    
-                    /** Se retornar a true, quer dizer que o usuário é do tipo premium, se retornar a false é do tipo free.
-                    */
+
+                /** Se retornar a true, quer dizer que o usuário é do tipo premium, se retornar a false é do tipo free.
+                  */
                 if("premium".equals(verificarTipo())){
-                        PremiumUser  usuarioPremium = new PremiumUser(id, email, username, password, email, passwordTip);
-                        //cadastra usuario e checa se foi obtido sucesso
-                        
-                        if ("Sucesso".equals(usuarioPremium.gravaUser())){
-                            return "Sucesso";
-                        }
+                    PremiumUser  usuarioPremium = new PremiumUser(id, email, username, password, email, passwordTip);
+                            //cadastra usuario e checa se foi obtido sucesso
+                    if ("Sucesso".equals(usuarioPremium.gravaUser())){
+                        return "Sucesso";
+                    }
                 }
                 else{
-                        FreeUser usuarioFree = new FreeUser(id, nomeCompleto, username, password, email, passwordTip);
-                        if ("Sucesso".equals(usuarioFree.gravaUser())){
-                            return "Sucesso";
-                        }
+                    FreeUser usuarioFree = new FreeUser(id, nomeCompleto, username, password, email, passwordTip);
+                    if ("Sucesso".equals(usuarioFree.gravaUser())){
+                        return "Sucesso";
+                    }
                 }
             
-            }
             }catch(Exception e){
                 return "Excessao" + e; //mudar isso, colocar algum numero que remete a excessao 
             }
@@ -84,9 +79,32 @@ public class Cadastro {
          */
 	private boolean verificarUsuario(String username) {
             
-            
-            
-            return false;
+            try{
+
+                int i = 0; //contador de username
+
+                Connection conn =  DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE", "iagorrs", "iago2014");
+                String sql = "select user_name from usuario where user_name = '"+username+"'";
+                Statement stmt = conn.createStatement();
+                ResultSet resultado = stmt.executeQuery(sql);
+
+                while (resultado.next()) {  
+                    //conta quantas ocorrências de usuários com username especificado
+                    i++;
+                }  
+                
+                conn.close();
+
+                if(i>0){
+                    return true;
+                }
+                else{
+                    return false;
+                }
+
+            }catch(Exception e){
+                return false;
+            }
 	}
         
         /**Método verificarEmail - verifica se tem algum usuário cadastro com o email solicitado
@@ -98,15 +116,14 @@ public class Cadastro {
             try{
 
                 int i = 0; //contador de email
-                String email2;
 
                 Connection conn =  DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE", "iagorrs", "iago2014");
-                String sql = "select email from usuario where email = '"+email+"';";
+                String sql = "select email from usuario where email = '"+email+"'";
                 Statement stmt = conn.createStatement();
                 ResultSet resultado = stmt.executeQuery(sql);
 
                 while (resultado.next()) {  
-                    email2 = resultado.getString("email");
+                    //conta quantas ocorrências de usuários com email especificado
                     i++;
                 }  
                 
