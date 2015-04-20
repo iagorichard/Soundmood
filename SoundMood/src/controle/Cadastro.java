@@ -83,7 +83,7 @@ public class Cadastro {
 
                 int i = 0; //contador de username
 
-                Connection conn =  DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE", "iagorrs", "iago2014");
+                Connection conn =  DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE", "projeto", "123");
                 String sql = "select user_name from usuario where user_name = '"+username+"'";
                 Statement stmt = conn.createStatement();
                 ResultSet resultado = stmt.executeQuery(sql);
@@ -117,7 +117,7 @@ public class Cadastro {
 
                 int i = 0; //contador de email
 
-                Connection conn =  DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE", "iagorrs", "iago2014");
+                Connection conn =  DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE", "projeto", "123");
                 String sql = "select email from usuario where email = '"+email+"'";
                 Statement stmt = conn.createStatement();
                 ResultSet resultado = stmt.executeQuery(sql);

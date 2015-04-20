@@ -41,7 +41,7 @@ public final class PremiumUser extends User{
        
         try{
             //INSERT INTO DATABASE
-            Connection conn =  DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE", "iagorrs", "iago2014");
+            Connection conn =  DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE", "projeto", "123");
  
             String sql = "insert into usuario " 
                     + "(id,user_name,tipo,nome,email,senha,dica_senha,id_tagmood,id_tagstatus) " 
