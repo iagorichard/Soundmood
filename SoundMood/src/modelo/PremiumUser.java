@@ -56,7 +56,7 @@ public final class PremiumUser extends User{
             }//o select só vai ter um resultado, por isso foi usado if ao invés de while
             
             String sql = "INSERT INTO USUARIO " 
-                    + "(ID,USER_NAME,TIPO,NOME,EMAIL,SENHA,DICA_SENHA,ID_TAGMOOD,ID_TAGSATATUS) " 
+                    + "(ID,USER_NAME,TIPO,NOME,EMAIL,SENHA,DICA_SENHA,ID_TAGMOOD,ID_TAGSTATUS) " 
                     + "VALUES (?,?,?,?,?,?,?,?,?)"; //insert na tabela de usuário
             PreparedStatement stmt = conn.prepareStatement(sql); 
             
