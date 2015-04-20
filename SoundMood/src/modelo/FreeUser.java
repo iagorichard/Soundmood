@@ -42,9 +42,9 @@ public final class FreeUser extends User {
             //INSERT INTO DATABASE
             Connection conn =  DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE", "projeto", "123");
  
-            String sql = "insert into usuario " 
+            String sql = "INSERT INTO usuario " 
                     + "(id,user_name,tipo,nome,email,senha,dica_senha,id_tagmood,id_tagstatus) " 
-                    + "values (?,?,?,?,?,?,?,?,?)";
+                    + "VALUES (?,?,?,?,?,?,?,?,?)";
             PreparedStatement stmt = conn.prepareStatement(sql);
             
             stmt.setInt(1, 1);
