@@ -46,7 +46,7 @@ public final class FreeUser extends User {
             Connection conn =  DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE", "projeto", "123");
             int proxId = 0; //inicializando id
             
-            String sqlSaberUltimoId = "select SEQ_ID_USER.NEXTVAL from dual"; //select para saber qual a ultima id, vai retonar o ultimo valor da sequencia criada
+            String sqlSaberUltimoId = "SELECT SEQ_ID_USER.NEXTVAL FROM dual"; //select para saber qual a ultima id, vai retonar o ultimo valor da sequencia criada
             PreparedStatement pst = conn.prepareStatement(sqlSaberUltimoId);
             ResultSet resultadoId = pst.executeQuery(); //Executar Query
             if(resultadoId.next()){
