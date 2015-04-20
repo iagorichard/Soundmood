@@ -18,6 +18,7 @@ public class Playlist {
         * @return ArrayList - Vai retornar um array de músicas para ser executadas no player.
         */
 	public ArrayList calcularPlaylist(String status, String mood) {
+            // implentar classes SelectMusicaMood e SelectMusicaStatus
 		return null;
 	}
 
