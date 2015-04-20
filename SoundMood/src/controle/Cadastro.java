@@ -1,5 +1,9 @@
 package controle;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
 import modelo.FreeUser;
 import modelo.PremiumUser;
 import modelo.User;
@@ -79,7 +83,10 @@ public class Cadastro {
          * @return boolean - se retornar a true quer dizer que já existe; se retornar a false quer dizer que não existe.
          */
 	private boolean verificarUsuario(String username) {
-		return false;
+            
+            
+            
+            return false;
 	}
         
         /**Método verificarEmail - verifica se tem algum usuário cadastro com o email solicitado
@@ -88,7 +95,33 @@ public class Cadastro {
         */
 	private boolean verificarEmail(String email) {
             
-            return false;
+            try{
+
+                int i = 0; //contador de email
+                String email2;
+
+                Connection conn =  DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE", "iagorrs", "iago2014");
+                String sql = "select email from usuario where email = '"+email+"';";
+                Statement stmt = conn.createStatement();
+                ResultSet resultado = stmt.executeQuery(sql);
+
+                while (resultado.next()) {  
+                    email2 = resultado.getString("email");
+                    i++;
+                }  
+                
+                conn.close();
+
+                if(i>0){
+                    return true;
+                }
+                else{
+                    return false;
+                }
+
+            }catch(Exception e){
+                return false;
+            }
 	}
 
         /**Método verificarTipo - verifica se tem algum usuário cadastro com o nome de usuário solicitado

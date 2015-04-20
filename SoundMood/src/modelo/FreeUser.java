@@ -40,12 +40,11 @@ public final class FreeUser extends User {
        
         try{
             //INSERT INTO DATABASE
-            
             Connection conn =  DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE", "iagorrs", "iago2014");
  
             String sql = "insert into usuario " 
                     + "(id,user_name,tipo,nome,email,senha,dica_senha,id_tagmood,id_tagstatus) " 
-                    + "values (?,?,?,?,?,?,?,?,?);";
+                    + "values (?,?,?,?,?,?,?,?,?)";
             PreparedStatement stmt = conn.prepareStatement(sql);
             
             stmt.setInt(1, 1);
@@ -59,18 +58,15 @@ public final class FreeUser extends User {
             stmt.setInt(9, 1);
             
             stmt.execute();
-
+            conn.close();
+            
             return "Sucesso";
             
         }catch(Exception e){
             return "Exception" + e;
         }
-        
     }
     
-    
-    
-
     /**
      * @return the id
      */

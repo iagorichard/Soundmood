@@ -41,12 +41,12 @@ public final class PremiumUser extends User{
        
         try{
             //INSERT INTO DATABASE
-            Connection conne =  DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE", "iagorrs", "iago2014");
+            Connection conn =  DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE", "iagorrs", "iago2014");
  
             String sql = "insert into usuario " 
                     + "(id,user_name,tipo,nome,email,senha,dica_senha,id_tagmood,id_tagstatus) " 
                     + "values (?,?,?,?,?,?,?,?,?)";
-            PreparedStatement stmt = conne.prepareStatement(sql);
+            PreparedStatement stmt = conn.prepareStatement(sql);
             
             stmt.setInt(1, 1);
             stmt.setString(2, this.username);
@@ -60,14 +60,13 @@ public final class PremiumUser extends User{
             
             stmt.execute();
             
+            conn.close();
+            
             return "Sucesso";
             
         }catch(Exception e){
             return "Exception" + e;
         }
-        
-       
-        
     }
 
     /**

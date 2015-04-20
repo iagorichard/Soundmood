@@ -1,5 +1,6 @@
 package modelo;
 
+//Realizando o import das classes a serem usadas no código
 import controle.Login;
 import java.sql.Connection;
 import java.sql.DriverManager;

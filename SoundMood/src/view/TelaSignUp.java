@@ -38,7 +38,7 @@ public class TelaSignUp extends javax.swing.JFrame {
         freeRadioButton = new javax.swing.JRadioButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setBackground(new java.awt.Color(153, 0, 0));
+        setBackground(new java.awt.Color(102, 0, 255));
         setPreferredSize(new java.awt.Dimension(560, 360));
 
         jLabel1.setFont(new java.awt.Font("Malayalam MN", 0, 13)); // NOI18N
