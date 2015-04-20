@@ -222,8 +222,20 @@ public class TelaSignUp extends javax.swing.JFrame {
                 //O retorno das operações irá para a variável auxiliarRetornoDeCadastro, para o tratamento de erros
                 auxiliarRetornoDeCadastro = cadastro.receberInformacao(id, username, password, nomeCompleto, email, tipoDeUsuario, passwordTip);
                 if("Sucesso".equals(auxiliarRetornoDeCadastro)){
-                    jLabel3.setText("Cadastro realizado com sucesso!");
-                    //new TelaCadastroRealizado().setVisible(true);
+                    jLabel3.setText("Cadastro do user "+username+" realizado com sucesso!");
+                    usernameCadastroTextField.setText("");
+                    passwordCadastroField.setText("");
+                    nomeCompletoTextField.setText("");
+                    emailCadastroTextField.setText("");
+                    passwordTipCadastroTextField.setText("");
+                }
+                else if("Email ja cadastrado".equals(auxiliarRetornoDeCadastro)){
+                    jLabel3.setText("Email "+email+" já está sendo usado, digite outro!");
+                    emailCadastroTextField.setText("");
+                }
+                else if("Nome de Usuario ja cadastrado".equals(auxiliarRetornoDeCadastro)){
+                    jLabel3.setText("Usuário "+username+" já está sendo usado, digite outro!");
+                    usernameCadastroTextField.setText("");
                 }
             }
         }
