@@ -53,7 +53,7 @@ public class Cadastro {
                 /** Se retornar a true, quer dizer que o usuário é do tipo premium, se retornar a false é do tipo free.
                   */
                 if("premium".equals(verificarTipo())){
-                    PremiumUser  usuarioPremium = new PremiumUser(id, email, username, password, email, passwordTip);
+                    PremiumUser  usuarioPremium = new PremiumUser(id, nomeCompleto, username, password, email, passwordTip);
                             //cadastra usuario e checa se foi obtido sucesso
                     if ("Sucesso".equals(usuarioPremium.gravaUser())){
                         return "Sucesso";
