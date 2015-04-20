@@ -115,37 +115,39 @@ public class TelaSignUp extends javax.swing.JFrame {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(249, 249, 249)
-                .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-            .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(120, 120, 120)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(nomeCompletoCadastroLabel)
-                            .addComponent(passwordCadastroLabel)
-                            .addComponent(emailCadastroLabel)
-                            .addComponent(usernameCadastroLabel)
-                            .addComponent(passwordTipCadastroLabel)
-                            .addComponent(passwordTipCadastroLabel1))
-                        .addGap(66, 66, 66)
+                        .addGap(249, 249, 249)
+                        .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(premiumRadioButton)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(freeRadioButton))
-                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(cadastrarButton, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(usernameCadastroTextField)
-                                .addComponent(nomeCompletoTextField)
-                                .addComponent(emailCadastroTextField)
-                                .addComponent(passwordTipCadastroTextField)
-                                .addComponent(passwordCadastroField, javax.swing.GroupLayout.PREFERRED_SIZE, 322, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(190, 190, 190)
-                        .addComponent(jLabel1)))
-                .addContainerGap(146, Short.MAX_VALUE))
+                                .addGap(120, 120, 120)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(nomeCompletoCadastroLabel)
+                                    .addComponent(passwordCadastroLabel)
+                                    .addComponent(emailCadastroLabel)
+                                    .addComponent(usernameCadastroLabel)
+                                    .addComponent(passwordTipCadastroLabel)
+                                    .addComponent(passwordTipCadastroLabel1))
+                                .addGap(66, 66, 66)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addComponent(premiumRadioButton)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(freeRadioButton))
+                                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(cadastrarButton, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(usernameCadastroTextField)
+                                        .addComponent(nomeCompletoTextField)
+                                        .addComponent(emailCadastroTextField)
+                                        .addComponent(passwordTipCadastroTextField)
+                                        .addComponent(passwordCadastroField, javax.swing.GroupLayout.PREFERRED_SIZE, 322, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGap(190, 190, 190)
+                                .addComponent(jLabel1)))
+                        .addGap(0, 136, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -197,7 +199,12 @@ public class TelaSignUp extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    /**
+     * Quando clicar no botão cadastrar, todas as ações dentro
+     * do método cadastrarButtonMouseReleased serão realizadas, ou seja,
+     * o sistema irá tentar cadastrar um novo usuário.
+     * @param evt 
+     */
     private void cadastrarButtonMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cadastrarButtonMouseReleased
         // TODO add your handling code here:
         
