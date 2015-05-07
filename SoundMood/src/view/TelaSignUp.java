@@ -111,8 +111,17 @@ public class TelaSignUp extends javax.swing.JFrame {
         passwordTipCadastroLabel1.setForeground(new java.awt.Color(255, 255, 255));
         passwordTipCadastroLabel1.setText("Tipo de Conta:");
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/soundmood .png"))); // NOI18N
-        jLabel2.setText("jLabel2");
+        jLabel2.setIcon(new javax.swing.JLabel() {
+            public javax.swing.Icon getIcon() {
+                try {
+                    return new javax.swing.ImageIcon(
+                        new java.net.URL("https://raw.githubusercontent.com/iagorichard/Soundmood/master/SoundMood/src/view/soundmood%20.png")
+                    );
+                } catch (java.net.MalformedURLException e) {
+                }
+                return null;
+            }
+        }.getIcon());
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -124,9 +133,9 @@ public class TelaSignUp extends javax.swing.JFrame {
                         .addGap(249, 249, 249)
                         .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(114, 114, 114)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGap(120, 120, 120)
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(nomeCompletoCadastroLabel)
                                     .addComponent(passwordCadastroLabel)
@@ -148,11 +157,10 @@ public class TelaSignUp extends javax.swing.JFrame {
                                         .addComponent(passwordTipCadastroTextField)
                                         .addComponent(passwordCadastroField, javax.swing.GroupLayout.PREFERRED_SIZE, 322, javax.swing.GroupLayout.PREFERRED_SIZE))))
                             .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGap(61, 61, 61)
                                 .addComponent(jLabel2)
-                                .addGap(84, 84, 84)
+                                .addGap(25, 25, 25)
                                 .addComponent(jLabel1)))
-                        .addGap(0, 136, Short.MAX_VALUE)))
+                        .addGap(0, 189, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
@@ -163,11 +171,11 @@ public class TelaSignUp extends javax.swing.JFrame {
                         .addGap(52, 52, 52)
                         .addComponent(jLabel1))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(60, 60, 60)
+                        .addGap(21, 21, 21)
                         .addComponent(jLabel2)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(45, 45, 45)
                 .addComponent(jLabel3)
-                .addGap(74, 74, 74)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(usernameCadastroTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(usernameCadastroLabel))
@@ -194,7 +202,7 @@ public class TelaSignUp extends javax.swing.JFrame {
                     .addComponent(passwordTipCadastroLabel1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(cadastrarButton)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(98, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
