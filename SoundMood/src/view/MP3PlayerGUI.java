@@ -101,7 +101,7 @@ public class MP3PlayerGUI extends javax.swing.JFrame {
             public javax.swing.Icon getIcon() {
                 try {
                     return new javax.swing.ImageIcon(
-                        new java.net.URL("https://raw.githubusercontent.com/iagorichard/Soundmood/master/SoundMood/src/view/Background.png")
+                        new java.net.URL("https://raw.githubusercontent.com/iagorichard/Soundmood/master/SoundMood/src/includes/Background.png")
                     );
                 } catch (java.net.MalformedURLException e) {
                 }
@@ -182,7 +182,7 @@ public class MP3PlayerGUI extends javax.swing.JFrame {
             public javax.swing.Icon getIcon() {
                 try {
                     return new javax.swing.ImageIcon(
-                        new java.net.URL("https://raw.githubusercontent.com/iagorichard/Soundmood/master/SoundMood/src/view/soundmood%20.png")
+                        new java.net.URL("https://raw.githubusercontent.com/iagorichard/Soundmood/master/SoundMood/src/includes/soundmood%20.png")
                     );
                 } catch (java.net.MalformedURLException e) {
                 }

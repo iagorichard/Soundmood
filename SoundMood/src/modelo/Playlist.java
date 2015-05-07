@@ -11,6 +11,9 @@ public class Playlist {
 
 	private long id;
 	private ArrayList musicas;
+        
+        SelectMusicaMood SLM = new SelectMusicaMood();
+        SelectMusicaStatus SLS = new SelectMusicaStatus();
 
         /**Método para calcular uma playlist do sistema
         * @param status - Status do usuário (o que está fazendo)
