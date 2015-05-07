@@ -37,6 +37,7 @@ public class TelaSignUp extends javax.swing.JFrame {
         passwordCadastroField = new javax.swing.JPasswordField();
         usernameCadastroLabel = new javax.swing.JLabel();
         passwordTipCadastroLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(102, 0, 255));
@@ -110,6 +111,9 @@ public class TelaSignUp extends javax.swing.JFrame {
         passwordTipCadastroLabel1.setForeground(new java.awt.Color(255, 255, 255));
         passwordTipCadastroLabel1.setText("Tipo de Conta:");
 
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/soundmood .png"))); // NOI18N
+        jLabel2.setText("jLabel2");
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -144,7 +148,9 @@ public class TelaSignUp extends javax.swing.JFrame {
                                         .addComponent(passwordTipCadastroTextField)
                                         .addComponent(passwordCadastroField, javax.swing.GroupLayout.PREFERRED_SIZE, 322, javax.swing.GroupLayout.PREFERRED_SIZE))))
                             .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGap(190, 190, 190)
+                                .addGap(61, 61, 61)
+                                .addComponent(jLabel2)
+                                .addGap(84, 84, 84)
                                 .addComponent(jLabel1)))
                         .addGap(0, 136, Short.MAX_VALUE)))
                 .addContainerGap())
@@ -152,8 +158,13 @@ public class TelaSignUp extends javax.swing.JFrame {
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(52, 52, 52)
-                .addComponent(jLabel1)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(52, 52, 52)
+                        .addComponent(jLabel1))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(60, 60, 60)
+                        .addComponent(jLabel2)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel3)
                 .addGap(74, 74, 74)
@@ -183,7 +194,7 @@ public class TelaSignUp extends javax.swing.JFrame {
                     .addComponent(passwordTipCadastroLabel1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(cadastrarButton)
-                .addContainerGap(60, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -343,6 +354,7 @@ public class TelaSignUp extends javax.swing.JFrame {
     private javax.swing.JTextField emailCadastroTextField;
     private javax.swing.JRadioButton freeRadioButton;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JLabel nomeCompletoCadastroLabel;
