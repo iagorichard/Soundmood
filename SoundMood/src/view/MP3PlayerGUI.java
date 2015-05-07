@@ -21,6 +21,8 @@ public class MP3PlayerGUI extends javax.swing.JFrame {
     /**
      * Creates new form MP3PlayerGUI
      */
+    boolean mousePressedPause;
+    
     
     ControlePlaylist CP = new ControlePlaylist();
     
@@ -34,6 +36,7 @@ public class MP3PlayerGUI extends javax.swing.JFrame {
         initComponents();
         
         this.setLocation(width, height);
+        mousePressedPause=false;
     }
 
     /**
@@ -185,6 +188,7 @@ public class MP3PlayerGUI extends javax.swing.JFrame {
         // TODO add your handling code here:
         CP.Stop();
         //Stop.setText("bla");
+        mousePressedPause=false;
     }//GEN-LAST:event_StopMouseReleased
 
     private void PlayMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PlayMouseReleased
@@ -192,13 +196,19 @@ public class MP3PlayerGUI extends javax.swing.JFrame {
             // TODO add your handling code here:
             //essa URL vai ser gerada por outro metodo
         
-            CP.Play("/Users/biancamoreira/Downloads/Taking Back Sunday - A Decade Under The Influence (Video).mp3");
-       
+        
+            if(mousePressedPause==false){
+                CP.Play("/Users/biancamoreira/Downloads/Taking Back Sunday - A Decade Under The Influence (Video).mp3");
+            }else{
+                CP.Resume();
+            }
     }//GEN-LAST:event_PlayMouseReleased
 
     private void PauseMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PauseMouseReleased
         // TODO add your handling code here:
         CP.Pause();
+        mousePressedPause=true;
+        
     }//GEN-LAST:event_PauseMouseReleased
 
     /**
