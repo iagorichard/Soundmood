@@ -67,6 +67,11 @@ public class MP3PlayerGUI extends javax.swing.JFrame {
         SelectFile.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         Pause.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        Pause.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                PauseMouseReleased(evt);
+            }
+        });
 
         Stop.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         Stop.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -190,6 +195,11 @@ public class MP3PlayerGUI extends javax.swing.JFrame {
             CP.Play("/Users/biancamoreira/Downloads/Taking Back Sunday - A Decade Under The Influence (Video).mp3");
        
     }//GEN-LAST:event_PlayMouseReleased
+
+    private void PauseMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PauseMouseReleased
+        // TODO add your handling code here:
+        CP.Pause();
+    }//GEN-LAST:event_PauseMouseReleased
 
     /**
      * @param args the command line arguments

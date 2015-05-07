@@ -131,6 +131,9 @@
               <Color id="Cursor Padr&#xe3;o"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="mouseReleased" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="PauseMouseReleased"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="Stop">
           <Properties>
