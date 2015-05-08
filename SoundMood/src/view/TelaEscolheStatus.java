@@ -35,9 +35,9 @@ public class TelaEscolheStatus extends javax.swing.JFrame {
         animadoIcon = new javax.swing.JLabel();
         felizIcon = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        tristeIcon = new javax.swing.JLabel();
+        banhoIcon = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
-        pensativoIcon = new javax.swing.JLabel();
+        namoradoIcon = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -62,17 +62,17 @@ public class TelaEscolheStatus extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Chalkboard", 0, 13)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Apaixonado");
+        jLabel1.setText("Malhando");
 
         jLabel3.setFont(new java.awt.Font("Chalkboard", 0, 13)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("Animado");
+        jLabel3.setText("Viajando");
 
         apaixonadoIcon.setIcon(new javax.swing.JLabel() {
             public javax.swing.Icon getIcon() {
                 try {
                     return new javax.swing.ImageIcon(
-                        new java.net.URL("https://raw.githubusercontent.com/iagorichard/Soundmood/master/SoundMood/src/includes/inlove.png")
+                        new java.net.URL("https://github.com/iagorichard/Soundmood/blob/master/SoundMood/src/includes/workingout.png?raw=true")
                     );
                 } catch (java.net.MalformedURLException e) {
                 }
@@ -89,7 +89,7 @@ public class TelaEscolheStatus extends javax.swing.JFrame {
             public javax.swing.Icon getIcon() {
                 try {
                     return new javax.swing.ImageIcon(
-                        new java.net.URL("https://raw.githubusercontent.com/iagorichard/Soundmood/master/SoundMood/src/includes/excited.png")
+                        new java.net.URL("https://github.com/iagorichard/Soundmood/blob/master/SoundMood/src/includes/viajando.png?raw=true")
                     );
                 } catch (java.net.MalformedURLException e) {
                 }
@@ -106,7 +106,7 @@ public class TelaEscolheStatus extends javax.swing.JFrame {
             public javax.swing.Icon getIcon() {
                 try {
                     return new javax.swing.ImageIcon(
-                        new java.net.URL("https://raw.githubusercontent.com/iagorichard/Soundmood/master/SoundMood/src/includes/happy.png")
+                        new java.net.URL("https://github.com/iagorichard/Soundmood/blob/master/SoundMood/src/includes/studying.png?raw=true")
                     );
                 } catch (java.net.MalformedURLException e) {
                 }
@@ -121,53 +121,53 @@ public class TelaEscolheStatus extends javax.swing.JFrame {
 
         jLabel7.setFont(new java.awt.Font("Chalkboard", 0, 13)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel7.setText("Feliz");
+        jLabel7.setText("Estudando");
 
-        tristeIcon.setIcon(new javax.swing.JLabel() {
+        banhoIcon.setIcon(new javax.swing.JLabel() {
             public javax.swing.Icon getIcon() {
                 try {
                     return new javax.swing.ImageIcon(
-                        new java.net.URL("https://raw.githubusercontent.com/iagorichard/Soundmood/master/SoundMood/src/includes/sad.png")
+                        new java.net.URL("https://raw.githubusercontent.com/iagorichard/Soundmood/master/SoundMood/src/includes/bathing.png")
                     );
                 } catch (java.net.MalformedURLException e) {
                 }
                 return null;
             }
         }.getIcon());
-        tristeIcon.addMouseListener(new java.awt.event.MouseAdapter() {
+        banhoIcon.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseReleased(java.awt.event.MouseEvent evt) {
-                tristeIconMouseReleased(evt);
+                banhoIconMouseReleased(evt);
             }
         });
 
         jLabel9.setFont(new java.awt.Font("Chalkboard", 0, 13)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel9.setText("Triste");
+        jLabel9.setText("No Banho");
 
-        pensativoIcon.setIcon(new javax.swing.JLabel() {
+        namoradoIcon.setIcon(new javax.swing.JLabel() {
             public javax.swing.Icon getIcon() {
                 try {
                     return new javax.swing.ImageIcon(
-                        new java.net.URL("https://raw.githubusercontent.com/iagorichard/Soundmood/master/SoundMood/src/includes/thoughtful.png")
+                        new java.net.URL("https://raw.githubusercontent.com/iagorichard/Soundmood/master/SoundMood/src/includes/dating2.png")
                     );
                 } catch (java.net.MalformedURLException e) {
                 }
                 return null;
             }
         }.getIcon());
-        pensativoIcon.addMouseListener(new java.awt.event.MouseAdapter() {
+        namoradoIcon.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseReleased(java.awt.event.MouseEvent evt) {
-                pensativoIconMouseReleased(evt);
+                namoradoIconMouseReleased(evt);
             }
         });
 
         jLabel11.setFont(new java.awt.Font("Chalkboard", 0, 13)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel11.setText("Pensativo");
+        jLabel11.setText("Com o namorado(a)");
 
         jLabel12.setFont(new java.awt.Font("Chalkduster", 0, 36)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel12.setText("Como você está se sentindo?");
+        jLabel12.setText("O que você está fazendo?");
 
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Ajuda?");
@@ -177,62 +177,62 @@ public class TelaEscolheStatus extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(148, Short.MAX_VALUE)
+                .addGap(0, 127, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel3)
+                        .addGap(108, 108, 108)
+                        .addComponent(jLabel1)
+                        .addGap(282, 282, 282))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel7)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(felizIcon)
+                        .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel3)
-                                .addGap(99, 99, 99)
-                                .addComponent(jLabel1)
-                                .addGap(292, 292, 292))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel7)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(felizIcon)
-                                .addGap(18, 18, 18)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(pensativoIcon))
+                                    .addComponent(namoradoIcon))
                                 .addGap(18, 18, 18)
-                                .addComponent(tristeIcon)
+                                .addComponent(banhoIcon)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel9)
-                                .addGap(156, 156, 156))))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel9))
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(152, 152, 152)
-                                .addComponent(animadoIcon)
-                                .addGap(27, 27, 27)
-                                .addComponent(apaixonadoIcon))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(260, 260, 260)
+                                .addGap(8, 8, 8)
                                 .addComponent(jLabel11)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 252, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(156, 156, 156))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(animadoIcon)
+                        .addGap(27, 27, 27)
+                        .addComponent(apaixonadoIcon)
+                        .addGap(252, 252, 252))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel4)
+                        .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel12)
-                        .addGap(90, 90, 90))
-                    .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addContainerGap())
+                        .addGap(147, 147, 147))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(17, 17, 17)
                 .addComponent(jLabel4)
-                .addGap(18, 18, 18)
+                .addGap(23, 23, 23)
                 .addComponent(jLabel12)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 56, Short.MAX_VALUE)
-                .addComponent(jLabel11)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 57, Short.MAX_VALUE)
+                .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(felizIcon)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(pensativoIcon)
+                                .addComponent(namoradoIcon)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
@@ -241,7 +241,7 @@ public class TelaEscolheStatus extends javax.swing.JFrame {
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                             .addComponent(jLabel7)
                             .addGap(57, 57, 57)))
-                    .addComponent(tristeIcon))
+                    .addComponent(banhoIcon))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(animadoIcon)
@@ -279,13 +279,13 @@ public class TelaEscolheStatus extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_felizIconMouseReleased
 
-    private void tristeIconMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tristeIconMouseReleased
+    private void banhoIconMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_banhoIconMouseReleased
         // TODO add your handling code here:
-    }//GEN-LAST:event_tristeIconMouseReleased
+    }//GEN-LAST:event_banhoIconMouseReleased
 
-    private void pensativoIconMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pensativoIconMouseReleased
+    private void namoradoIconMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_namoradoIconMouseReleased
         // TODO add your handling code here:
-    }//GEN-LAST:event_pensativoIconMouseReleased
+    }//GEN-LAST:event_namoradoIconMouseReleased
 
     /**
      * @param args the command line arguments
@@ -325,6 +325,7 @@ public class TelaEscolheStatus extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel animadoIcon;
     private javax.swing.JLabel apaixonadoIcon;
+    private javax.swing.JLabel banhoIcon;
     private javax.swing.JLabel felizIcon;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
@@ -335,7 +336,6 @@ public class TelaEscolheStatus extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JLabel pensativoIcon;
-    private javax.swing.JLabel tristeIcon;
+    private javax.swing.JLabel namoradoIcon;
     // End of variables declaration//GEN-END:variables
 }
