@@ -237,6 +237,8 @@ public class TelaSignUp extends javax.swing.JFrame {
         String passwordTip;
         int tipoDeUsuario = 0;
         
+       
+        
         //Variável para controle de erro no cadastro, valor para default
         String auxiliarRetornoDeCadastro;
         

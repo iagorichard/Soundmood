@@ -44,14 +44,16 @@ public final class PremiumUser extends User{
      * @throws java.sql.SQLException
      */
     @Override
-    public String gravaUser() throws SQLException {
+    public String gravaUser(){
        
         try{
             Connection conn = null;
-            
-            BancoDeDadosConection dataBase = new BancoDeDadosConection(conn);
-            dataBase.abrirConexao();
+            BancoDeDadosConection dataBase = new BancoDeDadosConection();
+            //BancoDeDadosConection dataBase = new BancoDeDadosConection();
+            //dataBase.abrirConexao(conn);
             int proxId = 0; //inicializando id
+            
+            conn = dataBase.abrirConexao(conn);
         
             String sqlSaberUltimoId = "SELECT SEQ_ID_USER.NEXTVAL FROM DUAL"; //select para saber qual a ultima id, vai retonar o ultimo valor da sequencia criada
             PreparedStatement pst = conn.prepareStatement(sqlSaberUltimoId);
@@ -77,8 +79,11 @@ public final class PremiumUser extends User{
             stmt.setInt(9, 1);
                 //Setando todos os valores necessários em cada campo da tabela ex:.(numerodocampo, valorasetgravado)
             stmt.execute(); //executando a query de insert na tabela de usuário
-
-            dataBase.fecharConexao();
+            
+            
+            dataBase.fecharConexao(conn);
+            //dataBase.fecharConexao(conn);
+            
             
             return "Sucesso";
             

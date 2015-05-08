@@ -69,7 +69,7 @@ public class Cadastro {
             }catch(Exception e){
                 return "Excessao" + e; //mudar isso, colocar algum numero que remete a excessao 
             }
-            return null; //conferir isso
+            return "Erro"; //conferir isso
             
         }
         

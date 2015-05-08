@@ -26,7 +26,6 @@ public final class FreeUser extends User {
     private String passwordTip;
     
     public FreeUser(long id, String name, String username, String password, String email, String passwordTip){
-    
         setId(id);
         setName(name);
         setUserName(username);
@@ -45,10 +44,10 @@ public final class FreeUser extends User {
     public String gravaUser() throws SQLException {
        
         try{
-            Connection conn = null;
+            Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE", "projeto", "123");
             
-            BancoDeDadosConection dataBase = new BancoDeDadosConection(conn);
-            dataBase.abrirConexao();
+            //BancoDeDadosConection dataBase = new BancoDeDadosConection(conn);
+            //dataBase.abrirConexao();
             int proxId = 0; //inicializando id
         
             String sqlSaberUltimoId = "SELECT SEQ_ID_USER.NEXTVAL FROM DUAL"; //select para saber qual a ultima id, vai retonar o ultimo valor da sequencia criada
@@ -76,7 +75,8 @@ public final class FreeUser extends User {
                 //Setando todos os valores necessários em cada campo da tabela ex:.(numerodocampo, valorasetgravado)
             stmt.execute(); //executando a query de insert na tabela de usuário
 
-            dataBase.fecharConexao();
+            conn.close();
+            //dataBase.fecharConexao();
             
             return "Sucesso";
             
