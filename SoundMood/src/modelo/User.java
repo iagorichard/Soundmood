@@ -27,7 +27,7 @@ public abstract class User {
         * @author IagoRichard
         * @return String - Se o processo foi executado com sucesso, retorna a "Sucesso" se não, retorna a uma exceção
         */
-        public String gravaUser() throws SQLException {
+        public String gravaUser() throws SQLException{
             return "User";
         }
         
