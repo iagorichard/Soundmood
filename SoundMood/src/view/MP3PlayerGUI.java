@@ -97,17 +97,7 @@ public class MP3PlayerGUI extends javax.swing.JFrame {
 
         Loop.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
-        Background.setIcon(new javax.swing.JLabel() {
-            public javax.swing.Icon getIcon() {
-                try {
-                    return new javax.swing.ImageIcon(
-                        new java.net.URL("https://raw.githubusercontent.com/iagorichard/Soundmood/master/SoundMood/src/includes/Background.png")
-                    );
-                } catch (java.net.MalformedURLException e) {
-                }
-                return null;
-            }
-        }.getIcon());
+        Background.setIcon(new javax.swing.ImageIcon("/Users/biancamoreira/NetBeansProjects/Soundmood4/SoundMood/src/includes/Background.png")); // NOI18N
         Background.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseDragged(java.awt.event.MouseEvent evt) {
                 BackgroundMouseDragged(evt);

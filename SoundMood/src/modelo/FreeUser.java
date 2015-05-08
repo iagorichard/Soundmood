@@ -39,6 +39,7 @@ public final class FreeUser extends User {
     /**
      * Método para cadastrar um usuário no sistema
      * @return String - Saber se foi inserido com sucesso
+     * @throws java.sql.SQLException
      */
     @Override
     public String gravaUser() throws SQLException {
