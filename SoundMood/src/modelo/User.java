@@ -5,6 +5,7 @@ import controle.Login;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 
 /**Classe para objetos do tipo user (ou usuário), onde estarão contidos todos os dados de um usuário do sistema
@@ -26,7 +27,7 @@ public abstract class User {
         * @author IagoRichard
         * @return String - Se o processo foi executado com sucesso, retorna a "Sucesso" se não, retorna a uma exceção
         */
-        public String gravaUser(){
+        public String gravaUser() throws SQLException{
             return "User";
         }
         
