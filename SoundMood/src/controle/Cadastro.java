@@ -3,10 +3,12 @@ package controle;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 import modelo.FreeUser;
 import modelo.PremiumUser;
 import modelo.User;
+import modelo.BancoDeDadosConection;
 
 /**Classe para objetos do tipo Cadastro, onde serão realizadas operações em relação à criação de um novo usuário
  * @author IagoRichard
@@ -77,68 +79,32 @@ public class Cadastro {
          * @param username
          * @return boolean - se retornar a true quer dizer que já existe; se retornar a false quer dizer que não existe.
          */
-	private boolean verificarUsuario(String username) {
+	private boolean verificarUsuario(String username) throws SQLException {
             
-            try{
-
-                int i = 0; //contador de username
-
-                Connection conn =  DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE", "projeto", "123");
-                String sql = "SELECT USER_NAME FROM USUARIO WHERE USER_NAME = '"+username+"'";
-                Statement stmt = conn.createStatement();
-                ResultSet resultado = stmt.executeQuery(sql);
-
-                while (resultado.next()) {  
-                    //conta quantas ocorrências de usuários com username especificado
-                    i++;
-                }  
-                
-                conn.close();
-
-                if(i>0){
-                    return true;
-                }
-                else{
-                    return false;
-                }
-
-            }catch(Exception e){
-                return false;
-            }
+            boolean resultado;
+            BancoDeDadosConection dataBase = new BancoDeDadosConection();
+            
+            dataBase.abrirConexao();
+            resultado = dataBase.verificaCampo("USER_NAME", username);
+            dataBase.fecharConexao();
+            
+            return resultado;
 	}
         
         /**Método verificarEmail - verifica se tem algum usuário cadastro com o email solicitado
         * @param email
         * @return boolean - se retornar a true quer dizer que já existe; se retornar a false quer dizer que não existe.
         */
-	private boolean verificarEmail(String email) {
+	private boolean verificarEmail(String email) throws SQLException {
             
-            try{
-
-                int i = 0; //contador de email
-
-                Connection conn =  DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE", "projeto", "123");
-                String sql = "SELECT EMAIL FROM USUARIO WHERE EMAIL = '"+email+"'";
-                Statement stmt = conn.createStatement();
-                ResultSet resultado = stmt.executeQuery(sql);
-
-                while (resultado.next()) {  
-                    //conta quantas ocorrências de usuários com email especificado
-                    i++;
-                }  
-                
-                conn.close();
-
-                if(i>0){
-                    return true;
-                }
-                else{
-                    return false;
-                }
-
-            }catch(Exception e){
-                return false;
-            }
+            boolean resultado;
+            BancoDeDadosConection dataBase = new BancoDeDadosConection();
+            
+            dataBase.abrirConexao();
+            resultado = dataBase.verificaCampo("EMAIL", email);
+            dataBase.fecharConexao();
+            
+            return resultado;
 	}
 
         /**Método verificarTipo - verifica se tem algum usuário cadastro com o nome de usuário solicitado
