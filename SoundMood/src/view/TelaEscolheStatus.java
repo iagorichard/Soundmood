@@ -211,7 +211,7 @@ public class TelaEscolheStatus extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addComponent(animadoIcon)
-                        .addGap(27, 27, 27)
+                        .addGap(37, 37, 37)
                         .addComponent(apaixonadoIcon)
                         .addGap(252, 252, 252))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
