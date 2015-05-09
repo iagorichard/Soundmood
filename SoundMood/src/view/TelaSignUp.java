@@ -23,7 +23,7 @@ public class TelaSignUp extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        cadastrarButton = new javax.swing.JButton();
+        cancelarButton = new javax.swing.JButton();
         usernameCadastroTextField = new javax.swing.JTextField();
         premiumRadioButton = new javax.swing.JRadioButton();
         nomeCompletoTextField = new javax.swing.JTextField();
@@ -38,9 +38,10 @@ public class TelaSignUp extends javax.swing.JFrame {
         usernameCadastroLabel = new javax.swing.JLabel();
         passwordTipCadastroLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        cadastrarButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setBackground(new java.awt.Color(102, 0, 255));
+        setBackground(new java.awt.Color(51, 51, 51));
         setMinimumSize(new java.awt.Dimension(780, 520));
         setPreferredSize(new java.awt.Dimension(560, 360));
 
@@ -53,19 +54,19 @@ public class TelaSignUp extends javax.swing.JFrame {
         jLabel3.setForeground(new java.awt.Color(255, 51, 51));
         jLabel3.setText("               ");
 
-        cadastrarButton.setBackground(new java.awt.Color(255, 255, 204));
-        cadastrarButton.setFont(new java.awt.Font("Malayalam MN", 0, 13)); // NOI18N
-        cadastrarButton.setForeground(new java.awt.Color(51, 51, 51));
-        cadastrarButton.setText("Cadastrar");
-        cadastrarButton.setName("cadastrarButton"); // NOI18N
-        cadastrarButton.addMouseListener(new java.awt.event.MouseAdapter() {
+        cancelarButton.setBackground(new java.awt.Color(255, 255, 204));
+        cancelarButton.setFont(new java.awt.Font("Malayalam MN", 0, 13)); // NOI18N
+        cancelarButton.setForeground(new java.awt.Color(51, 51, 51));
+        cancelarButton.setText("Cancelar");
+        cancelarButton.setName("cancelarButton"); // NOI18N
+        cancelarButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseReleased(java.awt.event.MouseEvent evt) {
-                cadastrarButtonMouseReleased(evt);
+                cancelarButtonMouseReleased(evt);
             }
         });
-        cadastrarButton.addActionListener(new java.awt.event.ActionListener() {
+        cancelarButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cadastrarButtonActionPerformed(evt);
+                cancelarButtonActionPerformed(evt);
             }
         });
 
@@ -123,6 +124,22 @@ public class TelaSignUp extends javax.swing.JFrame {
             }
         }.getIcon());
 
+        cadastrarButton1.setBackground(new java.awt.Color(255, 255, 204));
+        cadastrarButton1.setFont(new java.awt.Font("Malayalam MN", 0, 13)); // NOI18N
+        cadastrarButton1.setForeground(new java.awt.Color(51, 51, 51));
+        cadastrarButton1.setText("Cadastrar");
+        cadastrarButton1.setName("cadastrarButton"); // NOI18N
+        cadastrarButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                cadastrarButton1MouseReleased(evt);
+            }
+        });
+        cadastrarButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cadastrarButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -144,23 +161,27 @@ public class TelaSignUp extends javax.swing.JFrame {
                                     .addComponent(passwordTipCadastroLabel)
                                     .addComponent(passwordTipCadastroLabel1))
                                 .addGap(66, 66, 66)
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addComponent(premiumRadioButton)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(freeRadioButton))
-                                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(cadastrarButton, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(usernameCadastroTextField)
-                                        .addComponent(nomeCompletoTextField)
-                                        .addComponent(emailCadastroTextField)
-                                        .addComponent(passwordTipCadastroTextField)
-                                        .addComponent(passwordCadastroField, javax.swing.GroupLayout.PREFERRED_SIZE, 322, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(premiumRadioButton)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(freeRadioButton))
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addComponent(jLabel2)
                                 .addGap(25, 25, 25)
-                                .addComponent(jLabel1)))
-                        .addGap(0, 189, Short.MAX_VALUE)))
+                                .addComponent(jLabel1))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGap(195, 195, 195)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(usernameCadastroTextField)
+                                    .addComponent(nomeCompletoTextField)
+                                    .addComponent(emailCadastroTextField)
+                                    .addComponent(passwordTipCadastroTextField)
+                                    .addComponent(passwordCadastroField, javax.swing.GroupLayout.PREFERRED_SIZE, 322, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGap(69, 69, 69)
+                                .addComponent(cadastrarButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(39, 39, 39)
+                                .addComponent(cancelarButton, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 154, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
@@ -200,20 +221,28 @@ public class TelaSignUp extends javax.swing.JFrame {
                     .addComponent(premiumRadioButton)
                     .addComponent(freeRadioButton)
                     .addComponent(passwordTipCadastroLabel1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(cadastrarButton)
-                .addContainerGap(98, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cancelarButton)
+                    .addComponent(cadastrarButton1))
+                .addContainerGap(74, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         pack();
@@ -224,10 +253,41 @@ public class TelaSignUp extends javax.swing.JFrame {
      * o sistema irá tentar cadastrar um novo usuário.
      * @param evt 
      */
-    private void cadastrarButtonMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cadastrarButtonMouseReleased
+    private void cancelarButtonMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cancelarButtonMouseReleased
         // TODO add your handling code here:
         
         //Variáveis que indicam atributos do usuário (tipo a ser definido)
+        
+        this.setVisible(false);
+        PrimeiraTela primeiraTela = new PrimeiraTela();
+        
+        primeiraTela.setVisible(true);
+        
+        //this.setVisible(false);
+        
+        
+    }//GEN-LAST:event_cancelarButtonMouseReleased
+
+    private void premiumRadioButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_premiumRadioButtonMouseClicked
+        // TODO add your handling code here:
+        freeRadioButton.setSelected(false);
+    }//GEN-LAST:event_premiumRadioButtonMouseClicked
+
+    private void freeRadioButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_freeRadioButtonMouseClicked
+        // TODO add your handling code here:
+         premiumRadioButton.setSelected(false);
+    }//GEN-LAST:event_freeRadioButtonMouseClicked
+
+    private void cancelarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelarButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cancelarButtonActionPerformed
+
+    private void cadastrarButton1MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cadastrarButton1MouseReleased
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cadastrarButton1MouseReleased
+
+    private void cadastrarButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastrarButton1ActionPerformed
+        // TODO add your handling code here:
         Cadastro cadastro;
         int id = 1;
         String username;
@@ -302,24 +362,7 @@ public class TelaSignUp extends javax.swing.JFrame {
         //else if(auxiliarRetornoDeCadastro==2){
         //    jLabel3.setText("Email solicitado já foi cadastrado, favor digite outro!");
         //}
-
-        
-        
-    }//GEN-LAST:event_cadastrarButtonMouseReleased
-
-    private void premiumRadioButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_premiumRadioButtonMouseClicked
-        // TODO add your handling code here:
-        freeRadioButton.setSelected(false);
-    }//GEN-LAST:event_premiumRadioButtonMouseClicked
-
-    private void freeRadioButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_freeRadioButtonMouseClicked
-        // TODO add your handling code here:
-         premiumRadioButton.setSelected(false);
-    }//GEN-LAST:event_freeRadioButtonMouseClicked
-
-    private void cadastrarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastrarButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cadastrarButtonActionPerformed
+    }//GEN-LAST:event_cadastrarButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -359,7 +402,8 @@ public class TelaSignUp extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton cadastrarButton;
+    private javax.swing.JButton cadastrarButton1;
+    private javax.swing.JButton cancelarButton;
     private javax.swing.JLabel emailCadastroLabel;
     private javax.swing.JTextField emailCadastroTextField;
     private javax.swing.JRadioButton freeRadioButton;

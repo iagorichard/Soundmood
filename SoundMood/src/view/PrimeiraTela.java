@@ -134,7 +134,9 @@ public class PrimeiraTela extends javax.swing.JFrame {
 
     private void jButton3MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseReleased
         // TODO add your handling code here:
+        
         new TelaSignUp().setVisible(true);
+        this.setVisible(false);
         
        // TelaSignUp.setVisible(true); 
     }//GEN-LAST:event_jButton3MouseReleased
