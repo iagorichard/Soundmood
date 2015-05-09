@@ -1,14 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package view;
 
-/**
- *
- * @author biancamoreira
- */
+import controle.Login;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 public class TelaSignIn extends javax.swing.JFrame {
 
     /**
@@ -34,9 +30,9 @@ public class TelaSignIn extends javax.swing.JFrame {
         usernameCadastroTextField = new javax.swing.JTextField();
         usernameCadastroLabel = new javax.swing.JLabel();
         passwordCadastroLabel = new javax.swing.JLabel();
-        entrarButton = new javax.swing.JButton();
+        logarButton = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
-        cancelarButton1 = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(780, 520));
@@ -67,73 +63,71 @@ public class TelaSignIn extends javax.swing.JFrame {
         passwordCadastroLabel.setForeground(new java.awt.Color(255, 255, 255));
         passwordCadastroLabel.setText("Password:");
 
-        entrarButton.setBackground(new java.awt.Color(255, 255, 204));
-        entrarButton.setFont(new java.awt.Font("Malayalam MN", 0, 13)); // NOI18N
-        entrarButton.setForeground(new java.awt.Color(51, 51, 51));
-        entrarButton.setText("Entrar");
-        entrarButton.setName("entrarButton"); // NOI18N
-        entrarButton.addMouseListener(new java.awt.event.MouseAdapter() {
+        logarButton.setBackground(new java.awt.Color(255, 255, 204));
+        logarButton.setFont(new java.awt.Font("Malayalam MN", 0, 13)); // NOI18N
+        logarButton.setForeground(new java.awt.Color(51, 51, 51));
+        logarButton.setText("Entrar");
+        logarButton.setName("logarButton"); // NOI18N
+        logarButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseReleased(java.awt.event.MouseEvent evt) {
-                entrarButtonMouseReleased(evt);
+                logarButtonMouseReleased(evt);
+            }
+        });
+        logarButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                logarButtonActionPerformed(evt);
             }
         });
 
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Esqueceu a senha?");
 
-        cancelarButton1.setBackground(new java.awt.Color(255, 255, 204));
-        cancelarButton1.setFont(new java.awt.Font("Malayalam MN", 0, 13)); // NOI18N
-        cancelarButton1.setForeground(new java.awt.Color(51, 51, 51));
-        cancelarButton1.setText("Cancelar");
-        cancelarButton1.setName("cadastrarButton"); // NOI18N
-        cancelarButton1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                cancelarButton1MouseReleased(evt);
-            }
-        });
+        jLabel4.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel4.setText("jLabel4");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(116, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(42, 42, 42)
+                        .addGap(140, 140, 140)
                         .addComponent(jLabel2)
                         .addGap(36, 36, 36)
                         .addComponent(jLabel1))
                     .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(98, 98, 98)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(passwordCadastroLabel)
                             .addComponent(usernameCadastroLabel))
                         .addGap(66, 66, 66)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(logarButton, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(36, 36, 36)
                                 .addComponent(jLabel3))
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addComponent(usernameCadastroTextField)
-                                .addComponent(passwordCadastroField, javax.swing.GroupLayout.PREFERRED_SIZE, 322, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addGap(154, 154, 154))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(140, 140, 140)
-                .addComponent(entrarButton, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(26, 26, 26)
-                .addComponent(cancelarButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addComponent(passwordCadastroField, javax.swing.GroupLayout.PREFERRED_SIZE, 322, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(261, 261, 261)
+                        .addComponent(jLabel4)))
+                .addContainerGap(186, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(60, 60, 60)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(21, 21, 21)
+                        .addGap(62, 62, 62)
                         .addComponent(jLabel1))
-                    .addComponent(jLabel2))
-                .addGap(47, 47, 47)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(41, 41, 41)
+                        .addComponent(jLabel2)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel4)
+                .addGap(27, 27, 27)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(usernameCadastroTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(usernameCadastroLabel))
@@ -141,13 +135,11 @@ public class TelaSignIn extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(passwordCadastroField, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(passwordCadastroLabel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(91, 91, 91)
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(entrarButton)
-                    .addComponent(cancelarButton1))
-                .addContainerGap(173, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(logarButton)
+                .addContainerGap(127, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -164,29 +156,37 @@ public class TelaSignIn extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void entrarButtonMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_entrarButtonMouseReleased
-        // TODO add your handling code here:
-
+    private void logarButtonMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_logarButtonMouseReleased
+        
         //Variáveis que indicam atributos do usuário (tipo a ser definido)
         
         String username;
         String password;
-     
-
+        String auxiliarRetornoDoLogin = ""; //inciando a variável para tratamento de erros no login
+        
         //Atribuindo valores da textBox para os atributos
         username = usernameCadastroTextField.getText();
         password = passwordCadastroField.getText();
         
-
-    }//GEN-LAST:event_entrarButtonMouseReleased
-
-    private void cancelarButton1MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cancelarButton1MouseReleased
-        // TODO add your handling code here:
-        this.setVisible(false);
-        PrimeiraTela primeiraTela = new PrimeiraTela();
+        if("".equals(username) || "".equals(password)){ //se algum campo estiver vazio...
+            jLabel4.setText("Preencha todos os campos.");
+        }
+        else{
+            Login logar = new Login(username, password); //instancia login
+            try {
+                auxiliarRetornoDoLogin = logar.checarLogin(); //recebe o retorno da tentativa de login
+            } catch (SQLException ex) {
+                Logger.getLogger(TelaSignIn.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            jLabel4.setText(auxiliarRetornoDoLogin); //mostra retorno na tela
+        }
         
-        primeiraTela.setVisible(true);
-    }//GEN-LAST:event_cancelarButton1MouseReleased
+
+    }//GEN-LAST:event_logarButtonMouseReleased
+
+    private void logarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logarButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_logarButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -224,12 +224,12 @@ public class TelaSignIn extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton cancelarButton1;
-    private javax.swing.JButton entrarButton;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JButton logarButton;
     private javax.swing.JPasswordField passwordCadastroField;
     private javax.swing.JLabel passwordCadastroLabel;
     private javax.swing.JLabel usernameCadastroLabel;
