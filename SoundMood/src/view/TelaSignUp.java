@@ -64,11 +64,6 @@ public class TelaSignUp extends javax.swing.JFrame {
                 cancelarButtonMouseReleased(evt);
             }
         });
-        cancelarButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cancelarButtonActionPerformed(evt);
-            }
-        });
 
         premiumRadioButton.setFont(new java.awt.Font("Malayalam MN", 0, 13)); // NOI18N
         premiumRadioButton.setForeground(new java.awt.Color(255, 255, 255));
@@ -134,11 +129,6 @@ public class TelaSignUp extends javax.swing.JFrame {
                 cadastrarButton1MouseReleased(evt);
             }
         });
-        cadastrarButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cadastrarButton1ActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -181,7 +171,7 @@ public class TelaSignUp extends javax.swing.JFrame {
                                 .addComponent(cadastrarButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(39, 39, 39)
                                 .addComponent(cancelarButton, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 154, Short.MAX_VALUE)))
+                        .addGap(0, 166, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
@@ -225,24 +215,18 @@ public class TelaSignUp extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(cancelarButton)
                     .addComponent(cadastrarButton1))
-                .addContainerGap(74, Short.MAX_VALUE))
+                .addContainerGap(86, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -278,91 +262,9 @@ public class TelaSignUp extends javax.swing.JFrame {
          premiumRadioButton.setSelected(false);
     }//GEN-LAST:event_freeRadioButtonMouseClicked
 
-    private void cancelarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelarButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cancelarButtonActionPerformed
-
     private void cadastrarButton1MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cadastrarButton1MouseReleased
         // TODO add your handling code here:
     }//GEN-LAST:event_cadastrarButton1MouseReleased
-
-    private void cadastrarButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastrarButton1ActionPerformed
-        // TODO add your handling code here:
-        Cadastro cadastro;
-        int id = 1;
-        String username;
-        String password;
-        String nomeCompleto;
-        String email;
-        String passwordTip;
-        int tipoDeUsuario = 0;
-        
-       
-        
-        //Variável para controle de erro no cadastro, valor para default
-        String auxiliarRetornoDeCadastro;
-        
-        //Atribuindo valores da textBox para os atributos
-        username = usernameCadastroTextField.getText();
-        password = passwordCadastroField.getText();
-        nomeCompleto = nomeCompletoTextField.getText();
-        email = emailCadastroTextField.getText();
-        passwordTip = passwordTipCadastroTextField.getText();
-        
-        //Instanciando cadastro
-        cadastro = new Cadastro();
-
-        //Verifica qual o tipo de conta especificado pelo usuário
-        if (premiumRadioButton.isSelected() == true){
-            tipoDeUsuario = 1;
-        } else if (freeRadioButton.isSelected() == true){
-            tipoDeUsuario = 2;
-        } else {
-            tipoDeUsuario = 0;
-            jLabel3.setText("Digite um tipo de usuário!");
-        }
-        
-        //Se o usuário tiver escolhido alguma opção para o tipo de conta, as instruções dentro do if irão verificar se as fields estão vazias
-        if(tipoDeUsuario!=0){
-            
-            if("".equals(username) || "".equals(password) || "".equals(nomeCompleto) || "".equals(email) || "".equals(passwordTip)){
-                jLabel3.setText("Por favor, preencha todos os campos!");
-            }
-            //Se não tiver nenhuma field vazia, o programa tentará cadastrar com os dados especificados
-            else{
-                //O retorno das operações irá para a variável auxiliarRetornoDeCadastro, para o tratamento de erros
-                auxiliarRetornoDeCadastro = cadastro.receberInformacao(id, username, password, nomeCompleto, email, tipoDeUsuario, passwordTip);
-                if("Sucesso".equals(auxiliarRetornoDeCadastro)){
-                    jLabel3.setText("Cadastro do user "+username+" realizado com sucesso!");
-                    usernameCadastroTextField.setText("");
-                    passwordCadastroField.setText("");
-                    nomeCompletoTextField.setText("");
-                    emailCadastroTextField.setText("");
-                    passwordTipCadastroTextField.setText("");
-                }
-                else if("Email ja cadastrado".equals(auxiliarRetornoDeCadastro)){
-                    jLabel3.setText("Email "+email+" já está sendo usado, digite outro!");
-                    emailCadastroTextField.setText("");
-                }
-                else if("Nome de Usuario ja cadastrado".equals(auxiliarRetornoDeCadastro)){
-                    jLabel3.setText("Usuário "+username+" já está sendo usado, digite outro!");
-                    usernameCadastroTextField.setText("");
-                }
-            }
-        }
-        
-        //Se tiver retornado a 0, o cadastro foi feito com sucesso; se não, houve erro(s)
-       // if("Sucesso".equals(auxiliarRetornoDeCadastro)){
-       //     jLabel3.setText("Cadastro realizado com sucesso!");
-         //   new TelaCadastroRealizado().setVisible(true);
-        //}
-        //else if(auxiliarRetornoDeCadastro==1){
-         //   jLabel3.setText("Nome de usuário solicitado já foi cadastrado, favor digite outro!");
-        //}
-        //else if(auxiliarRetornoDeCadastro==2){
-        //    jLabel3.setText("Email solicitado já foi cadastrado, favor digite outro!");
-        //}
-    }//GEN-LAST:event_cadastrarButton1ActionPerformed
 
     /**
      * @param args the command line arguments

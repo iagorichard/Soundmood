@@ -34,8 +34,9 @@ public class TelaSignIn extends javax.swing.JFrame {
         usernameCadastroTextField = new javax.swing.JTextField();
         usernameCadastroLabel = new javax.swing.JLabel();
         passwordCadastroLabel = new javax.swing.JLabel();
-        cadastrarButton = new javax.swing.JButton();
+        entrarButton = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
+        cancelarButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(780, 520));
@@ -66,24 +67,30 @@ public class TelaSignIn extends javax.swing.JFrame {
         passwordCadastroLabel.setForeground(new java.awt.Color(255, 255, 255));
         passwordCadastroLabel.setText("Password:");
 
-        cadastrarButton.setBackground(new java.awt.Color(255, 255, 204));
-        cadastrarButton.setFont(new java.awt.Font("Malayalam MN", 0, 13)); // NOI18N
-        cadastrarButton.setForeground(new java.awt.Color(51, 51, 51));
-        cadastrarButton.setText("Entrar");
-        cadastrarButton.setName("cadastrarButton"); // NOI18N
-        cadastrarButton.addMouseListener(new java.awt.event.MouseAdapter() {
+        entrarButton.setBackground(new java.awt.Color(255, 255, 204));
+        entrarButton.setFont(new java.awt.Font("Malayalam MN", 0, 13)); // NOI18N
+        entrarButton.setForeground(new java.awt.Color(51, 51, 51));
+        entrarButton.setText("Entrar");
+        entrarButton.setName("entrarButton"); // NOI18N
+        entrarButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseReleased(java.awt.event.MouseEvent evt) {
-                cadastrarButtonMouseReleased(evt);
-            }
-        });
-        cadastrarButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cadastrarButtonActionPerformed(evt);
+                entrarButtonMouseReleased(evt);
             }
         });
 
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Esqueceu a senha?");
+
+        cancelarButton1.setBackground(new java.awt.Color(255, 255, 204));
+        cancelarButton1.setFont(new java.awt.Font("Malayalam MN", 0, 13)); // NOI18N
+        cancelarButton1.setForeground(new java.awt.Color(51, 51, 51));
+        cancelarButton1.setText("Cancelar");
+        cancelarButton1.setName("cadastrarButton"); // NOI18N
+        cancelarButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                cancelarButton1MouseReleased(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -103,7 +110,6 @@ public class TelaSignIn extends javax.swing.JFrame {
                             .addComponent(usernameCadastroLabel))
                         .addGap(66, 66, 66)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(cadastrarButton, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(36, 36, 36)
                                 .addComponent(jLabel3))
@@ -111,6 +117,12 @@ public class TelaSignIn extends javax.swing.JFrame {
                                 .addComponent(usernameCadastroTextField)
                                 .addComponent(passwordCadastroField, javax.swing.GroupLayout.PREFERRED_SIZE, 322, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addGap(154, 154, 154))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(140, 140, 140)
+                .addComponent(entrarButton, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(26, 26, 26)
+                .addComponent(cancelarButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -129,11 +141,13 @@ public class TelaSignIn extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(passwordCadastroField, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(passwordCadastroLabel))
-                .addGap(91, 91, 91)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(cadastrarButton)
-                .addContainerGap(106, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(entrarButton)
+                    .addComponent(cancelarButton1))
+                .addContainerGap(173, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -150,7 +164,7 @@ public class TelaSignIn extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void cadastrarButtonMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cadastrarButtonMouseReleased
+    private void entrarButtonMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_entrarButtonMouseReleased
         // TODO add your handling code here:
 
         //Variáveis que indicam atributos do usuário (tipo a ser definido)
@@ -164,11 +178,15 @@ public class TelaSignIn extends javax.swing.JFrame {
         password = passwordCadastroField.getText();
         
 
-    }//GEN-LAST:event_cadastrarButtonMouseReleased
+    }//GEN-LAST:event_entrarButtonMouseReleased
 
-    private void cadastrarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastrarButtonActionPerformed
+    private void cancelarButton1MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cancelarButton1MouseReleased
         // TODO add your handling code here:
-    }//GEN-LAST:event_cadastrarButtonActionPerformed
+        this.setVisible(false);
+        PrimeiraTela primeiraTela = new PrimeiraTela();
+        
+        primeiraTela.setVisible(true);
+    }//GEN-LAST:event_cancelarButton1MouseReleased
 
     /**
      * @param args the command line arguments
@@ -206,7 +224,8 @@ public class TelaSignIn extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton cadastrarButton;
+    private javax.swing.JButton cancelarButton1;
+    private javax.swing.JButton entrarButton;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
