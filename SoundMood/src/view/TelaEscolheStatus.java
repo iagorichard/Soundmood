@@ -79,6 +79,7 @@ public class TelaEscolheStatus extends javax.swing.JFrame {
                 return null;
             }
         }.getIcon());
+        apaixonadoIcon.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         apaixonadoIcon.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseReleased(java.awt.event.MouseEvent evt) {
                 apaixonadoIconMouseReleased(evt);
@@ -96,6 +97,7 @@ public class TelaEscolheStatus extends javax.swing.JFrame {
                 return null;
             }
         }.getIcon());
+        animadoIcon.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         animadoIcon.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseReleased(java.awt.event.MouseEvent evt) {
                 animadoIconMouseReleased(evt);
@@ -113,6 +115,7 @@ public class TelaEscolheStatus extends javax.swing.JFrame {
                 return null;
             }
         }.getIcon());
+        felizIcon.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         felizIcon.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseReleased(java.awt.event.MouseEvent evt) {
                 felizIconMouseReleased(evt);
@@ -134,6 +137,7 @@ public class TelaEscolheStatus extends javax.swing.JFrame {
                 return null;
             }
         }.getIcon());
+        banhoIcon.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         banhoIcon.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseReleased(java.awt.event.MouseEvent evt) {
                 banhoIconMouseReleased(evt);
@@ -155,6 +159,7 @@ public class TelaEscolheStatus extends javax.swing.JFrame {
                 return null;
             }
         }.getIcon());
+        namoradoIcon.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         namoradoIcon.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseReleased(java.awt.event.MouseEvent evt) {
                 namoradoIconMouseReleased(evt);

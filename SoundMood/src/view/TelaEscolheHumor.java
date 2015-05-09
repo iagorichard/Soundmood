@@ -78,6 +78,7 @@ public class TelaEscolheHumor extends javax.swing.JFrame {
                 return null;
             }
         }.getIcon());
+        apaixonadoIcon.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         apaixonadoIcon.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseReleased(java.awt.event.MouseEvent evt) {
                 apaixonadoIconMouseReleased(evt);
@@ -95,6 +96,7 @@ public class TelaEscolheHumor extends javax.swing.JFrame {
                 return null;
             }
         }.getIcon());
+        animadoIcon.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         animadoIcon.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseReleased(java.awt.event.MouseEvent evt) {
                 animadoIconMouseReleased(evt);
@@ -112,6 +114,7 @@ public class TelaEscolheHumor extends javax.swing.JFrame {
                 return null;
             }
         }.getIcon());
+        felizIcon.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         felizIcon.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseReleased(java.awt.event.MouseEvent evt) {
                 felizIconMouseReleased(evt);
@@ -133,6 +136,7 @@ public class TelaEscolheHumor extends javax.swing.JFrame {
                 return null;
             }
         }.getIcon());
+        tristeIcon.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         tristeIcon.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseReleased(java.awt.event.MouseEvent evt) {
                 tristeIconMouseReleased(evt);
@@ -154,6 +158,7 @@ public class TelaEscolheHumor extends javax.swing.JFrame {
                 return null;
             }
         }.getIcon());
+        pensativoIcon.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         pensativoIcon.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseReleased(java.awt.event.MouseEvent evt) {
                 pensativoIconMouseReleased(evt);
@@ -184,26 +189,23 @@ public class TelaEscolheHumor extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                        .addComponent(jLabel3)
-                                        .addGap(99, 99, 99)
-                                        .addComponent(jLabel1)
-                                        .addGap(202, 202, 202))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                        .addComponent(jLabel7)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(felizIcon)
-                                        .addGap(18, 18, 18)
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(pensativoIcon))
-                                        .addGap(18, 18, 18)
-                                        .addComponent(tristeIcon)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jLabel9)
-                                        .addGap(66, 66, 66))))
+                                .addComponent(jLabel3)
+                                .addGap(99, 99, 99)
+                                .addComponent(jLabel1)
+                                .addGap(202, 202, 202))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel7)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(felizIcon)
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(pensativoIcon))
+                                .addGap(18, 18, 18)
+                                .addComponent(tristeIcon)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel9)
+                                .addGap(66, 66, 66))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -272,22 +274,32 @@ public class TelaEscolheHumor extends javax.swing.JFrame {
 
     private void felizIconMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_felizIconMouseReleased
         // TODO add your handling code here:
+        new TelaEscolheStatus().setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_felizIconMouseReleased
 
     private void pensativoIconMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pensativoIconMouseReleased
         // TODO add your handling code here:
+        new TelaEscolheStatus().setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_pensativoIconMouseReleased
 
     private void tristeIconMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tristeIconMouseReleased
         // TODO add your handling code here:
+        new TelaEscolheStatus().setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_tristeIconMouseReleased
 
     private void apaixonadoIconMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_apaixonadoIconMouseReleased
         // TODO add your handling code here:
+        new TelaEscolheStatus().setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_apaixonadoIconMouseReleased
 
     private void animadoIconMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_animadoIconMouseReleased
         // TODO add your handling code here:
+        new TelaEscolheStatus().setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_animadoIconMouseReleased
 
     /**
