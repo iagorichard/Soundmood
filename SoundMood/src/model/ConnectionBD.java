@@ -30,14 +30,14 @@ public class ConnectionBD {
         session.close();
     }
     
-    // public static void main(String args[]) {
-    //    SessionFactory sf = HibernateUtil.getSessionFactory();
-    //    Session session = sf.openSession();
+    public static void main(String args[]) {
+        SessionFactory sf = HibernateUtil.getSessionFactory();
+        Session session = sf.openSession();
         
         
         
         
-    //    sf.close();
-    //}
+        sf.close();
+    }
     
 }
