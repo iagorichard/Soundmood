@@ -1,9 +1,10 @@
 package view;
 
-import controle.Cadastro;
+import controller.ControleCadastro;
 
 public class TelaSignUp extends javax.swing.JFrame {
-
+    
+    ControleCadastro controleCadastro = new ControleCadastro();
     /**
      * Creates new form TelaSignUp
      */
@@ -22,7 +23,7 @@ public class TelaSignUp extends javax.swing.JFrame {
 
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        labelRetorno = new javax.swing.JLabel();
         cancelarButton = new javax.swing.JButton();
         usernameCadastroTextField = new javax.swing.JTextField();
         premiumRadioButton = new javax.swing.JRadioButton();
@@ -51,8 +52,8 @@ public class TelaSignUp extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Cadastro de Usuário");
 
-        jLabel3.setForeground(new java.awt.Color(255, 51, 51));
-        jLabel3.setText("               ");
+        labelRetorno.setForeground(new java.awt.Color(255, 51, 51));
+        labelRetorno.setText("               ");
 
         cancelarButton.setBackground(new java.awt.Color(255, 255, 204));
         cancelarButton.setFont(new java.awt.Font("Malayalam MN", 0, 13)); // NOI18N
@@ -138,7 +139,7 @@ public class TelaSignUp extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(249, 249, 249)
-                        .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(labelRetorno, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(114, 114, 114)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -185,7 +186,7 @@ public class TelaSignUp extends javax.swing.JFrame {
                         .addGap(21, 21, 21)
                         .addComponent(jLabel2)))
                 .addGap(45, 45, 45)
-                .addComponent(jLabel3)
+                .addComponent(labelRetorno)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(usernameCadastroTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -264,6 +265,31 @@ public class TelaSignUp extends javax.swing.JFrame {
 
     private void cadastrarButton1MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cadastrarButton1MouseReleased
         // TODO add your handling code here:
+        String retorno = controleCadastro.receberInformacao(usernameCadastroTextField.getText(), emailCadastroTextField.getText());
+       
+        String textBoxRetorno;
+        boolean retornoGravar;
+        
+        if("email".equals(retorno)){
+            textBoxRetorno = "Email existente!";
+            labelRetorno.setText(textBoxRetorno);
+        }else if("usuario".equals(retorno)){
+           textBoxRetorno = "Usuario ja existente!";
+           labelRetorno.setText(textBoxRetorno);
+        }else{
+            textBoxRetorno = "";
+            labelRetorno.setText(textBoxRetorno);
+            
+            
+            retornoGravar = controleCadastro.gravarInformacao(usernameCadastroTextField.getText(), passwordCadastroField.getText(), nomeCompletoTextField.getText(), emailCadastroTextField.getText(), 1, passwordTipCadastroTextField.getText());
+            if(retornoGravar == true){
+                this.setVisible(false);
+                TelaSignIn telaSignIn = new TelaSignIn();
+        
+                telaSignIn.setVisible(true);
+                
+            }
+        }
     }//GEN-LAST:event_cadastrarButton1MouseReleased
 
     /**
@@ -292,6 +318,7 @@ public class TelaSignUp extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(TelaSignUp.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -311,8 +338,8 @@ public class TelaSignUp extends javax.swing.JFrame {
     private javax.swing.JRadioButton freeRadioButton;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JLabel labelRetorno;
     private javax.swing.JLabel nomeCompletoCadastroLabel;
     private javax.swing.JTextField nomeCompletoTextField;
     private javax.swing.JPasswordField passwordCadastroField;

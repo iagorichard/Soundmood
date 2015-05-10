@@ -1,4 +1,4 @@
-package controle;
+package controller;
 
 import java.io.BufferedInputStream;
 import java.io.FileInputStream;
@@ -8,14 +8,13 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javazoom.jl.decoder.JavaLayerException;
 import javazoom.jl.player.Player;
-import modelo.Playlist;
 
 public class ControlePlaylist {
 
     FileInputStream FIS;
     BufferedInputStream BIS;
     
-    Playlist pl = new Playlist();
+    //Playlist pl = new Playlist();
     
     public Player player;
     

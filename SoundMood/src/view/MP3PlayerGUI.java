@@ -6,7 +6,7 @@
 package view;
 
 import static com.sun.corba.se.impl.orbutil.CorbaResourceUtil.getText;
-import controle.ControlePlaylist;
+import controller.ControlePlaylist;
 import java.awt.Toolkit;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -354,6 +354,7 @@ public class MP3PlayerGUI extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(MP3PlayerGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
