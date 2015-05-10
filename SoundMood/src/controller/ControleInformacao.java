@@ -5,8 +5,13 @@
  */
 package controller;
 
+import java.util.List;
 import java.util.Random;
+import model.ConnectionBD;
 import model.Musica;
+import model.Usuario;
+import org.hibernate.Query;
+import org.hibernate.Session;
 
 /**
  *
@@ -60,6 +65,16 @@ public class ControleInformacao {
             int randomNumMusicaHumor = rand.nextInt((10) + 1);
             
             //fazer query e pegar id
+            
+            ConnectionBD connect = new ConnectionBD();
+            Session session = connect.abrirConexao();
+        
+            int musicaid = 0;
+            session.beginTransaction();
+            Query query = session.createQuery("from Musica where id = :musicaid");
+            musica = (Musica) query.uniqueResult();
+            
+            System.out.println(musica.getNome());
             
             System.out.println(randomNumMusicaStatus);
             System.out.println(randomNumMusicaHumor);

@@ -5,6 +5,13 @@
  */
 package controller;
 
+import java.util.List;
+import model.ConnectionBD;
+import model.Musica;
+import model.Usuario;
+import org.hibernate.Query;
+import org.hibernate.Session;
+
 /**
  *
  * @author biancamoreira
@@ -17,7 +24,23 @@ public class ControllerMain {
         ci.getHumor("feliz");
         ci.getStatus("trabalhando");
         
-        ci.calculaMusicas();
+        //ci.calculaMusicas();
+        
+        
+        
+        ConnectionBD connect = new ConnectionBD();
+        Session session = connect.abrirConexao();
+        
+        //session.beginTransaction();
+        //Query query = session.createQuery("from Musica");
+        
+        //List<Musica> musicas = query.list();
+       
+        
+        //for(Musica musica : musicas){
+            
+        //    System.out.println(musica.getArtista());
+        //}
     
     }
     

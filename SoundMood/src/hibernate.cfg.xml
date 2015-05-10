@@ -8,10 +8,10 @@
     <property name="hibernate.connection.username">root</property>
     <property name="hibernate.connection.password">root</property>
     <property name="hibernate.hbm2ddl.auto">update</property>
-    <mapping class="model.Usuario"/>
     <mapping class="model.Calcula"/>
     <mapping class="model.Status"/>
     <mapping class="model.Musica"/>
     <mapping class="model.Mood"/>
+    <mapping class="model.Usuario"/>
   </session-factory>
 </hibernate-configuration>
