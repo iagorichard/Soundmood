@@ -12,8 +12,12 @@ package controller;
 public class ControllerMain {
     public static void main(String args[]) {
        
+        ControleInformacao ci = ControleInformacao.getInstance();
         
-       
+        ci.getHumor("feliz");
+        ci.getStatus("trabalhando");
+        
+        ci.calculaMusicas();
     
     }
     

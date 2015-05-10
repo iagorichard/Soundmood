@@ -21,14 +21,29 @@ import javax.persistence.Table;
 public class Calcula implements Serializable {
     
     @Id
-    @Column(name = "musicaid")
+    @Column(name = "idcalcula")
     @GeneratedValue
     
+    private int idcalcula;
     private int musicaid;
-    private int moodid;
-    private int statusid;
+    private int tagmoodid;
+    private int statustagid;
     
     public Calcula(){
+    }
+
+    /**
+     * @return the idcalcula
+     */
+    public int getIdcalcula() {
+        return idcalcula;
+    }
+
+    /**
+     * @param idcalcula the idcalcula to set
+     */
+    public void setIdcalcula(int idcalcula) {
+        this.idcalcula = idcalcula;
     }
 
     /**
@@ -46,34 +61,33 @@ public class Calcula implements Serializable {
     }
 
     /**
-     * @return the moodid
+     * @return the tagmoodid
      */
-    public int getMoodid() {
-        return moodid;
+    public int getTagmoodid() {
+        return tagmoodid;
     }
 
     /**
-     * @param moodid the moodid to set
+     * @param tagmoodid the tagmoodid to set
      */
-    public void setMoodid(int moodid) {
-        this.moodid = moodid;
+    public void setTagmoodid(int tagmoodid) {
+        this.tagmoodid = tagmoodid;
     }
 
     /**
-     * @return the statusid
+     * @return the statustagid
      */
-    public int getStatusid() {
-        return statusid;
+    public int getStatustagid() {
+        return statustagid;
     }
 
     /**
-     * @param statusid the statusid to set
+     * @param statustagid the statustagid to set
      */
-    public void setStatusid(int statusid) {
-        this.statusid = statusid;
+    public void setStatustagid(int statustagid) {
+        this.statustagid = statustagid;
     }
-    
-    
+
     
     
 }

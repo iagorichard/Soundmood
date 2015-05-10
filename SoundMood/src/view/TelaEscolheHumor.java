@@ -5,12 +5,14 @@
  */
 package view;
 
+import controller.ControleInformacao;
+
 /**
  *
  * @author biancamoreira
  */
 public class TelaEscolheHumor extends javax.swing.JFrame {
-
+    ControleInformacao informacaoInstancia = ControleInformacao.getInstance();
     /**
      * Creates new form TelaEscolheHumor
      */
@@ -276,30 +278,41 @@ public class TelaEscolheHumor extends javax.swing.JFrame {
         // TODO add your handling code here:
         new TelaEscolheStatus().setVisible(true);
         this.setVisible(false);
+        
+        
+        informacaoInstancia.getHumor("feliz");
     }//GEN-LAST:event_felizIconMouseReleased
 
     private void pensativoIconMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pensativoIconMouseReleased
         // TODO add your handling code here:
         new TelaEscolheStatus().setVisible(true);
         this.setVisible(false);
+        
+         informacaoInstancia.getHumor("feliz");
     }//GEN-LAST:event_pensativoIconMouseReleased
 
     private void tristeIconMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tristeIconMouseReleased
         // TODO add your handling code here:
         new TelaEscolheStatus().setVisible(true);
         this.setVisible(false);
+        
+         informacaoInstancia.getHumor("feliz");
     }//GEN-LAST:event_tristeIconMouseReleased
 
     private void apaixonadoIconMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_apaixonadoIconMouseReleased
         // TODO add your handling code here:
         new TelaEscolheStatus().setVisible(true);
         this.setVisible(false);
+        
+         informacaoInstancia.getHumor("feliz");
     }//GEN-LAST:event_apaixonadoIconMouseReleased
 
     private void animadoIconMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_animadoIconMouseReleased
         // TODO add your handling code here:
         new TelaEscolheStatus().setVisible(true);
         this.setVisible(false);
+        
+         informacaoInstancia.getHumor("feliz");
     }//GEN-LAST:event_animadoIconMouseReleased
 
     /**

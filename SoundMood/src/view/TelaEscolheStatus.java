@@ -5,12 +5,15 @@
  */
 package view;
 
+import controller.ControleInformacao;
+
 /**
  *
  * @author biancamoreira
  */
 public class TelaEscolheStatus extends javax.swing.JFrame {
-
+    
+    ControleInformacao informacaoInstancia = ControleInformacao.getInstance();
     /**
      * Creates new form TelaEscolheStatus
      */
@@ -276,22 +279,32 @@ public class TelaEscolheStatus extends javax.swing.JFrame {
 
     private void apaixonadoIconMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_apaixonadoIconMouseReleased
         // TODO add your handling code here:
+        
+        informacaoInstancia.getHumor("feliz");
     }//GEN-LAST:event_apaixonadoIconMouseReleased
 
     private void animadoIconMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_animadoIconMouseReleased
         // TODO add your handling code here:
+        
+        informacaoInstancia.getHumor("feliz");
     }//GEN-LAST:event_animadoIconMouseReleased
 
     private void felizIconMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_felizIconMouseReleased
         // TODO add your handling code here:
+        
+        informacaoInstancia.getHumor("feliz");
     }//GEN-LAST:event_felizIconMouseReleased
 
     private void banhoIconMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_banhoIconMouseReleased
         // TODO add your handling code here:
+        
+        informacaoInstancia.getHumor("feliz");
     }//GEN-LAST:event_banhoIconMouseReleased
 
     private void namoradoIconMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_namoradoIconMouseReleased
         // TODO add your handling code here:
+        
+        informacaoInstancia.getHumor("feliz");
     }//GEN-LAST:event_namoradoIconMouseReleased
 
     /**
