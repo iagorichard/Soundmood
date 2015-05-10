@@ -8,6 +8,10 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javazoom.jl.decoder.JavaLayerException;
 import javazoom.jl.player.Player;
+import model.ConnectionBD;
+import model.Musica;
+import org.hibernate.Query;
+import org.hibernate.Session;
 
 public class ControlePlaylist {
 
@@ -16,6 +20,8 @@ public class ControlePlaylist {
     
     //Playlist pl = new Playlist();
     
+    private Musica musicaAtual = new Musica();
+    
     public Player player;
     
     public long pauseLocation;
@@ -23,6 +29,20 @@ public class ControlePlaylist {
     
     public String fileLocation;
     
+    private static ControlePlaylist INSTANCE;
+    
+    int temp = 0;
+  
+    
+    private ControlePlaylist(){
+    }
+    
+    public static ControlePlaylist getInstance(){
+        if(INSTANCE==null){
+            INSTANCE = new ControlePlaylist();
+        }
+        return INSTANCE;
+    }
     
    
     public void Stop(){
@@ -52,15 +72,85 @@ public class ControlePlaylist {
         }
     } 
     
+    public void setMusicaInformacao(Musica musica){
+        
+        this.musicaAtual = musica;
+        
+       // System.out.println(this.musicaAtual.getArtista());
+    }
+    
+    public String getMusicaNome(){
+        return musicaAtual.getNome();
+    }
+    
+    public String getMusicaArtista(){
+        return musicaAtual.getArtista();
+    }
+    
+    public void chamarPlay(){
+            String path;
+            
+            //e aqui a gente faz um for 
+            ConnectionBD connect = new ConnectionBD();
+            Session session = connect.abrirConexao();
+            session.beginTransaction();
+            
+           // Query query = session.createQuery("from Musica where id= :id");
+            
+          // for(int temp=0; temp>3;temp++){
+                Query query = session.createQuery("from Musica where id= :id");
+                
+                
+                query.setParameter("id",temp);
+                Musica retorno = new Musica();
+                retorno = (Musica) query.uniqueResult();
+                //System.out.println(retorno.getNome());
+                path = retorno.getPathurl();
+                
+                this.setMusicaInformacao(retorno);
+                this.Play(path);
+                
+                temp++;
+          // }
+           // query.setParameter("id",0);
+            
+         //   Musica retorno = new Musica();
+          //  retorno = (Musica) query.uniqueResult();
+            
+         //   path = retorno.getPathurl();
+        
+    }
     //mudar esse string path pra um array de strings
     public void Play(String path){
         try{
             
+            //String path;
+            
             //e aqui a gente faz um for 
-            path = "/Users/biancamoreira/Downloads/Taking Back Sunday - A Decade Under The Influence (Video).mp3";
+            //ConnectionBD connect = new ConnectionBD();
+            //Session session = connect.abrirConexao();
+            //session.beginTransaction();
+            
+            //Query query = session.createQuery("from Musica where id= :id");
+            
+           // for(int temp=0; temp>3;temp++){
+           //     query.setParameter("id",0);
+           // }
+            //query.setParameter("id",0);
+            
+            //Musica retorno = new Musica();
+            //retorno = (Musica) query.uniqueResult();
+            
+            //path = retorno.getPathurl();
+            
+           // this.setMusicaInformacao(retorno);
+            
+            //path = "/Users/biancamoreira/Downloads/Taking Back Sunday - A Decade Under The Influence (Video).mp3";
             
             FIS = new FileInputStream(path);
             BIS = new BufferedInputStream(FIS);
+            
+            
             
             player = new Player(BIS);
             
@@ -78,10 +168,15 @@ public class ControlePlaylist {
         
         new Thread(){
             
+            ControlePlaylist ci = ControlePlaylist.getInstance();
             @Override
             public void run(){
                 try {
                     player.play();
+                    if(player.isComplete() == true){
+                        ci.chamarPlay();
+                    }
+                    
                 } catch (JavaLayerException ex) {
                     //Logger.getLogger(ControlePlaylist.class.getName()).log(Level.SEVERE, null, ex);
                 }

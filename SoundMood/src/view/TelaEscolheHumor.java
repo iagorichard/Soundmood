@@ -13,11 +13,15 @@ import controller.ControleInformacao;
  */
 public class TelaEscolheHumor extends javax.swing.JFrame {
     ControleInformacao informacaoInstancia = ControleInformacao.getInstance();
+    ProgressBar progress;
+    TelaEscolheStatus escolheStatus = new TelaEscolheStatus();
     /**
      * Creates new form TelaEscolheHumor
      */
     public TelaEscolheHumor() {
         initComponents();
+         //progress = new ProgressBar(this, jProgressBar1);
+         
     }
 
     /**
@@ -186,50 +190,47 @@ public class TelaEscolheHumor extends javax.swing.JFrame {
                 .addGap(0, 148, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel4)
-                        .addGap(20, 20, 20))
+                        .addComponent(jLabel3)
+                        .addGap(99, 99, 99)
+                        .addComponent(jLabel1)
+                        .addGap(202, 202, 202))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel7)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(felizIcon)
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(pensativoIcon))
+                        .addGap(18, 18, 18)
+                        .addComponent(tristeIcon)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel9)
+                        .addGap(66, 66, 66))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel3)
-                                .addGap(99, 99, 99)
-                                .addComponent(jLabel1)
-                                .addGap(202, 202, 202))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel7)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(felizIcon)
-                                .addGap(18, 18, 18)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(pensativoIcon))
-                                .addGap(18, 18, 18)
-                                .addComponent(tristeIcon)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel9)
-                                .addGap(66, 66, 66))
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGap(143, 143, 143)
-                                        .addComponent(animadoIcon)
-                                        .addGap(27, 27, 27)
-                                        .addComponent(apaixonadoIcon))
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGap(251, 251, 251)
-                                        .addComponent(jLabel11)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 171, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jLabel12, javax.swing.GroupLayout.Alignment.TRAILING))
-                        .addGap(99, 99, 99))))
+                                .addGap(143, 143, 143)
+                                .addComponent(animadoIcon)
+                                .addGap(27, 27, 27)
+                                .addComponent(apaixonadoIcon))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(251, 251, 251)
+                                .addComponent(jLabel11)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 171, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel12, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addGap(38, 38, 38)
+                .addComponent(jLabel4)
+                .addGap(20, 20, 20))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(17, 17, 17)
                 .addComponent(jLabel4)
-                .addGap(18, 18, 18)
+                .addGap(22, 22, 22)
                 .addComponent(jLabel12)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 66, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 62, Short.MAX_VALUE)
                 .addComponent(jLabel11)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -276,7 +277,9 @@ public class TelaEscolheHumor extends javax.swing.JFrame {
 
     private void felizIconMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_felizIconMouseReleased
         // TODO add your handling code here:
-        new TelaEscolheStatus().setVisible(true);
+        escolheStatus.setVisible(true);
+        progress.start();
+        
         this.setVisible(false);
         
         
@@ -285,7 +288,7 @@ public class TelaEscolheHumor extends javax.swing.JFrame {
 
     private void pensativoIconMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pensativoIconMouseReleased
         // TODO add your handling code here:
-        new TelaEscolheStatus().setVisible(true);
+        escolheStatus.setVisible(true);
         this.setVisible(false);
         
          informacaoInstancia.getHumor("feliz");
@@ -293,7 +296,7 @@ public class TelaEscolheHumor extends javax.swing.JFrame {
 
     private void tristeIconMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tristeIconMouseReleased
         // TODO add your handling code here:
-        new TelaEscolheStatus().setVisible(true);
+        escolheStatus.setVisible(true);
         this.setVisible(false);
         
          informacaoInstancia.getHumor("feliz");
@@ -301,7 +304,8 @@ public class TelaEscolheHumor extends javax.swing.JFrame {
 
     private void apaixonadoIconMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_apaixonadoIconMouseReleased
         // TODO add your handling code here:
-        new TelaEscolheStatus().setVisible(true);
+        escolheStatus.setVisible(true);
+        
         this.setVisible(false);
         
          informacaoInstancia.getHumor("feliz");
@@ -309,7 +313,10 @@ public class TelaEscolheHumor extends javax.swing.JFrame {
 
     private void animadoIconMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_animadoIconMouseReleased
         // TODO add your handling code here:
-        new TelaEscolheStatus().setVisible(true);
+        //progress.start();
+        
+        
+        escolheStatus.setVisible(true);
         this.setVisible(false);
         
          informacaoInstancia.getHumor("feliz");

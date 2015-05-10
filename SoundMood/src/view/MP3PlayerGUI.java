@@ -7,6 +7,7 @@ package view;
 
 import controller.ControlePlaylist;
 import java.awt.Toolkit;
+import javazoom.jl.decoder.JavaLayerException;
 
 /**
  *
@@ -20,7 +21,8 @@ public class MP3PlayerGUI extends javax.swing.JFrame {
     boolean mousePressedPause;
     
     
-    ControlePlaylist CP = new ControlePlaylist();
+    ControlePlaylist CP = ControlePlaylist.getInstance();
+    PlaylistInformacao PI;
     
     int xMouse;
     int yMouse;
@@ -33,7 +35,11 @@ public class MP3PlayerGUI extends javax.swing.JFrame {
         
         this.setLocation(width, height);
         mousePressedPause=false;
+        PI = new PlaylistInformacao(this, jLabel3, jLabel4);
+        PI.start();
     }
+    
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -68,30 +74,35 @@ public class MP3PlayerGUI extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(51, 51, 51));
 
-        Play.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        Play.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Play.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseReleased(java.awt.event.MouseEvent evt) {
                 PlayMouseReleased(evt);
             }
         });
 
-        SelectFile.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        SelectFile.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        Pause.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        Pause.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Pause.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseReleased(java.awt.event.MouseEvent evt) {
                 PauseMouseReleased(evt);
             }
         });
 
-        Stop.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        Stop.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Stop.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseReleased(java.awt.event.MouseEvent evt) {
                 StopMouseReleased(evt);
             }
         });
 
-        Loop.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        Loop.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Loop.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                LoopMouseReleased(evt);
+            }
+        });
 
         Background.setIcon(new javax.swing.JLabel() {
             public javax.swing.Icon getIcon() {
@@ -104,6 +115,7 @@ public class MP3PlayerGUI extends javax.swing.JFrame {
                 return null;
             }
         }.getIcon());
+        Background.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Background.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseDragged(java.awt.event.MouseEvent evt) {
                 BackgroundMouseDragged(evt);
@@ -296,6 +308,9 @@ public class MP3PlayerGUI extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+  
+    //@Override
+    
     private void BackgroundMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BackgroundMouseDragged
         int x = evt.getXOnScreen();
         int y = evt.getYOnScreen();
@@ -313,19 +328,37 @@ public class MP3PlayerGUI extends javax.swing.JFrame {
         CP.Stop();
         //Stop.setText("bla");
         mousePressedPause=false;
+        
+        jLabel3.setText("");
+        jLabel4.setText("");
     }//GEN-LAST:event_StopMouseReleased
 
     private void PlayMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PlayMouseReleased
         
             // TODO add your handling code here:
             //essa URL vai ser gerada por outro metodo
-        
+            
         
             if(mousePressedPause==false){
-                CP.Play("/Users/biancamoreira/Downloads/Taking Back Sunday - A Decade Under The Influence (Video).mp3");
+                CP.chamarPlay();
+                
             }else{
                 CP.Resume();
             }
+            
+            
+           // nomeMusica = CP.getMusicaNome();
+           // nomeArtista = CP.getMusicaArtista();
+            
+            //jLabel3.setText(nomeMusica);
+            //jLabel4.setText(nomeArtista);
+            
+            
+            
+           // ControlePlaylist ci = ControlePlaylist.getInstance();
+            
+           
+            
     }//GEN-LAST:event_PlayMouseReleased
 
     private void PauseMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PauseMouseReleased
@@ -334,6 +367,13 @@ public class MP3PlayerGUI extends javax.swing.JFrame {
         mousePressedPause=true;
         
     }//GEN-LAST:event_PauseMouseReleased
+
+    private void LoopMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LoopMouseReleased
+        // TODO add your handling code here:
+        CP.Stop();
+        CP.chamarPlay();
+        
+    }//GEN-LAST:event_LoopMouseReleased
 
     /**
      * @param args the command line arguments
@@ -364,9 +404,12 @@ public class MP3PlayerGUI extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
+        
+        
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new MP3PlayerGUI().setVisible(true);
+                
             }
         });
     }
