@@ -16,6 +16,7 @@ import org.hibernate.Session;
  * @author Leylane Ferreira
  * @author Washington Filipe
  */
+
 public class ControleLogIn {
     
     /** Construtor simples para a classe. */

@@ -52,7 +52,7 @@ public class ControlePlaylist {
     }
     
     /**
-     * A classe será uma Singleton Class, onde poderá ser instanciada em
+     * A classe será uma Singleton Class, podendo ser instanciada em
      * qualquer parte do código.
      *
      * @return INTANCE instância da Singleton Class.
@@ -222,13 +222,14 @@ public class ControlePlaylist {
                     }
                     
                 } catch (JavaLayerException ex) {
+                    
                     //Logger.getLogger(ControlePlaylist.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }
         }.start();
     }
     
-    //adicionar o resume method no nosso diagrama de classes
+    //adicionar o "resume method" no nosso diagrama de classes
     
     /**
      * Método que faz tocar a musica de onde ela parou se o botao pause 

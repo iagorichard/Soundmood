@@ -6,6 +6,8 @@ descricao VARCHAR(50),
 PRIMARY KEY(id)
 );
 
+--descrição está sendo usada? 
+
 CREATE TABLE STATUS (
 id INT,
 nometag VARCHAR(20),
@@ -58,4 +60,4 @@ CREATE SEQUENCE SEQ_ID_USER INCREMENT BY 1 START WITH 1;
 
 
 
--- o script precisa ser alterado para incluir o UPDATE de USER em um condicional mood e status 
+ 
