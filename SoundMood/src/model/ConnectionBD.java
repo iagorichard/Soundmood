@@ -15,6 +15,7 @@ import org.hibernate.Transaction;
  * @author Leylane Ferreira
  * @author Washington Filipe
  */
+
 public class ConnectionBD {
     
     /**
@@ -38,6 +39,7 @@ public class ConnectionBD {
     }
     
     public static void main(String args[]) {
+        
         SessionFactory sf = HibernateUtil.getSessionFactory();
         Session session = sf.openSession();
         
