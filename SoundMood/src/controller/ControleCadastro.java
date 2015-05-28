@@ -90,6 +90,7 @@ public class ControleCadastro {
     public boolean gravarInformacao(String username, String password, String nomeCompleto, String email, int tipoConta, String passwordTip) {
 
         try {
+            
             ConnectionBD connect = new ConnectionBD();
             Session session = connect.abrirConexao();
 

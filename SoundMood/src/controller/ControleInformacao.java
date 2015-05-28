@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package controller;
 
 import java.util.List;
@@ -14,20 +9,35 @@ import org.hibernate.Query;
 import org.hibernate.Session;
 
 /**
+ * Classe responsável pelo controle de <b>humor</b> e <b>status</b>.  
  *
+ * @version 1.0
  * @author biancamoreira
+ * @author Iago Rodrigues
+ * @author Leylane Ferreira
+ * @author Washington Filipe
  */
 
-//singleton
 public class ControleInformacao {
     
+    /** Declaração da instância de ControleInformacao. */
     private static ControleInformacao INSTANCE;
+    /** Propriedade para humor. */ 
     private String humor = null;
+    /** Propriedade para status. */
     private String status = null;
     
+    /**
+     * Construtor simples para a classe.
+     */
     private ControleInformacao(){
     }
     
+    /**
+     * A classe será uma Singleton Class, onde poderá ser instanciada em qualquer
+     * parte do código.
+     * @return INTANCE instância da Singleton Class.
+     */
     public static ControleInformacao getInstance(){
         if(INSTANCE==null){
             INSTANCE = new ControleInformacao();
