@@ -58,7 +58,7 @@ public class ControlePlaylist {
      * @return INTANCE instância da Singleton Class.
      */
     public static ControlePlaylist getInstance(){
-        if(INSTANCE==null){
+        if(INSTANCE == null){
             INSTANCE = new ControlePlaylist();
         }
         return INSTANCE;
