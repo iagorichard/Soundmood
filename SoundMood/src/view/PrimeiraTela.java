@@ -1,7 +1,8 @@
 package view;
 
 /**
- * Classe contendo todas as propriedades da tela inicial do sistema.
+ * Classe contendo todas as propriedades da tela que o usuário poderá escolher
+ * entre efetuar login ou cadastro um novo usuário.
  *
  * @version 1.0
  * @author biancamoreira

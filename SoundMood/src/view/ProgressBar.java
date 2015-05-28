@@ -29,11 +29,13 @@ public class ProgressBar extends Thread {
         this.progressBar = progressBar;
     }
 
+    /**
+     * Execução da barra de progresso como uma Thread.
+     */
     @Override
     public void run() {
         for (int temp = 0; temp < 101; temp++) {
             progressBar.setValue(temp);
-
         }
     }
 
