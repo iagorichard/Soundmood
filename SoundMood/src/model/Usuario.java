@@ -19,11 +19,11 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "USUARIO")
 public class Usuario implements Serializable {
-    
+
     @Id
     @Column(name = "id")
     @GeneratedValue
-    
+
     private int id;
     private String username;
     private String tipo;
@@ -31,8 +31,7 @@ public class Usuario implements Serializable {
     private String email;
     private String senha;
     private String senhadica;
-   
-    
+
     private int tagmoodid;
     private int tagstatusid;
 
@@ -163,9 +162,8 @@ public class Usuario implements Serializable {
     }
 
     public void setTipo(int tipoConta) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        throw new UnsupportedOperationException("Not supported yet.");
+    //To change body of generated methods, choose Tools | Templates.
     }
-    
-    
-    
+
 }
