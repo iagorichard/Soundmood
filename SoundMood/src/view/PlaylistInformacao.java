@@ -1,9 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package view;
 
 import controller.ControlePlaylist;
@@ -11,8 +5,13 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 
 /**
+ * Classe responsável pelo controle do fluxo de informação da playlist.
  *
- * @author biancamoreira 
+ * @version 1.0
+ * @author biancamoreira
+ * @author Iago Rodrigues
+ * @author Leylane Ferreira
+ * @author Washington Filipe
  */
 public class PlaylistInformacao extends Thread {
     
@@ -23,15 +22,24 @@ public class PlaylistInformacao extends Thread {
     String nomeMusica;
     String nomeArtista;
     
+    /**
+     * Método para setar as informações da playlist.
+     * @param MP3Gui
+     * @param jlabel1
+     * @param jlabel2 
+     */
     public PlaylistInformacao(JFrame MP3Gui, JLabel jlabel1, JLabel jlabel2){
         
         this.MP3Gui = MP3Gui;
         this.jlabel1 = jlabel1;
         this.jlabel2 = jlabel2;
         
-        
     }
     
+    /**
+     * Rodando e atualizando as informações da playlist de acordo com a música 
+     * atual através de uma thread.
+     */
     @Override
     public void run(){
         
