@@ -12,7 +12,7 @@ import javax.swing.JProgressBar;
 
 /**
  *
- * @author biancamoreira
+ * @author Leylane Ferreira
  */
 public class ProgressBar extends Thread{
     private JFrame frame;
