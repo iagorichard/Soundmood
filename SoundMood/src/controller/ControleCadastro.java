@@ -153,8 +153,8 @@ public class ControleCadastro {
      * Método que verifica se está tentando cadastrar um novo usuário com um
      * email já utilizado por algum usuário no sistema.
      * @param email do suposto novo usuário.
-     * @return boolean se email está sendo utilizado retorna true, se não 
-     * retorna a false.
+     * @return boolean se email está sendo utilizado retorna <b>true</b>, se não 
+     * retorna a <b>false</b>.
      */
     private boolean verificarEmail(String email) {
         
