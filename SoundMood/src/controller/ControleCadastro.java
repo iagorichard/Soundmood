@@ -8,17 +8,17 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 
 /**
- *
+ * Classe responsável pelo controle de cadastro de um novo usuário do sistema, 
+ * aqui estarão todos os métodos para a validação desse novo usuário.
+ * @version 1.0
  * @author biancamoreira
  * @author Iago Rodrigues
  * @author Leylane Ferreira
  * @author Washington Filipe
  */
+
 public class ControleCadastro {
-    
- 
-    //public String receberInformacao(long id, String username, String password, String nomeCompleto, String email, int tipoConta, String passwordTip){
-     
+
     
     public String receberInformacao(String username, String email){
          try{
