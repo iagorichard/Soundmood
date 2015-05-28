@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package view;
 
 import java.util.logging.Level;
@@ -11,25 +6,35 @@ import javax.swing.JFrame;
 import javax.swing.JProgressBar;
 
 /**
+ * Classe referente a uma barra de progresso.
  *
+ * @version 1.0
+ * @author biancamoreira
+ * @author Iago Rodrigues
  * @author Leylane Ferreira
+ * @author Washington Filipe
  */
-public class ProgressBar extends Thread{
+public class ProgressBar extends Thread {
+
     private JFrame frame;
     private JProgressBar progressBar;
-    
-    public ProgressBar(JFrame frame, JProgressBar progressBar){
+
+    /**
+     * Construtor da barra de progresso.
+     * @param frame Formulário que extá contida a barra.
+     * @param progressBar Barra de progresso.
+     */
+    public ProgressBar(JFrame frame, JProgressBar progressBar) {
         this.frame = frame;
         this.progressBar = progressBar;
     }
-    
+
     @Override
-    public void run(){
-        for(int temp=0; temp<101; temp++){
+    public void run() {
+        for (int temp = 0; temp < 101; temp++) {
             progressBar.setValue(temp);
-            
+
         }
     }
-    
-    
+
 }
