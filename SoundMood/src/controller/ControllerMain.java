@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package controller;
 
 import java.util.List;
@@ -13,10 +8,21 @@ import org.hibernate.Query;
 import org.hibernate.Session;
 
 /**
+ * Classe responsável pelo controle principal e onde será instanciada a classe
+ * de controle de informação da seção atual.
  *
+ * @version 1.0
  * @author biancamoreira
+ * @author Iago Rodrigues
+ * @author Leylane Ferreira
+ * @author Washington Filipe
  */
 public class ControllerMain {
+    
+    /**
+     * Classe principal do sistema.
+     * @param args Parâmetros passados na execução do programa.
+     */
     public static void main(String args[]) {
        
         ControleInformacao ci = ControleInformacao.getInstance();
@@ -25,8 +31,6 @@ public class ControllerMain {
         ci.getStatus("trabalhando");
         
         //ci.calculaMusicas();
-        
-        
         
         ConnectionBD connect = new ConnectionBD();
         Session session = connect.abrirConexao();
