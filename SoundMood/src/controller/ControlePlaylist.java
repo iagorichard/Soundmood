@@ -65,7 +65,7 @@ public class ControlePlaylist {
     }
     
     /**
-     * Método responsável para parar a música que está tocando atualmente na
+     * Método responsável por parar a música que está tocando atualmente na
      * playlist.
      */
     public void Stop(){
@@ -80,7 +80,7 @@ public class ControlePlaylist {
     } 
     
     /**
-     * Método responsável para pausar a música que está tocando atualmente na
+     * Método responsável por pausar a música que está tocando atualmente na
      * playlist.
      */
     public void Pause(){
@@ -161,6 +161,7 @@ public class ControlePlaylist {
         
     }
     //mudar esse string path pra um array de strings
+    
     /**
      * Método responsável para tocar a playlist.
      * @param path Diretório da música a ser executada.

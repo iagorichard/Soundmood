@@ -16,6 +16,9 @@ import javax.persistence.Table;
 /**
  *
  * @author biancamoreira
+ * @author Iago Richard
+ * @author Leylane Ferreira
+ * @author Washigton Filipe 
  */
 
 @Entity

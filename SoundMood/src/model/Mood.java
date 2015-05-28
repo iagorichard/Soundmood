@@ -10,6 +10,9 @@ import javax.persistence.Table;
 /**
  *
  * @author biancamoreira
+ * @author Iago Rodrigues
+ * @author Leylane Ferreira
+ * @author Washington Filipe
  */
 
 @Entity

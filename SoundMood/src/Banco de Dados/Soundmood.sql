@@ -1,3 +1,5 @@
+--Script SoundMood 
+
 --tabela para Humor
 CREATE TABLE MOOD (
 id INT,
@@ -6,9 +8,9 @@ descricao VARCHAR(50),
 
 PRIMARY KEY(id)
 );
-
---descrição está sendo usada? 
+ 
 --tabela para status
+
 CREATE TABLE STATUS (
 id INT,
 nometag VARCHAR(20),
@@ -16,7 +18,9 @@ descricao VARCHAR(50),
 
 PRIMARY KEY(id)
 );
+
 --tabela referente ao usuário
+
 CREATE TABLE USUARIO (
 id int,
 username VARCHAR(20),
@@ -60,6 +64,7 @@ PRIMARY KEY(musicaid)
 );
 
 CREATE SEQUENCE SEQ_ID_USER INCREMENT BY 1 START WITH 1;
+-- variável de sequência 
 
 
 

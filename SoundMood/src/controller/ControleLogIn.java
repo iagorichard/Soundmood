@@ -19,7 +19,7 @@ import org.hibernate.Session;
 
 public class ControleLogIn {
     
-    /** Construtor simples para a classe. */
+    /** Construtor simples para a referida classe. */
     public ControleLogIn(){
         
     }
