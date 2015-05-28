@@ -1,3 +1,4 @@
+--tabela para Humor
 CREATE TABLE MOOD (
 id INT,
 nometag VARCHAR(20),
@@ -7,7 +8,7 @@ PRIMARY KEY(id)
 );
 
 --descrição está sendo usada? 
-
+--tabela para status
 CREATE TABLE STATUS (
 id INT,
 nometag VARCHAR(20),
@@ -15,7 +16,7 @@ descricao VARCHAR(50),
 
 PRIMARY KEY(id)
 );
-
+--tabela referente ao usuário
 CREATE TABLE USUARIO (
 id int,
 username VARCHAR(20),
@@ -33,6 +34,7 @@ FOREIGN KEY (tagmoodid) REFERENCES MOOD (id) ON DELETE CASCADE,
 FOREIGN KEY (tagstatusid) REFERENCES STATUS (id) ON DELETE CASCADE
 
 );
+--tabela referente a música 
 
 CREATE TABLE MUSICA(
 id INT,
@@ -43,6 +45,7 @@ pathurl VARCHAR(100),
 PRIMARY KEY(id)
 );
 
+--tabela referente ao cálculo feito para gerar playlist
 CREATE TABLE CALCULA(
 musicaid INT,
 moodid INT, 
