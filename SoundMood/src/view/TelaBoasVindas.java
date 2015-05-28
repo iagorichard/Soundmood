@@ -118,6 +118,7 @@ public class TelaBoasVindas extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+    
     /**
      * Ao clicar no botão <b>Button1</b>, a tela para a escolha do humor será exibida.
      * @param evt Evento do mouse.
