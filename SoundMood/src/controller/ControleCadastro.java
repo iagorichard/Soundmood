@@ -34,9 +34,9 @@ public class ControleCadastro {
      * para saber se existe um usuário com o username e email que foi passado
      * como parâmetro.
      * 
-     * @param username username do suposto novo usuário.
-     * @param email e-mail do suposto novo usuário.
-     * @return String, se o cadastro for aprovado, retorna uma mensagem 
+     * @param username Username do suposto novo usuário.
+     * @param email E-mail do suposto novo usuário.
+     * @return String: se o cadastro for aprovado, retorna uma mensagem 
      * <b>"Disponivel"</b>, se não, retorna outro valor. 
      */
     public String receberInformacao(String username, String email) {
@@ -79,13 +79,13 @@ public class ControleCadastro {
     
     /**
      * Método que recebe as informações do usuário e as grava no banco de dados.
-     * @param username username do novo usuário.
-     * @param password senha do novo usuário.
-     * @param nomeCompleto nome completo do novo usuário.
-     * @param email e-mail do novo usuário.
-     * @param tipoConta tipo de conta do novo usuário.
-     * @param passwordTip lembrete de senha do novo usuário.
-     * @return boolean para verificar se a trasação foi realizada com sucesso.
+     * @param username Username do novo usuário.
+     * @param password Senha do novo usuário.
+     * @param nomeCompleto Nome completo do novo usuário.
+     * @param email E-mail do novo usuário.
+     * @param tipoConta Tipo de conta do novo usuário.
+     * @param passwordTip Lembrete de senha do novo usuário.
+     * @return boolean: para verificar se a trasação foi realizada com sucesso.
      */
     public boolean gravarInformacao(String username, String password, String nomeCompleto, String email, int tipoConta, String passwordTip) {
 
@@ -125,9 +125,9 @@ public class ControleCadastro {
     /**
      * Método que verifica se está tentando cadastrar um novo usuário com um
      * username já utilizado por algum usuário no sistema.
-     * @param username do suposto novo usuário.
-     * @return boolean se username está sendo utilizado retorna true, se não 
-     * retorna a false.
+     * @param username Username do suposto novo usuário.
+     * @return boolean: se username está sendo utilizado retorna <b>true</b>, 
+     * se não retorna a <b>false</b>.
      */
     private boolean verificarUsuario(String username) {
        
@@ -153,8 +153,8 @@ public class ControleCadastro {
     /**
      * Método que verifica se está tentando cadastrar um novo usuário com um
      * email já utilizado por algum usuário no sistema.
-     * @param email do suposto novo usuário.
-     * @return boolean se email está sendo utilizado retorna <b>true</b>, se não 
+     * @param email E-mail do suposto novo usuário.
+     * @return boolean: se email está sendo utilizado retorna <b>true</b>, se não 
      * retorna a <b>false</b>.
      */
     private boolean verificarEmail(String email) {

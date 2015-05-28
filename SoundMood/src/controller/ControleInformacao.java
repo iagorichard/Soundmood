@@ -9,7 +9,7 @@ import org.hibernate.Query;
 import org.hibernate.Session;
 
 /**
- * Classe responsável pelo controle de <b>humor</b> e <b>status</b>.  
+ * Classe responsável pelo controle de <b>humor</b> e <b>status</b>.
  *
  * @version 1.0
  * @author biancamoreira
@@ -17,84 +17,98 @@ import org.hibernate.Session;
  * @author Leylane Ferreira
  * @author Washington Filipe
  */
-
 public class ControleInformacao {
-    
-    /** Declaração da instância de ControleInformacao. */
+
+    /**
+     * Declaração da instância de ControleInformacao.
+     */
     private static ControleInformacao INSTANCE;
-    /** Propriedade para humor. */ 
+    /**
+     * Propriedade para humor.
+     */
     private String humor = null;
-    /** Propriedade para status. */
+    /**
+     * Propriedade para status.
+     */
     private String status = null;
-    
+
     /**
      * Construtor simples para a classe.
      */
-    private ControleInformacao(){
+    private ControleInformacao() {
     }
-    
+
     /**
-     * A classe será uma Singleton Class, onde poderá ser instanciada em qualquer
-     * parte do código.
+     * A classe será uma Singleton Class, onde poderá ser instanciada em
+     * qualquer parte do código.
+     *
      * @return INTANCE instância da Singleton Class.
      */
-    public static ControleInformacao getInstance(){
-        if(INSTANCE==null){
+    public static ControleInformacao getInstance() {
+        if (INSTANCE == null) {
             INSTANCE = new ControleInformacao();
         }
         return INSTANCE;
     }
-    
-    
-    public void getHumor(String humor){
+
+    /**
+     * Getter para humor usuário na seção atual.
+     *
+     * @param humor Humor do usuário.
+     */
+    public void getHumor(String humor) {
         this.humor = humor;
     }
-    
-    public void getStatus(String status){
+
+    /**
+     * Getter para status do usuário na seção atual.
+     *
+     * @param status Status do usuário.
+     */
+    public void getStatus(String status) {
         this.status = status;
     }
-    
-    public void calculaMusicas(){
-        
+
+    /**
+     * Método para a realização do cálculo das músicas da playlist a ser gerada.
+     */
+    public void calculaMusicas() {
+
         String statusCalcula;
         String humorCalcula;
-        
-        if(this.humor == null){
+
+        if (this.humor == null) {
             //tratamento de erro
-        }else if(this.status == null){
+        } else if (this.status == null) {
             //tratamento de erro
+        } else {
             
-        }else{
             Musica musica = new Musica();
-            
+
             humorCalcula = this.humor;
             statusCalcula = this.status;
-            
+
             Random rand = new Random();
             int randomNumMusicaStatus = rand.nextInt((10) + 1);
             int randomNumMusicaHumor = rand.nextInt((10) + 1);
-            
+
             //fazer query e pegar id
-            
             ConnectionBD connect = new ConnectionBD();
             Session session = connect.abrirConexao();
-        
+
             int musicaid = 0;
             session.beginTransaction();
             Query query = session.createQuery("from Musica where id = :musicaid");
             musica = (Musica) query.uniqueResult();
-            
+
             System.out.println(musica.getNome());
-            
+
             System.out.println(randomNumMusicaStatus);
             System.out.println(randomNumMusicaHumor);
         }
-        
-        
+
     }
-    
+
     //public String[] retornoMusicas(){
-        
     //}
-    
 }
