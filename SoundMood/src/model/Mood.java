@@ -8,7 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 /**
- * Classe referente à um tipo de <b>humor</b> do sistema.
+ * Classe referente à um tipo de <b>humor</b> de um usuário no sistema.
  *
  * @author biancamoreira
  * @author Iago Rodrigues
