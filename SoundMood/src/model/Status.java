@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package model;
 
 import java.io.Serializable;
@@ -13,10 +8,13 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 /**
+ * Classe referente a um tipo de <b>status</b> de um usuário no sistema.
  *
  * @author biancamoreira
+ * @author Iago Richard
+ * @author Leylane Ferreira
+ * @author Washigton Filipe 
  */
-
 @Entity
 @Table(name = "STATUS")
 public class Status implements Serializable {

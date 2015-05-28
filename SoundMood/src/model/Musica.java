@@ -8,7 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 /**
- * Classe referente a uma música do sistema.
+ * Classe referente a uma <b>música</b> do sistema.
  *
  * @author biancamoreira
  * @author Iago Richard
