@@ -3,6 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package model;
 
 import java.io.Serializable;
@@ -85,8 +86,5 @@ public class Musica implements Serializable {
     public void setPathurl(String pathurl) {
         this.pathurl = pathurl;
     }
-    
-    
-    
-    
+       
 }
