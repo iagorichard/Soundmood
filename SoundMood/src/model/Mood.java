@@ -28,7 +28,7 @@ public class Mood implements Serializable {
     private String descricao;
 
     /**
-     * Getter para pegar o valor de id.
+     * Getter para pegar o valor da id do humor.
      * @return Retorna o valor da propriedade.
      */
     public int getId() {
@@ -44,7 +44,7 @@ public class Mood implements Serializable {
     }
 
     /**
-     * Getter para pegar o valor de nometag.
+     * Getter para pegar o valor do tag do humor.
      * @return Retorna o valor da propriedade.
      */
     public String getNometag() {
@@ -60,7 +60,7 @@ public class Mood implements Serializable {
     }
 
     /**
-     * Getter para pegar o valor de descricao.
+     * Getter para pegar o valor da descricao do humor.
      * @return Retorna o valor da propriedade.
      */
     public String getDescricao() {

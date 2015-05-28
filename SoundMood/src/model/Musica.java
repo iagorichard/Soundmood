@@ -29,56 +29,64 @@ public class Musica implements Serializable {
     private String pathurl;
 
     /**
-     * @return the id
+     * Getter para pegar o valor da id da música.
+     * @return Valor da propriedade.
      */
     public int getId() {
         return id;
     }
 
     /**
-     * @param id the id to set
+     * Setter para alterar o valor de id.
+     * @param id Valor a ser alterado em id.
      */
     public void setId(int id) {
         this.id = id;
     }
 
     /**
-     * @return the nome
+     * Getter para pegar o valor do nome da música.
+     * @return Valor da propriedade.
      */
     public String getNome() {
         return nome;
     }
 
     /**
-     * @param nome the nome to set
+     * Setter para alterar o valor de nome.
+     * @param nome Valor a ser alterado em nome.
      */
     public void setNome(String nome) {
         this.nome = nome;
     }
 
     /**
-     * @return the artista
+     * Getter para pegar o valor do nome do artista da música.
+     * @return Valor da propriedade.
      */
     public String getArtista() {
         return artista;
     }
 
     /**
-     * @param artista the artista to set
+     * Setter para alterar o valor de artista.
+     * @param artista Valor a ser alterado em artista.
      */
     public void setArtista(String artista) {
         this.artista = artista;
     }
 
     /**
-     * @return the pathurl
+     * Getter para pegar o valor do path de localização da música.
+     * @return Valor da propriedade.
      */
     public String getPathurl() {
         return pathurl;
     }
 
     /**
-     * @param pathurl the pathurl to set
+     * Setter para alterar o valor de pathurl.
+     * @param pathurl Valor a ser alterado em pathurl.
      */
     public void setPathurl(String pathurl) {
         this.pathurl = pathurl;
