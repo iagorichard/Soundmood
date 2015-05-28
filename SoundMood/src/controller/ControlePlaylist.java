@@ -13,12 +13,26 @@ import model.Musica;
 import org.hibernate.Query;
 import org.hibernate.Session;
 
+/**
+ * Classe responsável pelo controle de todas as ações a serem realizadas pelo
+ * usuário na <b>playlst</b> que foi gerada na seção atual.
+ *
+ * @version 1.0
+ * @author biancamoreira
+ * @author Iago Rodrigues
+ * @author Leylane Ferreira
+ * @author Washington Filipe
+ */
 public class ControlePlaylist {
 
     FileInputStream FIS;
     BufferedInputStream BIS;
     
     //Playlist pl = new Playlist();
+    
+    /**
+     * Atributos referentes ao controle da playlist.
+     */
     
     private Musica musicaAtual = new Musica();
     
@@ -33,10 +47,16 @@ public class ControlePlaylist {
     
     int temp = 0;
   
-    
+    /** Construtor simples para a classe. */
     private ControlePlaylist(){
     }
     
+    /**
+     * A classe será uma Singleton Class, onde poderá ser instanciada em
+     * qualquer parte do código.
+     *
+     * @return INTANCE instância da Singleton Class.
+     */
     public static ControlePlaylist getInstance(){
         if(INSTANCE==null){
             INSTANCE = new ControlePlaylist();
@@ -44,7 +64,10 @@ public class ControlePlaylist {
         return INSTANCE;
     }
     
-   
+    /**
+     * Método responsável para parar a música que está tocando atualmente na
+     * playlist.
+     */
     public void Stop(){
          //Checa se a musica esta tocando ou nao
         if (player != null) {
@@ -56,6 +79,10 @@ public class ControlePlaylist {
         }
     } 
     
+    /**
+     * Método responsável para pausar a música que está tocando atualmente na
+     * playlist.
+     */
     public void Pause(){
          //Checa se a musica esta tocando ou nao
         if (player != null) {
@@ -72,21 +99,34 @@ public class ControlePlaylist {
         }
     } 
     
+    /**
+     * Método que seta a música atual da playlist.
+     * @param musica Musica que será setada para ser a nova música atual da 
+     * playlist.
+     */
     public void setMusicaInformacao(Musica musica){
-        
         this.musicaAtual = musica;
-        
-       // System.out.println(this.musicaAtual.getArtista());
     }
     
+    /**
+     * Método que pega o nome da música atual da playlist.
+     * @return String: nome da música atual da playlist.
+     */
     public String getMusicaNome(){
         return musicaAtual.getNome();
     }
     
+    /**
+     * Método que pega o nome do artista da música atual da playlist.
+     * @return String: nome do artista da música atual da playlist.
+     */
     public String getMusicaArtista(){
         return musicaAtual.getArtista();
     }
     
+    /**
+     * Método que chama a playlist.
+     */
     public void chamarPlay(){
             String path;
             
@@ -121,6 +161,10 @@ public class ControlePlaylist {
         
     }
     //mudar esse string path pra um array de strings
+    /**
+     * Método responsável para tocar a playlist.
+     * @param path Diretório da música a ser executada.
+     */
     public void Play(String path){
         try{
             
@@ -186,7 +230,10 @@ public class ControlePlaylist {
     
     //adicionar o resume method no nosso diagrama de classes
     
-    //toca a musica de onde ela parou se o botao pause foi clicado
+    /**
+     * Método que faz tocar a musica de onde ela parou se o botao pause 
+     * tiver sido clicado.
+     */
     public void Resume(){
         try{
             //this.Play("/Users/biancamoreira/Downloads/Taking Back Sunday - A Decade Under The Influence (Video).mp3");
