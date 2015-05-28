@@ -170,7 +170,7 @@ public class TelaSignUp extends javax.swing.JFrame {
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addGap(69, 69, 69)
                                 .addComponent(cadastrarButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(39, 39, 39)
+                                .addGap(49, 49, 49)
                                 .addComponent(cancelarButton, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(0, 166, Short.MAX_VALUE)))
                 .addContainerGap())
@@ -212,11 +212,11 @@ public class TelaSignUp extends javax.swing.JFrame {
                     .addComponent(premiumRadioButton)
                     .addComponent(freeRadioButton)
                     .addComponent(passwordTipCadastroLabel1))
-                .addGap(18, 18, 18)
+                .addGap(38, 38, 38)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cancelarButton)
-                    .addComponent(cadastrarButton1))
-                .addContainerGap(86, Short.MAX_VALUE))
+                    .addComponent(cadastrarButton1)
+                    .addComponent(cancelarButton))
+                .addContainerGap(66, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
