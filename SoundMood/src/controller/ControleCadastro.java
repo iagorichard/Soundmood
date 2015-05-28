@@ -1,5 +1,6 @@
 package controller;
 
+import java.util.Arrays;
 import java.util.List;
 import model.ConnectionBD;
 import model.Usuario;
@@ -18,42 +19,73 @@ import org.hibernate.Transaction;
  * @author Washington Filipe
  */
 public class ControleCadastro {
-
+    
+    /**
+     * Construtor simples para a classe.
+     */
+    public ControleCadastro(){
+        
+    }
+    
     /**
      * Método que recebe as informações do novo usuário a ser cadastrado, e
      * verifica se realmente poderá ser criado este usuário com as informações
      * passadas como parâmetro; será realizada uma busca no banco de dados
      * para saber se existe um usuário com o username e email que foi passado
      * como parâmetro.
-     * @param username - username do suposto novo usuário.
-     * @param email - e-mail do suposto novo usuário.
-     * @return - String, se o cadastro for aprovado, retorna uma mensagem <b>"Disponivel"</b>, se não, retorna outro valor. 
+     * 
+     * @param username username do suposto novo usuário.
+     * @param email e-mail do suposto novo usuário.
+     * @return String, se o cadastro for aprovado, retorna uma mensagem 
+     * <b>"Disponivel"</b>, se não, retorna outro valor. 
      */
     public String receberInformacao(String username, String email) {
+        
         try {
-            //Verificar o usuario -- verificar se existe
+            
             if (this.verificarUsuario(username) == true) {
                 /**
+                 * Verifica se já existe um usuário com nome de usuário
+                 * igual o valor do parâmetro username no sistema;
                  * Se retornar a true, quer dizer que o usuário com esse
-                 * username já existe o método retorna um valor para ser
-                 * mostrada uma mensagem
+                 * username já existe; o método retorna um valor para ser
+                 * mostrada uma mensagem na tela.
                  */
                 return "usuario";
             } else if (this.verificarEmail(email) == true) {
                 /**
+                 * Verifica se já existe um usuário com nome de usuário
+                 * igual o valor do parâmetro username no sistema;
                  * Se retornar a true, quer dizer que o usuário com esse
-                 * username já existe o método retorna um valor para ser
-                 * mostrada uma mensagem
+                 * e-mail já existe; o método retorna um valor para ser
+                 * mostrada uma mensagem na tela.
                  */
                 return "email";
             } else {
+                /**
+                 * Se nenhuma das condições anteriores forem satisfeitas,
+                 * significa que será aprovado o cadastro desse novo usuário.
+                 */
                 return "disponivel";
             }
         } catch (Exception e) {
+            /**
+             * Se algum erro aconteceu, será tratada a exceção.
+             */
+            return "Erro " + Arrays.toString(e.getStackTrace());
         }
-        return "disponivel";
     }
-
+    
+    /**
+     * Método que recebe as informações do usuário e as grava no banco de dados.
+     * @param username username do novo usuário.
+     * @param password senha do novo usuário.
+     * @param nomeCompleto nome completo do novo usuário.
+     * @param email e-mail do novo usuário.
+     * @param tipoConta tipo de conta do novo usuário.
+     * @param passwordTip lembrete de senha do novo usuário.
+     * @return boolean para verificar se a trasação foi realizada com sucesso.
+     */
     public boolean gravarInformacao(String username, String password, String nomeCompleto, String email, int tipoConta, String passwordTip) {
 
         try {
