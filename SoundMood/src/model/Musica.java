@@ -10,6 +10,7 @@ import javax.persistence.Table;
 /**
  * Classe referente a uma <b>música</b> do sistema.
  *
+ * @version 1.0
  * @author biancamoreira
  * @author Iago Richard
  * @author Leylane Ferreira

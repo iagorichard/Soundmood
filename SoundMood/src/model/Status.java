@@ -10,6 +10,7 @@ import javax.persistence.Table;
 /**
  * Classe referente a um tipo de <b>status</b> de um usuário no sistema.
  *
+ * @version 1.0
  * @author biancamoreira
  * @author Iago Richard
  * @author Leylane Ferreira

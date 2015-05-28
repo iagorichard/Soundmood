@@ -10,6 +10,7 @@ import javax.persistence.Table;
 /**
  * Classe referente à um tipo de <b>humor</b> de um usuário no sistema.
  *
+ * @version 1.0
  * @author biancamoreira
  * @author Iago Rodrigues
  * @author Leylane Ferreira
