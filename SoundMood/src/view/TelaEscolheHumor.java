@@ -29,7 +29,6 @@ public class TelaEscolheHumor extends javax.swing.JFrame {
      * ATENÇÃO: Não modifique este código. O conteúdo deste método é sempre 
      * regenerado pelo Editor de formulário.
      */
-
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
