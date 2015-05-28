@@ -74,6 +74,7 @@ public class ControleCadastro {
              */
             return "Erro " + Arrays.toString(e.getStackTrace());
         }
+        
     }
     
     /**
@@ -119,8 +120,16 @@ public class ControleCadastro {
         }
 
     }
-
+    
+    /**
+     * Método que verifica se está tentando cadastrar um novo usuário com um
+     * username já utilizado por algum usuário no sistema.
+     * @param username do suposto novo usuário.
+     * @return boolean se username está sendo utilizado retorna true, se não 
+     * retorna a false.
+     */
     private boolean verificarUsuario(String username) {
+       
         ConnectionBD connect = new ConnectionBD();
         Session session = connect.abrirConexao();
 
@@ -140,7 +149,15 @@ public class ControleCadastro {
 
     }
 
+    /**
+     * Método que verifica se está tentando cadastrar um novo usuário com um
+     * email já utilizado por algum usuário no sistema.
+     * @param email do suposto novo usuário.
+     * @return boolean se email está sendo utilizado retorna true, se não 
+     * retorna a false.
+     */
     private boolean verificarEmail(String email) {
+        
         ConnectionBD connect = new ConnectionBD();
         Session session = connect.abrirConexao();
 
