@@ -31,6 +31,7 @@ public class Usuario implements Serializable {
     private String email;
     private String senha;
     private String senhadica;
+   
     
     private int tagmoodid;
     private int tagstatusid;
