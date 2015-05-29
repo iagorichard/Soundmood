@@ -24,9 +24,13 @@ public class Calcula implements Serializable {
     @Column(name = "idcalcula")
     @GeneratedValue
     
+    /** Id de música retornado após os cálculos de recomendação. */
     private int idcalcula;
+    /** Id de música retornado após os cálculos de recomendação. */
     private int musicaid;
+    /** Id do mood retornado após os cálculos de recomendação. */
     private int tagmoodid;
+    /** Id do status retornado após os cálculos de recomendação. */
     private int statustagid;
     
     /** Construtor simples para a classe. */

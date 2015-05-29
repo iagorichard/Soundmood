@@ -24,9 +24,13 @@ public class Musica implements Serializable {
     @Column(name = "id")
     @GeneratedValue
     
+    /** Id da música. */
     private int id;
+    /** Nome da música. */
     private String nome;
+    /** Nome do artista da música. */
     private String artista;
+    /** Localização da música (diretório). */
     private String pathurl;
 
     /**
