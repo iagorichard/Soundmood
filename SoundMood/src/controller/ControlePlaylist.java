@@ -25,15 +25,14 @@ import org.hibernate.Session;
  */
 public class ControlePlaylist {
 
+    /** Input Stream*/
     FileInputStream FIS;
+    /** Input Stream com buffer */
     BufferedInputStream BIS;
     
     //Playlist pl = new Playlist();
     
-    /**
-     * Atributos referentes ao controle da playlist.
-     */
-    
+    /** Instância da musica atual da playlist */
     private Musica musicaAtual = new Musica();
     
     public Player player;
