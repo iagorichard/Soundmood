@@ -45,7 +45,7 @@ public class ControleCadastro {
             
             if (this.verificarUsuario(username) == true) {
                 /**
-                 * Verifica se já existe um usuário com nome de usuário
+                 * Verifica se já existe um username de um usuario
                  * igual o valor do parâmetro username no sistema;
                  * Se retornar a true, quer dizer que o usuário com esse
                  * username já existe; o método retorna um valor para ser
