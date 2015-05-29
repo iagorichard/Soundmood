@@ -25,25 +25,31 @@ import org.hibernate.Session;
  */
 public class ControlePlaylist {
 
-    /** Input Stream*/
+    /** Input Stream. */
     FileInputStream FIS;
-    /** Input Stream com buffer */
+    /** Input Stream com buffer. */
     BufferedInputStream BIS;
     
     //Playlist pl = new Playlist();
     
-    /** Instância da musica atual da playlist */
+    /** Instância da musica atual da playlist. */
     private Musica musicaAtual = new Musica();
     
+    /** Instância para player, para tocar as músicas. */
     public Player player;
     
+    /** Pause location. */
     public long pauseLocation;
+    /** Tamanho da música. */
     public long songTotalLength;
     
+    /** Localização do arquivo. */
     public String fileLocation;
     
+    /** Singleton class, será instanciada em qualquer parte do código. */
     private static ControlePlaylist INSTANCE;
     
+    /** Variável auxiliar. */
     int temp = 0;
   
     /** Construtor simples para a classe. */
