@@ -15,7 +15,12 @@ import java.util.logging.Logger;
  */
 public class TelaBoasVindas extends javax.swing.JFrame {
 
+    /** Barra de progresso. */
     ProgressBar progress;
+    /** 
+     * Tela de escolher humor, será chamada se o usuário clicar em um botão para
+     * iniciar uma seção.
+     */
     TelaEscolheHumor escolherHumor;
     
     /**

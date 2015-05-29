@@ -16,7 +16,9 @@ import javax.swing.JProgressBar;
  */
 public class ProgressBar extends Thread {
 
+    /** Tela que ficará a barra de progresso. */
     private JFrame frame;
+    /** Instância da barra de progresso. */
     private JProgressBar progressBar;
 
     /**

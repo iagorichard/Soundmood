@@ -13,6 +13,7 @@ import controller.ControleCadastro;
  */
 public class TelaSignUp extends javax.swing.JFrame {
 
+    /** Controle de cadastro, irá ser responsável pela validação (ou não) do cadastro. */
     ControleCadastro controleCadastro = new ControleCadastro();
 
     /**

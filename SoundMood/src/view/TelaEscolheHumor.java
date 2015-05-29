@@ -13,8 +13,14 @@ import controller.ControleInformacao;
  */
 public class TelaEscolheHumor extends javax.swing.JFrame {
 
+    /** Controle de toda informação que foi gerada através das escolhas do usuário. */
     ControleInformacao informacaoInstancia = ControleInformacao.getInstance();
+    /** Barra de progresso. */
     ProgressBar progress;
+    /** 
+     * Tela de escolher status, será chamada se o usuário clicar em um botão
+     * referente a um humor.
+     */
     TelaEscolheStatus escolheStatus = new TelaEscolheStatus();
 
     /**

@@ -15,11 +15,18 @@ import javax.swing.JLabel;
  */
 public class PlaylistInformacao extends Thread {
 
+    /** Tela que ficará a execução da playlist. */
     private JFrame MP3Gui;
-    private JLabel jlabel1, jlabel2;
+    /** Texto1 da playlist. */
+    private JLabel jlabel1;
+    /** Texto2 da playlist. */
+    private JLabel jlabel2;
+    /** Controle da playlist. */
     ControlePlaylist CP = ControlePlaylist.getInstance();
 
+    /** Nome da música atual da playlist. */
     String nomeMusica;
+    /** Nome do artista da música atual da playlist. */
     String nomeArtista;
 
     /**

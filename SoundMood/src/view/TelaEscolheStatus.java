@@ -12,8 +12,13 @@ import controller.ControleInformacao;
  * @author Washington Filipe
  */
 public class TelaEscolheStatus extends javax.swing.JFrame {
-    
+
+    /** Controle de toda informação que foi gerada através das escolhas do usuário. */
     ControleInformacao informacaoInstancia = ControleInformacao.getInstance();
+    /** 
+     * Tela da playlist, será chamada se o usuário clicar em um botão
+     * referente a um status.
+     */
     MP3PlayerGUI MP3;
     
     /**
