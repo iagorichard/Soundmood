@@ -64,7 +64,8 @@ public class ControleInformacao {
     }
 
     /**
-     * Método para a realização do cálculo das músicas da playlist a ser gerada.
+     * Método para a realização dos cálculos das músicas das playlists a sererem 
+     * geradas.
      */
     public void calculaMusicas() {
 
