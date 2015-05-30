@@ -26,14 +26,14 @@ public class ControleLogIn {
     
     /**
      * Método responsável para a validação de um login, o usuário só poderá
-     * logar no sistema se o username e password corresponderem a um mesmo
-     * usuário e senha que estiverem cadastrados na mesma tupla do banco
-     * de dados do sistema.
+     * logar no sistema se o username e password existirem e forem 
+     * corresponderem a um mesmo usuário e senha que estiverem cadastrados na 
+     * mesma tupla do banco de dados do sistema.
      * @param username Nome de usuário a ser validado.
      * @param password Senha a ser validada.
      * @return boolean: se o username e password tiverem sido validados, significa
      * que o login foi efetuado com sucesso, fazendo com que o método retorne
-     * a <b>true</b>, se não retornará a <b>false</b>.
+     *  <b>true</b>, se não for realizado com sucesso retornará a <b>false</b>.
      */
     public boolean checaLogin(String username, String password) {
         

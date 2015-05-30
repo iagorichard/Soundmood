@@ -70,11 +70,11 @@ public class ControlePlaylist {
     }
     
     /**
-     * Método responsável por parar a música que está tocando atualmente na
-     * playlist.
+     * Método responsável por parar a música que está sendo reproduzida naquele 
+     * instante na playlist.
      */
     public void Stop(){
-         //Checa se a musica esta tocando ou nao
+         //Checa se a musica esta sendo reproduzida ou nao
         if (player != null) {
             player.close();
             
@@ -85,11 +85,11 @@ public class ControlePlaylist {
     } 
     
     /**
-     * Método responsável por pausar a música que está tocando atualmente na
-     * playlist.
+     * Método responsável por pausar a música que está sendo reproduzida 
+     * atualmente na playlist.
      */
     public void Pause(){
-         //Checa se a musica esta tocando ou nao
+         //Checa se a musica esta sendo reproduzida ou nao
         if (player != null) {
             
             try {
@@ -168,7 +168,7 @@ public class ControlePlaylist {
     //mudar esse string path pra um array de strings
     
     /**
-     * Método responsável para tocar a playlist.
+     * Método responsável para reproduzir a playlist.
      * @param path Diretório da música a ser executada.
      */
     public void Play(String path){
@@ -238,7 +238,7 @@ public class ControlePlaylist {
     //adicionar o "resume method" no nosso diagrama de classes
     
     /**
-     * Método que faz tocar a musica de onde ela parou se o botao pause 
+     * Método que faz reproduzir a musica de onde ela parou se o botao pause 
      * tiver sido clicado.
      */
     public void Resume(){
