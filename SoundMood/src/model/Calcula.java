@@ -8,7 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 /**
- * Classe responsável pelo cálculo da playlist.
+ * Classe responsável pelos cálculos das playlist's.
  *
  * @version 1.0
  * @author biancamoreira
