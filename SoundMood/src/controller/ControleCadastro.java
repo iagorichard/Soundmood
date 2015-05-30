@@ -47,24 +47,24 @@ public class ControleCadastro {
                 /**
                  * Verifica se já existe um username de um usuario
                  * igual o valor do parâmetro username no sistema;
-                 * Se retornar a true, quer dizer que o usuário com esse
-                 * username já existe; o método retorna um valor para ser
-                 * mostrada uma mensagem na tela.
+                 * Se retornar a true, entende-se que o username ja existe;
+                 * o método retorna um valor para ser mostrada uma mensagem na 
+                 * tela.
                  */
                 return "usuario";
             } else if (this.verificarEmail(email) == true) {
                 /**
                  * Verifica se já existe um usuário com nome de usuário
                  * igual o valor do parâmetro username no sistema;
-                 * Se retornar a true, quer dizer que o usuário com esse
-                 * e-mail já existe; o método retorna um valor para ser
-                 * mostrada uma mensagem na tela.
+                 * Se retornar a true,entende-se que o e-mail ja foi cadastrado
+                 * o método retorna um valor para ser mostrada uma mensagem na 
+                 * tela.
                  */
                 return "email";
             } else {
                 /**
                  * Se nenhuma das condições anteriores forem satisfeitas,
-                 * significa que será aprovado o cadastro desse novo usuário.
+                 * significa que o cadastro pode ser realizado com sucesso.
                  */
                 return "disponivel";
             }
