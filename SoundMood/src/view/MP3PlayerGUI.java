@@ -6,7 +6,7 @@ import javazoom.jl.decoder.JavaLayerException;
 
 /**
  * Classe responsável pelo cálculo da playlist.
- * OBS BIANCA VEJA AS LINHAS 325 | 332 | 346 | 374 | 385 
+ * OBS BIANCA OBSERVE AS LINHAS 325 | 332 | 346 | 374 | 385 
  * @version 1.0
  * @author biancamoreira
  * @author Iago Rodrigues
@@ -27,7 +27,7 @@ public class MP3PlayerGUI extends javax.swing.JFrame {
     int height = Toolkit.getDefaultToolkit().getScreenSize().height - 180;
     
     /**
-     * Método responsável por mostrar na tela toda a interface gráfica da
+     * Método responsável por mostrar na tela de toda a interface gráfica da
      * playlist.
      */
     public MP3PlayerGUI() {
@@ -43,7 +43,7 @@ public class MP3PlayerGUI extends javax.swing.JFrame {
 
     /**
      * Esse método é chamado de dentro do construtor para inicializar o formulário. 
-     * ATENÇÃO: Não modifique este código. O conteúdo deste método é sempre 
+     * ATENÇÃO, ATENÇÂO: Não modifique este código. O conteúdo deste método é sempre 
      * regenerado pelo Editor de formulário.
      */
     @SuppressWarnings("unchecked")
