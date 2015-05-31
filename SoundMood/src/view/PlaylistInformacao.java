@@ -15,7 +15,7 @@ import javax.swing.JLabel;
  */
 public class PlaylistInformacao extends Thread {
 
-    /** Tela que ficará a execução da playlist. */
+    /** Tela que ficará na execução da playlist. */
     private JFrame MP3Gui;
     /** Texto1 da playlist. */
     private JLabel jlabel1;
