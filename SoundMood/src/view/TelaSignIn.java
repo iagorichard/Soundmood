@@ -11,6 +11,7 @@ import controller.ControleLogIn;
  * @author Leylane Ferreira
  * @author Washington Filipe
  */
+
 public class TelaSignIn extends javax.swing.JFrame {
 
     /**
@@ -181,6 +182,7 @@ public class TelaSignIn extends javax.swing.JFrame {
      * ao username e a senha.
      * @param evt Evento do mouse.
      */
+    
     private void entrarButtonMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_entrarButtonMouseReleased
         
         //Variáveis que indicam atributos do usuário (tipo a ser definido)
@@ -214,6 +216,7 @@ public class TelaSignIn extends javax.swing.JFrame {
      * Ao clicar no botão <b>cancelarButton1</b>, a primeira tela será exibida.
      * @param evt Evento do mouse.
      */
+    
     private void cancelarButton1MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cancelarButton1MouseReleased
         
         this.setVisible(false);
