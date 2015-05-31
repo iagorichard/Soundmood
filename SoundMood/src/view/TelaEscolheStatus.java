@@ -11,6 +11,7 @@ import controller.ControleInformacao;
  * @author Leylane Ferreira
  * @author Washington Filipe
  */
+
 public class TelaEscolheStatus extends javax.swing.JFrame {
 
     /** Controle de toda informação que foi gerada através das escolhas do usuário. */
