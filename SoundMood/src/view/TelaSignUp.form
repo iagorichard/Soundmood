@@ -62,20 +62,6 @@
                           <EmptySpace min="-2" pref="114" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="nomeCompletoCadastroLabel" min="-2" max="-2" attributes="0"/>
-                                      <Component id="passwordCadastroLabel" min="-2" max="-2" attributes="0"/>
-                                      <Component id="emailCadastroLabel" min="-2" max="-2" attributes="0"/>
-                                      <Component id="usernameCadastroLabel" min="-2" max="-2" attributes="0"/>
-                                      <Component id="passwordTipCadastroLabel" min="-2" max="-2" attributes="0"/>
-                                      <Component id="passwordTipCadastroLabel1" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace min="-2" pref="66" max="-2" attributes="0"/>
-                                  <Component id="premiumRadioButton" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="freeRadioButton" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" attributes="0">
                                   <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                                   <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
@@ -91,10 +77,37 @@
                                   </Group>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="69" max="-2" attributes="0"/>
-                                  <Component id="cadastrarButton1" min="-2" pref="189" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
-                                  <Component id="cancelarButton" min="-2" pref="189" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <EmptySpace min="-2" pref="69" max="-2" attributes="0"/>
+                                                  <Component id="cadastrarButton1" min="-2" pref="189" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Component id="nomeCompletoCadastroLabel" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="passwordCadastroLabel" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="emailCadastroLabel" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="usernameCadastroLabel" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="passwordTipCadastroLabel" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <EmptySpace min="-2" pref="175" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                          <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="passwordTipCadastroLabel1" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="32767" attributes="0"/>
+                                          <Component id="premiumRadioButton" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="freeRadioButton" min="-2" max="-2" attributes="0"/>
+                                      <Component id="cancelarButton" min="-2" pref="189" max="-2" attributes="0"/>
+                                  </Group>
                               </Group>
                           </Group>
                           <EmptySpace min="0" pref="166" max="32767" attributes="0"/>
@@ -144,18 +157,20 @@
                       <Component id="passwordTipCadastroTextField" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
                       <Component id="passwordTipCadastroLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="premiumRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="freeRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="passwordTipCadastroLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="1" attributes="0">
+                      <Component id="passwordTipCadastroLabel1" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="premiumRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="freeRadioButton" alignment="3" max="32767" attributes="0"/>
+                      </Group>
                   </Group>
-                  <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="cadastrarButton1" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="cancelarButton" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="66" max="32767" attributes="0"/>
+                  <EmptySpace pref="61" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
