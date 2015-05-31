@@ -24,23 +24,23 @@ public class Usuario implements Serializable {
     @Column(name = "id")
     @GeneratedValue
 
-    /** Id do usuário. */
+    /** ID do usuário. */
     private int id;
-    /** Username do usuário. */
+    /** USERNAME do usuário. */
     private String username;
-    /** Tipo de usuário. */
+    /** TIPO de usuário. */
     private String tipo;
-    /** Nome completo do usuário. */
+    /** NOME completo do usuário. */
     private String nome;
-    /** E-mail do usuário. */
+    /** E-MAIL do usuário. */
     private String email;
-    /** Senha do usuário. */
+    /** SENHA do usuário. */
     private String senha;
-    /** Dica da senha do usuário. */
+    /** DICA da SENHA do usuário. */
     private String senhadica;
-    /** Id do atual humor do usuário. */
+    /** ID do ATUAL HUMOR do usuário. */
     private int tagmoodid;
-    /** Id do atual status do usuário. */
+    /** ID do ATUAL STATUS do usuário. */
     private int tagstatusid;
 
     /**
