@@ -1,6 +1,6 @@
 --Script SoundMood 
 
---tabela para Humor
+--tabela para cadastrar Humor
 CREATE TABLE MOOD (
 id INT,
 nometag VARCHAR(20),
@@ -9,8 +9,7 @@ descricao VARCHAR(50),
 PRIMARY KEY(id)
 );
  
---tabela para status
---123 testando 
+--tabela para cadastrar status 
 
 CREATE TABLE STATUS (
 id INT,
