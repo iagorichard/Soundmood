@@ -19,7 +19,7 @@ import org.hibernate.Transaction;
 public class ConnectionBD {
     
     /**
-     * Método para a abertura da conexão.
+     * Método de abertura da conexão.
      * @return Session: sessão da conexão com o banco de dados.
      */
     public Session abrirConexao(){
@@ -31,7 +31,7 @@ public class ConnectionBD {
     }
     
     /**
-     * Método para o fechamento da conexão.
+     * Método do fechamento da conexão.
      * @param session Sessão a ser fechada.
      */
     public void fecharConexao(Session session){
