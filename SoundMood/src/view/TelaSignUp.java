@@ -11,6 +11,7 @@ import controller.ControleCadastro;
  * @author Leylane Ferreira
  * @author Washington Filipe
  */
+
 public class TelaSignUp extends javax.swing.JFrame {
 
     /** Controle de cadastro, irá ser responsável pela validação (ou não) do cadastro. */
@@ -275,6 +276,7 @@ public class TelaSignUp extends javax.swing.JFrame {
      * tela de cadastro.
      * @param evt Evento do mouse.
      */
+    
     private void cadastrarButton1MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cadastrarButton1MouseReleased
         
         String retorno = controleCadastro.receberInformacao(usernameCadastroTextField.getText(), emailCadastroTextField.getText());
