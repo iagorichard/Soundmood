@@ -66,7 +66,7 @@ public class Musica implements Serializable {
     }
 
     /**
-     * Getter para pegar o valor do nome do artista da música.
+     * Getter para pegar o valor do nome do artista da música escolhida.
      * @return Valor da propriedade.
      */
     public String getArtista() {

@@ -8,7 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 /**
- * Classe referente a um tipo de <b>status</b> de um usuário no sistema.
+ * Classe referente a um tipo de <b>status</b> escolhido de um usuário no sistema.
  *
  * @version 1.0
  * @author biancamoreira
