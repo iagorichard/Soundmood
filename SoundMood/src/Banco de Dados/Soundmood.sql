@@ -10,6 +10,7 @@ PRIMARY KEY(id)
 );
  
 --tabela para status
+--123 testando 
 
 CREATE TABLE STATUS (
 id INT,
