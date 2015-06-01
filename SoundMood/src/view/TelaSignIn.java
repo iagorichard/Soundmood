@@ -22,9 +22,10 @@ public class TelaSignIn extends javax.swing.JFrame {
     }
 
     /**
-     * Esse método é chamado de dentro do construtor para inicializar o formulário. 
-     * ATENÇÃO: Não modifique este código. O conteúdo deste método é sempre 
-     * regenerado pelo Editor de formulário.
+     * Esse método é chamado de dentro do construtor para inicializar o
+     * formulário. 
+     * ATENÇÃO,ATENÇAO: Não modifique este código. O conteúdo deste método é 
+     * sempre regenerado pelo Editor de formulário.
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
