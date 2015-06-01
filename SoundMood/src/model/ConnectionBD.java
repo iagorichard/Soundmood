@@ -31,7 +31,7 @@ public class ConnectionBD {
     }
     
     /**
-     * Método do fechamento da conexão.
+     * Método do fechamento da conexão com o banco de dados.
      * @param session Sessão a ser fechada.
      */
     public void fecharConexao(Session session){
