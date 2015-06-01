@@ -14,7 +14,7 @@ import javax.persistence.Table;
  * @author biancamoreira
  * @author Iago Richard
  * @author Leylane Ferreira
- * @author Washigton Filipe 
+ * @author Washington Filipe 
  */
 @Entity
 @Table(name = "USUARIO")
