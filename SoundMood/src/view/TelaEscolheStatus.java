@@ -18,7 +18,7 @@ public class TelaEscolheStatus extends javax.swing.JFrame {
     ControleInformacao informacaoInstancia = ControleInformacao.getInstance();
     /** 
      * Tela da playlist, será chamada se o usuário clicar em um botão
-     * referente a um status.
+     * que seja referente a um status.
      */
     MP3PlayerGUI MP3;
     
