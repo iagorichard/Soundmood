@@ -35,7 +35,7 @@ public class ControlePlaylist {
     /** Instância da musica atual da playlist. */
     private Musica musicaAtual = new Musica();
     
-    /** Instância para player, para tocar as músicas. */
+    /** Instância para player, para de tocar as músicas. */
     public Player player;
     
     /** Pause location. */
