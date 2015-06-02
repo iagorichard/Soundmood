@@ -44,7 +44,7 @@ public class Usuario implements Serializable {
     private int tagstatusid;
 
     /**
-     * Getter para pegar o valor da id do usuário.
+     * Getter para pegar o valor do id do usuário.
      * @return Retorna do valor da propriedade.
      */
     public int getId() {
@@ -52,7 +52,7 @@ public class Usuario implements Serializable {
     }
 
     /**
-     * Setter para alterar o valor de id.
+     * Setter para alterar o valor do id.
      * @param id Valor a ser alterado em id.
      */
     public void setId(int id) {
@@ -60,7 +60,7 @@ public class Usuario implements Serializable {
     }
 
     /**
-     * Getter para pegar o valor do username do usuário.
+     * Getter para pegar o valor d username do usuário.
      * @return Retorna do valor da propriedade.
      */
     public String getUsername() {

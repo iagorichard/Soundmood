@@ -64,7 +64,7 @@ public class Status implements Serializable {
     }
 
     /**
-     * Getter para pegar o valor da descricao do humor.
+     * Getter para pegar o valor da descricão do humor.
      * @return Retorna o valor da propriedade.
      */
     public String getDescricao() {
@@ -72,8 +72,8 @@ public class Status implements Serializable {
     }
 
     /**
-     * Setter para alterar o valor de descricao.
-     * @param descricao Valor a ser alterado em descricao.
+     * Setter para alterar o valor da descricão.
+     * @param descricao Valor a ser alterado em descricão.
      */
     public void setDescricao(String descricao) {
         this.descricao = descricao;
