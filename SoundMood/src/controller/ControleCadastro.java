@@ -70,7 +70,7 @@ public class ControleCadastro {
             }
         } catch (Exception e) {
             /**
-             * Se algum erro aconteceu, será tratada a exceção.
+             * Se algum erro aconteceu, será tratada a exceção desse erro.
              */
             return "Erro " + Arrays.toString(e.getStackTrace());
         }

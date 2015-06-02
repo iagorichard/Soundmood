@@ -19,7 +19,7 @@ import org.hibernate.Session;
  */
 public class ControleInformacao {
 
-    /** Declaração da instância de ControleInformacao. */
+    /** Declaração da instância de ControleInformacão. */
     private static ControleInformacao INSTANCE;
     /** Propriedade para humor. */
     private String humor = null;
