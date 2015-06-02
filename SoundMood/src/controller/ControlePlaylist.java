@@ -14,8 +14,8 @@ import org.hibernate.Query;
 import org.hibernate.Session;
 
 /**
- * Classe responsável pelo controle de todas as ações a serem realizadas pelo
- * usuário na <b>playlst</b> que foi gerada na seção atual.
+ * Classe responsável pelo controle de todas as ações a serem realizadas pelos
+ * os usuários na <b>playlst</b> que foi gerada na seção atual.
  *
  * @version 1.0
  * @author biancamoreira

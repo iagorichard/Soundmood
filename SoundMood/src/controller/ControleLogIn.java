@@ -26,7 +26,7 @@ public class ControleLogIn {
     
     /**
      * Método responsável para a validação de um login, o usuário só poderá
-     * logar no sistema se o username e password existirem e forem 
+     * logar no sistema se o username e password existir e for 
      * corresponderem a um mesmo usuário e senha que estiverem cadastrados na 
      * mesma tupla do banco de dados do sistema.
      * @param username Nome de usuário a ser validado.
