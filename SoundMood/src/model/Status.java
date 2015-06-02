@@ -24,11 +24,11 @@ public class Status implements Serializable {
     @Column(name = "id")
     @GeneratedValue
     
-    /** Id do status. */
+    /** ID do status. */
     private int id;
-    /** Nome do status. */
+    /** NOME do status. */
     private String nometag;
-    /** Descrição do status. */
+    /** DESCRICÃO do status. */
     private String descricao;
     
     /**

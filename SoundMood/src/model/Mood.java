@@ -24,11 +24,11 @@ public class Mood implements Serializable {
     @Column(name = "id")
     @GeneratedValue
    
-    /** Id do humor. */
+    /** ID do humor. */
     private int id;
-    /** Nome do humor. */
+    /** NOME do humor. */
     private String nometag;
-    /** Descrição do humor. */
+    /** DESCRIÇÃO do humor. */
     private String descricao;
 
     /**
