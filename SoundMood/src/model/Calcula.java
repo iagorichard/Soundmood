@@ -1,3 +1,8 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package model;
 
 import java.io.Serializable;
@@ -8,13 +13,8 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 /**
- * Classe responsável pelos cálculos das playlist's.
  *
- * @version 1.0
  * @author biancamoreira
- * @author Iago Rodrigues
- * @author Leylane Ferreira
- * @author Washington Filipe
  */
 @Entity
 @Table(name = "CALCULA")
@@ -24,81 +24,70 @@ public class Calcula implements Serializable {
     @Column(name = "idcalcula")
     @GeneratedValue
     
-    /** Id de música retornado após os cálculos de recomendação. */
     private int idcalcula;
-    /** Id de música retornado após os cálculos de recomendação. */
-    private int musicaid;
-    /** Id do mood retornado após os cálculos de recomendação. */
+    private int idmusica;
     private int tagmoodid;
-    /** Id do status retornado após os cálculos de recomendação. */
     private int statustagid;
     
-    /** Construtor simples para a classe. */
     public Calcula(){
     }
 
     /**
-     * Getter para idcalcula
-     * @return Retorna o valor da propriedade.
+     * @return the idcalcula
      */
     public int getIdcalcula() {
         return idcalcula;
     }
 
     /**
-     * Setter para idcalcula
-     * @param idcalcula Valor a ser setado.
+     * @param idcalcula the idcalcula to set
      */
     public void setIdcalcula(int idcalcula) {
         this.idcalcula = idcalcula;
     }
 
     /**
-     * Getter para musicaId
-     * @return Retorna o valor da propriedade.
+     * @return the musicaid
      */
-    public int getMusicaid() {
-        return musicaid;
+    public int getIdmusica() {
+        return idmusica;
     }
 
     /**
-     * Setter para musicaid
-     * @param musicaid Valor a ser setado.
+     * @param musicaid the musicaid to set
      */
-    public void setMusicaid(int musicaid) {
-        this.musicaid = musicaid;
+    public void setIdmusica(int musicaid) {
+        this.idmusica = musicaid;
     }
 
     /**
-     * Getter para tagmoodid
-     * @return Retorna o valor da propriedade.
+     * @return the tagmoodid
      */
     public int getTagmoodid() {
         return tagmoodid;
     }
 
     /**
-     * Setter para tagmoodid
-     * @param tagmoodid Valor a ser setado.
+     * @param tagmoodid the tagmoodid to set
      */
     public void setTagmoodid(int tagmoodid) {
         this.tagmoodid = tagmoodid;
     }
 
     /**
-     * Getter para statustagid
-     * @return Retorna o valor da propriedade.
+     * @return the statustagid
      */
     public int getStatustagid() {
         return statustagid;
     }
 
     /**
-     * Setter para statustagid
-     * @param statustagid Valor a ser setado.
+     * @param statustagid the statustagid to set
      */
     public void setStatustagid(int statustagid) {
         this.statustagid = statustagid;
     }
 
+    
+    
 }

@@ -4,6 +4,7 @@ import java.io.BufferedInputStream;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javazoom.jl.decoder.JavaLayerException;
@@ -13,68 +14,42 @@ import model.Musica;
 import org.hibernate.Query;
 import org.hibernate.Session;
 
-/**
- * Classe responsável pelo controle de todas as ações a serem realizadas pelos
- * os usuários na <b>playlst</b> que foi gerada na seção atual.
- *
- * @version 1.0
- * @author biancamoreira
- * @author Iago Rodrigues
- * @author Leylane Ferreira
- * @author Washington Filipe
- */
 public class ControlePlaylist {
 
-    /** Input Stream. */
     FileInputStream FIS;
-    /** Input Stream com buffer. */
     BufferedInputStream BIS;
     
     //Playlist pl = new Playlist();
-    
-    /** Instância da musica atual da playlist. */
+   
     private Musica musicaAtual = new Musica();
     
-    /** Instância para player, para de tocar as músicas. */
     public Player player;
     
-    /** Pause location. */
     public long pauseLocation;
-    /** Tamanho da música. */
     public long songTotalLength;
     
-    /** Localização do arquivo. */
     public String fileLocation;
     
-    /** Singleton class, será instanciada em qualquer parte do código. */
     private static ControlePlaylist INSTANCE;
     
-    /** Variável auxiliar. */
     int temp = 0;
-  
-    /** Construtor simples para a classe. */
+    
+    int[] pegaMusicasId;
+    
+    
     private ControlePlaylist(){
     }
     
-    /**
-     * A classe será uma Singleton Class, podendo ser instanciada em
-     * qualquer parte do código.
-     *
-     * @return INTANCE instância da Singleton Class.
-     */
     public static ControlePlaylist getInstance(){
-        if(INSTANCE == null){
+        if(INSTANCE==null){
             INSTANCE = new ControlePlaylist();
         }
         return INSTANCE;
     }
     
-    /**
-     * Método responsável por parar a música que está sendo reproduzida naquele 
-     * instante na playlist.
-     */
+   
     public void Stop(){
-         //Checa se a musica esta sendo reproduzida ou nao
+         //Checa se a musica esta tocando ou nao
         if (player != null) {
             player.close();
             
@@ -84,12 +59,8 @@ public class ControlePlaylist {
         }
     } 
     
-    /**
-     * Método responsável por pausar a música que está sendo reproduzida 
-     * atualmente na playlist.
-     */
     public void Pause(){
-         //Checa se a musica esta sendo reproduzida ou nao
+         //Checa se a musica esta tocando ou nao
         if (player != null) {
             
             try {
@@ -104,34 +75,34 @@ public class ControlePlaylist {
         }
     } 
     
-    /**
-     * Método que seta a música atual da playlist.
-     * @param musica Musica que será setada para ser a nova música atual da 
-     * playlist.
-     */
     public void setMusicaInformacao(Musica musica){
+        
         this.musicaAtual = musica;
+        
+       // System.out.println(this.musicaAtual.getArtista());
     }
     
-    /**
-     * Método que pega o nome da música atual da playlist.
-     * @return String: nome da música atual da playlist.
-     */
     public String getMusicaNome(){
         return musicaAtual.getNome();
     }
     
-    /**
-     * Método que pega o nome do artista da música atual da playlist.
-     * @return String: nome do artista da música atual da playlist.
-     */
     public String getMusicaArtista(){
         return musicaAtual.getArtista();
     }
     
-    /**
-     * Método que chama a playlist.
-     */
+    
+    public void pegaMusicasId(){
+        ControleInformacao CI = ControleInformacao.getInstance();
+        int[] musicasId = new int[5];
+        
+        //CI.getHumor(0);
+        //CI.getStatus(0);
+        musicasId = CI.calculaMusicas();
+        System.out.println(Arrays.toString(musicasId));
+        this.pegaMusicasId = musicasId;
+        
+    }
+    
     public void chamarPlay(){
             String path;
             
@@ -140,13 +111,15 @@ public class ControlePlaylist {
             Session session = connect.abrirConexao();
             session.beginTransaction();
             
+             
+              
            // Query query = session.createQuery("from Musica where id= :id");
             
           // for(int temp=0; temp>3;temp++){
                 Query query = session.createQuery("from Musica where id= :id");
                 
-                
-                query.setParameter("id",temp);
+                System.out.println(pegaMusicasId[temp]);
+                query.setParameter("id",pegaMusicasId[temp]);
                 Musica retorno = new Musica();
                 retorno = (Musica) query.uniqueResult();
                 //System.out.println(retorno.getNome());
@@ -166,11 +139,6 @@ public class ControlePlaylist {
         
     }
     //mudar esse string path pra um array de strings
-    
-    /**
-     * Método responsável para reproduzir a playlist.
-     * @param path Diretório da música a ser executada.
-     */
     public void Play(String path){
         try{
             
@@ -228,19 +196,15 @@ public class ControlePlaylist {
                     }
                     
                 } catch (JavaLayerException ex) {
-                    
                     //Logger.getLogger(ControlePlaylist.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }
         }.start();
     }
     
-    //adicionar o "resume method" no nosso diagrama de classes
+    //adicionar o resume method no nosso diagrama de classes
     
-    /**
-     * Método que faz reproduzir a musica de onde ela parou se o botao pause 
-     * tiver sido clicado.
-     */
+    //toca a musica de onde ela parou se o botao pause foi clicado
     public void Resume(){
         try{
             //this.Play("/Users/biancamoreira/Downloads/Taking Back Sunday - A Decade Under The Influence (Video).mp3");

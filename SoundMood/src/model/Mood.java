@@ -1,3 +1,8 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package model;
 
 import java.io.Serializable;
@@ -8,14 +13,10 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 /**
- * Classe referente à um tipo de <b>humor</b> escolhido de um usuário no sistema.
  *
- * @version 1.0
  * @author biancamoreira
- * @author Iago Rodrigues
- * @author Leylane Ferreira
- * @author Washington Filipe
  */
+
 @Entity
 @Table(name = "MOOD")
 public class Mood implements Serializable {
@@ -23,60 +24,52 @@ public class Mood implements Serializable {
     @Id
     @Column(name = "id")
     @GeneratedValue
-   
-    /** ID do humor. */
+    
     private int id;
-    /** NOME do humor. */
     private String nometag;
-    /** DESCRIÇÃO do humor. */
     private String descricao;
 
     /**
-     * Getter para pegar o valor da id do humor.
-     * @return Retorna o valor da propriedade.
+     * @return the id
      */
     public int getId() {
         return id;
     }
 
     /**
-     * Setter para alterar o valor de id.
-     * @param id Valor a ser alterado em id.
+     * @param id the id to set
      */
     public void setId(int id) {
         this.id = id;
     }
 
     /**
-     * Getter para pegar o valor do tag do humor.
-     * @return Retorna o valor da propriedade.
+     * @return the nometag
      */
     public String getNometag() {
         return nometag;
     }
 
     /**
-     * Setter para alterar o valor de nometag.
-     * @param nometag Valor a ser alterado em nometag.
+     * @param nometag the nometag to set
      */
     public void setNometag(String nometag) {
         this.nometag = nometag;
     }
 
     /**
-     * Getter para pegar o valor da descricao do humor.
-     * @return Retorna o valor da propriedade.
+     * @return the descricao
      */
     public String getDescricao() {
         return descricao;
     }
 
     /**
-     * Setter para alterar o valor de descricao.
-     * @param descricao Valor a ser alterado em descricao.
+     * @param descricao the descricao to set
      */
     public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
-       
+    
+    
 }
