@@ -13,8 +13,13 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 /**
+ * Classe responsável pelos cálculos das playlist's.
  *
+ * @version 1.0
  * @author biancamoreira
+ * @author Iago Rodrigues
+ * @author Leylane Ferreira
+ * @author Washington Filipe
  */
 @Entity
 @Table(name = "CALCULA")
@@ -24,65 +29,78 @@ public class Calcula implements Serializable {
     @Column(name = "idcalcula")
     @GeneratedValue
     
+    /** Id de música retornado após os cálculos de recomendação. */
     private int idcalcula;
+    /** Id de música retornado após os cálculos de recomendação. */
     private int idmusica;
+    /** Id do mood retornado após os cálculos de recomendação. */
     private int tagmoodid;
+    /** Id do status retornado após os cálculos de recomendação. */
     private int statustagid;
     
+    /** Construtor simples para a classe. */
     public Calcula(){
     }
 
     /**
-     * @return the idcalcula
+     * Getter para idcalcula
+     * @return Retorna o valor da propriedade.
      */
     public int getIdcalcula() {
         return idcalcula;
     }
 
     /**
-     * @param idcalcula the idcalcula to set
+     * Setter para idcalcula
+     * @param idcalcula Valor a ser setado.
      */
     public void setIdcalcula(int idcalcula) {
         this.idcalcula = idcalcula;
     }
 
     /**
-     * @return the musicaid
+     * Getter para musicaId
+     * @return Retorna o valor da propriedade.
      */
     public int getIdmusica() {
         return idmusica;
     }
 
     /**
-     * @param musicaid the musicaid to set
+     * Setter para idmusica
+     * @param musicaid Valor a ser setado.
      */
     public void setIdmusica(int musicaid) {
         this.idmusica = musicaid;
     }
 
     /**
-     * @return the tagmoodid
+     * Getter para tagmoodid
+     * @return Retorna o valor da propriedade.
      */
     public int getTagmoodid() {
         return tagmoodid;
     }
 
     /**
-     * @param tagmoodid the tagmoodid to set
+     * Setter para tagmoodid
+     * @param tagmoodid Valor a ser setado.
      */
     public void setTagmoodid(int tagmoodid) {
         this.tagmoodid = tagmoodid;
     }
 
-    /**
-     * @return the statustagid
+     /**
+     * Getter para statustagid
+     * @return Retorna o valor da propriedade.
      */
     public int getStatustagid() {
         return statustagid;
     }
 
     /**
-     * @param statustagid the statustagid to set
+     * Setter para statustagid
+     * @param statustagid Valor a ser setado.
      */
     public void setStatustagid(int statustagid) {
         this.statustagid = statustagid;

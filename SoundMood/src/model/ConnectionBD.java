@@ -13,11 +13,20 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
 /**
+ * Classe responsável pela realização da conexão com o banco de dados.
  *
+ * @version 1.0
  * @author biancamoreira
+ * @author Iago Rodrigues
+ * @author Leylane Ferreira
+ * @author Washington Filipe
  */
 public class ConnectionBD {
     
+    /**
+     * Método de abertura da conexão.
+     * @return Session: sessão da conexão com o banco de dados.
+     */
     public Session abrirConexao(){
         SessionFactory sf = HibernateUtil.getSessionFactory();
         Session session = sf.openSession();
@@ -25,6 +34,11 @@ public class ConnectionBD {
         return session;
         
     }
+    
+    /**
+     * Método do fechamento da conexão com o banco de dados.
+     * @param session Sessão a ser fechada.
+     */
     
     public void fecharConexao(Session session){
         session.close();
