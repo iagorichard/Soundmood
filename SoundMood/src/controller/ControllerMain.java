@@ -18,34 +18,30 @@ import org.hibernate.Session;
  * @author Leylane Ferreira
  * @author Washington Filipe
  */
-
 public class ControllerMain {
-    
+
     /**
      * Classe principal do sistema.
+     *
      * @param args Parâmetros passados na execução do programa.
      */
     public static void main(String args[]) {
-       
+
         ControleInformacao ci = ControleInformacao.getInstance();
-        
-       ci.getHumor(0);
-       ci.getStatus(0);
-        
-       int[] retorno = new int[5];
-       retorno = ci.calculaMusicas();
-       System.out.println(Arrays.toString(retorno));
+
+        ci.getHumor(0);
+        ci.getStatus(0);
+
+        int[] retorno = new int[5];
+        retorno = ci.calculaMusicas();
+        System.out.println(Arrays.toString(retorno));
         //session.beginTransaction();
         //Query query = session.createQuery("from Musica");
-        
+
         //List<Musica> musicas = query.list();
-       
-        
         //for(Musica musica : musicas){
-            
         //    System.out.println(musica.getArtista());
         //}
-    
     }
-    
+
 }
