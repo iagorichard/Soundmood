@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package controller;
 
 import java.util.List;
@@ -12,10 +8,33 @@ import org.hibernate.Query;
 import org.hibernate.Session;
 
 /**
+ * Classe responsável pelo controle de <b>login</b> da seção atual de um
+ * determinado usuário.
  *
+ * @version 1.0
  * @author biancamoreira
+ * @author Iago Rodrigues
+ * @author Leylane Ferreira
+ * @author Washington Filipe
  */
 public class ControleLogIn {
+    
+    /** Construtor simples para a referida classe. */
+    public ControleLogIn(){
+        
+    }
+    
+    /**
+     * Método responsável para a validação de um login, o usuário só poderá
+     * logar no sistema se o username e password existir e for 
+     * corresponderem a um mesmo usuário e senha que estiverem cadastrados na 
+     * mesma tupla do banco de dados do sistema.
+     * @param username Nome de usuário a ser validado.
+     * @param password Senha a ser validada.
+     * @return boolean: se o username e password tiverem sido validados, significa
+     * que o login foi efetuado com sucesso, fazendo com que o método retorne
+     *  <b>true</b>, se não for realizado com sucesso retornará a <b>false</b>.
+     */
     
     public boolean checaLogin(String username, String password){
         ConnectionBD connect = new ConnectionBD();
