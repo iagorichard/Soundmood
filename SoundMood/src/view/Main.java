@@ -1,13 +1,13 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package view;
 
 /**
+ * Classe responsável pela execução principal do programa.
  *
+ * @version 1.0
  * @author biancamoreira
+ * @author Iago Rodrigues
+ * @author Leylane Ferreira
+ * @author Washington Filipe
  */
 public class Main {
     
