@@ -25,6 +25,13 @@ import org.hibernate.Transaction;
  */
 public class ControleCadastro {
     
+    /**
+     * Construtor simples para a classe.
+     */
+    public ControleCadastro(){
+        
+    }
+    
  /**
      * Método que recebe as informações do novo usuário a ser cadastrado, e
      * verifica se realmente poderá ser criado este usuário com as informações
