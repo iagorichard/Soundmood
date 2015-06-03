@@ -13,10 +13,14 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 /**
+ * Classe referente à um tipo de <b>humor</b> escolhido de um usuário no sistema.
  *
+ * @version 1.0
  * @author biancamoreira
+ * @author Iago Rodrigues
+ * @author Leylane Ferreira
+ * @author Washington Filipe
  */
-
 @Entity
 @Table(name = "MOOD")
 public class Mood implements Serializable {
@@ -25,47 +29,56 @@ public class Mood implements Serializable {
     @Column(name = "id")
     @GeneratedValue
     
+    /** ID do humor. */
     private int id;
+    /** NOME do humor. */
     private String nometag;
+    /** DESCRIÇÃO do humor. */
     private String descricao;
 
     /**
-     * @return the id
+     * Getter para pegar o valor da id do humor.
+     * @return Retorna o valor da propriedade.
      */
     public int getId() {
         return id;
     }
 
     /**
-     * @param id the id to set
+     * Setter para alterar o valor de id.
+     * @param id Valor a ser alterado em id.
      */
     public void setId(int id) {
         this.id = id;
     }
 
     /**
-     * @return the nometag
+     * Getter para pegar o valor do tag do humor.
+     * @return Retorna o valor da propriedade.
      */
     public String getNometag() {
         return nometag;
     }
 
     /**
-     * @param nometag the nometag to set
+     * Setter para alterar o valor de nometag.
+     * @param nometag Valor a ser alterado em nometag.
      */
     public void setNometag(String nometag) {
         this.nometag = nometag;
     }
 
     /**
-     * @return the descricao
+     * Getter para pegar o valor da descricao do humor.
+     * @return Retorna o valor da propriedade.
      */
     public String getDescricao() {
         return descricao;
     }
 
     /**
-     * @param descricao the descricao to set
+     * Setter para alterar o valor de descricao.
+     * @param descricao Valor a ser alterado em descricao.
      */
     public void setDescricao(String descricao) {
         this.descricao = descricao;
